@@ -232,20 +232,34 @@
             position: relative;
         }
 
-        .price-card.featured {
-            .price-card:hover {
+        .price-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 40px 30px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+       .price-card.featured {
+    border: 2px solid var(--primary);
+    box-shadow: 0 15px 35px var(--primary-glow);
+}
+
+      .price-card:hover {
     transform: translateY(-5px);
     border-color: var(--primary);
 }
-
-        .price-title {
+       .price-title {
             font-size: 1.5rem;
             font-weight: 800;
             color: #fff;
             margin-bottom: 10px;
         }
 
-        .price-quote {
+       .price-quote {
             color: var(--primary);
             font-size: 0.95rem;
             font-style: italic;
