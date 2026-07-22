@@ -541,11 +541,14 @@
                 display: none;
             }
         }
-    /* Sve mrežne kartice za usluge i pakete pretvaramo u horizontalni slider */
+   /* Slider na mobitelima (ekrani do 768px) */
+@media (max-width: 768px) {
+    /* Dodali smo i jednokratne usluge u slider */
     .services-grid,
     .pricing-grid,
     .one-time-grid,
-    .cards-grid {
+    .cards-grid,
+    div[style*="display: grid"] {
         display: flex !important;
         overflow-x: auto !important;
         scroll-snap-type: x mandatory;
@@ -558,19 +561,21 @@
     /* Prilagođavamo širinu pojedinačne kartice u slideru */
     .service-card,
     .price-card,
-    .package-card {
-        flex: 0 0 85% !important; /* Kartica zauzima 85% širine ekrana tako da se vidi rub sljedeće */
+    .package-card,
+    div[style*="min-width: 280px"] {
+        flex: 0 0 85% !important;
         min-width: 260px !important;
         scroll-snap-align: start;
     }
 
-    /* Sakrivamo ružni horizontalni scrollbar na mobitelima */
+    /* Sakrivamo scrollbar */
     .services-grid::-webkit-scrollbar,
     .pricing-grid::-webkit-scrollbar,
     .one-time-grid::-webkit-scrollbar,
     .cards-grid::-webkit-scrollbar {
         display: none;
     }
+}
 }</style>
 </head>
 <body>
