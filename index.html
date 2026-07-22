@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VD Flow | Digitalni marketing koji donosi rezultate</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #060911;
+            --card-bg: #101726;
+            --primary: #a855f7;
+            --primary-glow: rgba(168, 85, 247, 0.3);
+            --accent: #6366f1;
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --border-color: rgba(255, 255, 255, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navigacija */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(6, 9, 17, 0.85);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            color: #fff;
+            text-transform: uppercase;
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Sekcije Općenito */
+        section {
+            padding: 100px 10% 80px 10%;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 15px;
+            background: linear-gradient(to right, #fff, var(--primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 60px auto;
+            font-size: 1.1rem;
+        }
+
+        /* Hero Sekcija */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            padding: 0 10%;
+            background: radial-gradient(circle at center, rgba(168, 85, 247, 0.15) 0%, transparent 70%);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            max-width: 900px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            color: #fff;
+        }
+
+        .hero h1 span {
+            color: var(--primary);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            max-width: 650px;
+            margin-bottom: 40px;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: #fff;
+            padding: 15px 35px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.05rem;
+            box-shadow: 0 10px 25px var(--primary-glow);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(168, 85, 247, 0.5);
+        }
+
+        /* O nama / Predstavljanje */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .about-text p {
+            color: var(--text-muted);
+            margin-bottom: 15px;
+            font-size: 1.05rem;
+        }
+
+        .about-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        /* Usluge Kartice */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 35px 25px;
+            border-radius: 16px;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+        }
+
+        .service-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        .service-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Mjesečni paketi */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+        }
+
+        .price-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 40px 30px;
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .price-card.featured {
+            border: 2px solid var(--primary);
+            box-shadow: 0 15px 35px var(--primary-glow);
+        }
+
+        .price-title {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .price-quote {
+            color: var(--primary);
+            font-size: 0.95rem;
+            font-style: italic;
+            margin-bottom: 20px;
+            min-height: 45px;
+        }
+
+        .price-features {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .price-features li {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .price-features li::before {
+            content: "✓";
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        .price-amount {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #fff;
+            border-top: 1px solid var(--border-color);
+            padding-top: 20px;
+        }
+
+        .price-amount span {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-weight: 400;
+        }
+
+        /* Jednokratne usluge - Tablica */
+        .table-container {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--card-bg);
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+
+        th, td {
+            padding: 20px 25px;
+            text-align: left;
+        }
+
+        th {
+            background: rgba(168, 85, 247, 0.1);
+            color: #fff;
+            font-weight: 700;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        td {
+            color: var(--text-muted);
+            border-bottom: 1px solid var(--border-color);
+            font-size: 0.95srem;
+        }
+
+        td:first-child {
+            color: #fff;
+            font-weight: 600;
+        }
+
+        td:last-child {
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Kako izgleda suradnja (Proces) */
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+        }
+
+        .process-step {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 30px;
+            border-radius: 16px;
+            position: relative;
+        }
+
+        .step-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: rgba(168, 85, 247, 0.2);
+            margin-bottom: 10px;
+        }
+
+        .process-step h3 {
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .process-step p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* FAQ (Česta pitanja) */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px 25px;
+            font-weight: 700;
+            color: #fff;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            padding: 0 25px 20px 25px;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        /* Upitnik / Kontakt Forma */
+        .contact-container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+        }
+
+        .form-step {
+            display: none;
+        }
+
+        .form-step.active {
+            display: block;
+        }
+
+        .form-step h3 {
+            font-size: 1.5rem;
+            color: #fff;
+            margin-bottom: 25px;
+        }
+
+        .form-options {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .form-option-label {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-color);
+            padding: 15px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            color: var(--text-main);
+            font-weight: 500;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .form-option-label:hover {
+            border-color: var(--primary);
+            background: rgba(168, 85, 247, 0.05);
+        }
+
+        .form-option-label input {
+            accent-color: var(--primary);
+            width: 18px;
+            height: 18px;
+        }
+
+        .form-input {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-color);
+            padding: 15px 20px;
+            border-radius: 10px;
+            color: #fff;
+            font-size: 1rem;
+            margin-bottom: 20px;
+            font-family: inherit;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .form-buttons {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-muted);
+            border: 1px solid var(--border-color);
+            padding: 12px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .btn-secondary:hover {
+            color: #fff;
+            border-color: #fff;
+        }
+
+        .success-message {
+            text-align: center;
+            display: none;
+        }
+
+        .success-message h3 {
+            color: var(--primary);
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        @media (max-width: 768px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigacija -->
+    <header>
+        <div class="logo">VD <span>Flow</span></div>
+        <ul class="nav-links">
+            <li><a href="#o-nama">O nama</a></li>
+            <li><a href="#usluge">Usluge</a></li>
+            <li><a href="#paketi">Paketi</a></li>
+            <li><a href="#proces">Suradnja</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#kontakt" class="btn" style="padding: 10px 20px; font-size: 0.9rem;">Zatraži ponudu</a></li>
+        </ul>
+    </header>
+
+    <!-- Hero Sekcija -->
+    <section class="hero">
+        <h1>Digitalni marketing koji donosi <span>rezultate.</span></h1>
+        <p>Preuzimamo brigu o društvenim mrežama i oglasima kako bi se ti mogao posvetiti svom poslu i klijentima.</p>
+        <a href="#kontakt" class="btn">Započni suradnju</a>
+    </section>
+
+    <!-- Predstavljanje -->
+    <section id="o-nama">
+        <div class="about-grid">
+            <div class="about-text">
+                <h2 class="section-title" style="text-align: left;">Tko stoji iza VD Flow-a?</h2>
+                <p>Iza brenda VD Flow stoji dugogodišnje iskustvo u digitalnom oglašavanju, kreiranju sadržaja i vođenju kampanja za male biznise i obrte.</p>
+                <p>Naš pristup je jednostavan: nema kompliciranih izraza ni praznih obećanja. Fokusiramo se na ono što donosi stvarne upite, rezervacije i kupce za tvoj biznis.</p>
+            </div>
+            <div class="about-card">
+                <h3 style="color: #fff; margin-bottom: 15px;">Zašto odabrati nas?</h3>
+                <p style="color: var(--text-muted); margin-bottom: 10px;">✓ Transparentne cijene bez skrivenih troškova</p>
+                <p style="color: var(--text-muted); margin-bottom: 10px;">✓ Potpuna prilagodba specifičnostima tvog posla</p>
+                <p style="color: var(--text-muted);">✓ Ušteda tvog vremena i živaca</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Usluge -->
+    <section id="usluge">
+        <h2 class="section-title">Naše Usluge</h2>
+        <p class="section-subtitle">Sve što ti treba za snažnu prisutnost na internetu na jednom mjestu.</p>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Google Ads</h3>
+                <p>Dovedi klijente u trenutku kada aktivno traže tvoje usluge na Google tražilici.</p>
+            </div>
+            <div class="service-card">
+                <h3>Meta Ads</h3>
+                <p>Precizno ciljani oglasi na Facebooku i Instagramu koji pune tvoj kalendar upitima.</p>
+            </div>
+            <div class="service-card">
+                <h3>Društvene Mreže</h3>
+                <p>Vođenje profila, osmišljavanje objava i moderan video sadržaj koji privlači pažnju.</p>
+            </div>
+            <div class="service-card">
+                <h3>Audit Profila</h3>
+                <p>Detaljna analiza tvojih trenutnih kanala i konkretne upute za poboljšanje rezultata.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mjesečni paketi -->
+    <section id="paketi">
+        <h2 class="section-title">Mjesečni Paketi</h2>
+        <p class="section-subtitle">Dugoročna podrška za mirnu glavu i stabilan rast.</p>
+        <div class="pricing-grid">
+            <div class="price-card">
+                <div>
+                    <div class="price-title">Profil Start</div>
+                    <div class="price-quote">"Da profil izgleda živo i profesionalno — bez svakodnevnog stresa."</div>
+                    <ul class="price-features">
+                        <li>Vođenje 1 profila (Instagram)</li>
+                        <li>8 objava mjesečno</li>
+                        <li>Plan mjesec unaprijed</li>
+                    </ul>
+                </div>
+                <div class="price-amount">180 – 250 € <span>/ mj</span></div>
+            </div>
+
+            <div class="price-card">
+                <div>
+                    <div class="price-title">Profil Aktivno</div>
+                    <div class="price-quote">"Za lokalne biznise koji žele jaču prisutnost i moderan video."</div>
+                    <ul class="price-features">
+                        <li>12 objava + storyji</li>
+                        <li>1 Reels video mjesečno</li>
+                        <li>Odgovaranje na upite</li>
+                    </ul>
+                </div>
+                <div class="price-amount">300 – 450 € <span>/ mj</span></div>
+            </div>
+
+            <div class="price-card">
+                <div>
+                    <div class="price-title">Ads Fokus</div>
+                    <div class="price-quote">"Zaboravi na lajkove. Oglasi za konkretne pozive i rezervacije."</div>
+                    <ul class="price-features">
+                        <li>Vođenje 1 oglasne platforme</li>
+                        <li>Napredno ciljanje kupaca</li>
+                        <li>Tjedni izvještaji</li>
+                    </ul>
+                </div>
+                <div class="price-amount">220 – 350 € <span>/ mj</span></div>
+            </div>
+
+            <div class="price-card featured">
+                <div>
+                    <div class="price-title">Lokalni Rast</div>
+                    <div class="price-quote">"All-in-one rješenje. Sređujemo ti online izlog i dovodimo kupce."</div>
+                    <ul class="price-features">
+                        <li>Vođenje profila + storyji</li>
+                        <li>Vođenje oglasne platforme</li>
+                        <li>Strateški poziv i izvještaj</li>
+                    </ul>
+                </div>
+                <div class="price-amount">450 – 650 € <span>/ mj</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Jednokratne usluge -->
+    <section id="jednokratno">
+        <h2 class="section-title">Jednokratne Usluge</h2>
+        <p class="section-subtitle">Bez ugovora i obveza – rješavamo točno ono što ti trenutačno treba.</p>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Usluga</th>
+                        <th>Opis</th>
+                        <th>Cijena</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Audit Instagram profila</td>
+                        <td>Analiza grešaka i preporuke za poboljšanje vizuala i biografije.</td>
+                        <
