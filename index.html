@@ -55,11 +55,11 @@
             font-size: 1.5rem;
             font-weight: 800;
             letter-spacing: 1px;
-            color: #fff;
+            color: var(--primary);
         }
 
         .logo span {
-            color: var(--primary);
+            color: #fff;
         }
 
         .nav-links {
@@ -185,6 +185,66 @@
 
         .about-box p:last-child {
             margin-bottom: 0;
+        }
+
+        /* Sekcija Usluge (Grid prikaz) */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+        }
+
+        .service-box {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 30px 25px;
+            transition: 0.3s;
+        }
+
+        .service-box:hover {
+            border-color: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        .service-icon {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+
+        .service-box h3 {
+            color: #fff;
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+        }
+
+        .service-box p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .service-box ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .service-box ul li {
+            color: #ddd;
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 18px;
+        }
+
+        .service-box ul li::before {
+            content: "✓";
+            color: var(--primary);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
         }
 
         /* Stilovi za Cjenik i Kartice */
@@ -329,7 +389,7 @@
                 <span>Javi nam se u DM</span>
             </a>
 
-            <a href="https://wa.me/385981774774" target="_blank" class="contact-btn">
+            <a href="https://wa.me/"385981774774" target="_blank" class="contact-btn">
                 <span>💬 WhatsApp</span>
             </a>
 
@@ -350,11 +410,63 @@
         </div>
     </section>
 
-    <!-- Usluge i Cjenik Sekcija -->
+    <!-- Naše Usluge Sekcija -->
     <section id="usluge" class="container section-padding">
+        <h2 class="section-title">Naše Usluge</h2>
+        <p class="section-subtitle">Cjelovita rješenja prilagođena potrebnome rastu i ciljevima tvog biznisa.</p>
+
+        <div class="services-grid">
+            <div class="service-box">
+                <span class="service-icon">📱</span>
+                <h3>Vođenje Društvenih Mreža</h3>
+                <p>Gradi profesionalnu i prepoznatljivu prisutnost bez gubljenja vremena na osmišljavanje objava.</p>
+                <ul>
+                    <li>Strategija i mjesečni plan objava</li>
+                    <li>Pisanje tekstova i odabir hashtagova</li>
+                    <li>Povezivanje s publikom (odgovaranje)</li>
+                </ul>
+            </div>
+
+            <div class="service-box">
+                <span class="service-icon">🎯</span>
+                <h3>Google & Meta Oglasi</h3>
+                <p>Pretvori posjetitelje u kupce uz ciljane reklame na platformama gdje se nalaze tvoji klijenti.</p>
+                <ul>
+                    <li>Postavljanje i izrada kampanja</li>
+                    <li>Ciljanje točne publike i lokalnih kupaca</li>
+                    <li>Optimizacija budžeta za maksimalan ROI</li>
+                </ul>
+            </div>
+
+            <div class="service-box">
+                <span class="service-icon">🎨</span>
+                <h3>Izrada Sadržaja (Content)</h3>
+                <p>Dizajn i montaža koji privlače pažnju i ističu te u odnosu na konkurenciju.</p>
+                <ul>
+                    <li>Statične i karusel objave</li>
+                    <li>Montaža i snimanje Reels / Short videa</li>
+                    <li>Grafičko oblikovanje Story objava</li>
+                </ul>
+            </div>
+
+            <div class="service-box">
+                <span class="service-icon">📊</span>
+                <h3>Strategija & Audit</h3>
+                <p>Pronađi slabe točke na profilu ili u oglasima i dobit ćeš jasne korake za poboljšanje.</p>
+                <ul>
+                    <li>Detaljan pregled postojećeg profila</li>
+                    <li>Postavljanje Meta Pixela i konverzija</li>
+                    <li>1-na-1 strateške konzultacije</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cjenik Sekcija -->
+    <section id="cjenik" class="container section-padding">
         
-        <div id="cjenik">
-            <h2 class="section-title">Usluge i Cjenik</h2>
+        <div style="text-align: center; margin-bottom: 50px;">
+            <h2 class="section-title">Cjenik Usluga</h2>
             <p class="section-subtitle">Jednostavni paketi i usluge za sadržaj, oglase i vođenje profila – prilagođeni malim biznisima.</p>
         </div>
 
