@@ -20,6 +20,10 @@
             padding: 0;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             background-color: var(--bg-color);
             color: var(--text-main);
@@ -61,7 +65,7 @@
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 20px;
+            gap: 25px;
         }
 
         .nav-links a {
@@ -133,13 +137,54 @@
             font-weight: 500;
             transition: 0.3s;
             flex: 1;
-            min-width: 250px;
-            max-width: 320px;
+            min-width: 220px;
+            max-width: 300px;
         }
 
         .contact-btn:hover {
             border-color: var(--primary);
             transform: translateY(-3px);
+        }
+
+        /* Sekcije općenito */
+        .section-padding {
+            padding: 60px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+
+        /* O nama sekcija */
+        .about-box {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 850px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-box p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .about-box p:last-child {
+            margin-bottom: 0;
         }
 
         /* Stilovi za Cjenik i Kartice */
@@ -213,7 +258,7 @@
             font-weight: bold;
         }
 
-        /* Prilagodba za mobitele (Media Query za Meni i Slider) */
+        /* Prilagodba za mobitele */
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2.2rem;
@@ -221,6 +266,10 @@
 
             .nav-links {
                 display: none;
+            }
+
+            .about-box {
+                padding: 25px;
             }
 
             .cards-slider {
@@ -259,7 +308,9 @@
     <header>
         <div class="logo">VD <span>FLOW</span></div>
         <ul class="nav-links">
-            <li><a href="#usluge">Usluge i Cjenik</a></li>
+            <li><a href="#o-nama">O nama</a></li>
+            <li><a href="#usluge">Usluge</a></li>
+            <li><a href="#cjenik">Cjenik</a></li>
         </ul>
         <a href="mailto:"vdflow.kontakt@gmail.com" class="btn-primary">Zatraži ponudu</a>
     </header>
@@ -282,18 +333,29 @@
                 <span>💬 WhatsApp</span>
             </a>
 
-            <a href="mailto:vdflow.kontakt@gmail.com" class="contact-btn">
+            <a href="mailto:"vdflow.kontakt@gmail.com" class="contact-btn">
                 <span>✉️ Pošalji Email</span>
             </a>
         </div>
     </section>
 
-    <!-- Cjenik i Usluge Sekcija -->
-    <section id="usluge" class="container" style="padding: 40px 20px;">
+    <!-- O nama Sekcija -->
+    <section id="o-nama" class="container section-padding">
+        <h2 class="section-title">O Nama</h2>
+        <p class="section-subtitle">Tvoj partner za rast i vidljivost na digitalnim kanalima.</p>
         
-        <div style="text-align: center; margin-bottom: 50px;">
-            <h2 style="font-size: 2.2rem; color: #fff;">Cjenik Usluga</h2>
-            <p style="color: var(--text-muted); max-width: 600px; margin: 10px auto 0;">Jednostavni paketi i usluge za sadržaj, oglase i vođenje profila – prilagođeni malim biznisima.</p>
+        <div class="about-box">
+            <p><strong>VD FLOW</strong> je obrt za digitalni marketing specijaliziran za vođenje društvenih mreža, izradu vizualnog sadržaja i vođenje ciljanih oglasnih kampanja na Google i Meta platformama.</p>
+            <p>Naša misija je jednostavna: osloboditi tvoje vrijeme i pomoći ti da dođeš do idealnih klijenata. Bilo da ti treba kompletno vođenje profila, izrada modernog sadržaja ili optimizacija oglasa – tu smo da stvorimo jasnu strategiju i dovedemo tvoj biznis do rezultata.</p>
+        </div>
+    </section>
+
+    <!-- Usluge i Cjenik Sekcija -->
+    <section id="usluge" class="container section-padding">
+        
+        <div id="cjenik">
+            <h2 class="section-title">Usluge i Cjenik</h2>
+            <p class="section-subtitle">Jednostavni paketi i usluge za sadržaj, oglase i vođenje profila – prilagođeni malim biznisima.</p>
         </div>
 
         <!-- 1. GLAVNI MJESEČNI PAKETI -->
