@@ -4,116 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kontakt | VD FLOW</title>
-    <meta name="description" content="Kontaktirajte VD FLOW za upite o vođenju društvenih mreža, izradi sadržaja i oglasnim kampanjama.">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-
-    <style>
-        :root {
-            --bg-color: #0b0c10;
-            --card-bg: #1f2833;
-            --primary: #a855f7;
-            --text-main: #ffffff;
-            --text-muted: #c5c6c7;
-            --border-color: #2d3748;
-        }
-
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { background-color: var(--bg-color); color: var(--text-main); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; }
-        .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
-
-        header {
-            display: flex; justify-content: space-between; align-items: center;
-            padding: 20px; background: rgba(11, 12, 16, 0.95);
-            position: sticky; top: 0; z-index: 1000;
-            backdrop-filter: blur(8px); border-bottom: 1px solid var(--border-color);
-        }
-
-        .logo { font-size: 1.5rem; font-weight: 800; color: var(--primary); text-decoration: none; }
-        .logo span { color: #fff; }
-        .nav-links { display: flex; list-style: none; gap: 25px; align-items: center; }
-        .nav-links a { color: var(--text-muted); text-decoration: none; font-weight: 500; transition: 0.3s; }
-        .nav-links a:hover { color: var(--primary); }
-
-        .dropdown { position: relative; display: inline-block; }
-        .dropdown-menu {
-            display: none; position: absolute; top: 100%; left: 0;
-            background-color: var(--card-bg); min-width: 230px;
-            box-shadow: 0px 8px 16px rgba(0,0,0,0.5);
-            border: 1px solid var(--border-color); border-radius: 12px;
-            padding: 10px 0; z-index: 1001;
-        }
-        .dropdown-menu a { color: var(--text-muted); padding: 10px 20px; text-decoration: none; display: block; font-size: 0.95rem; }
-        .dropdown-menu a:hover { background-color: var(--border-color); color: var(--primary); }
-        .dropdown:hover .dropdown-menu { display: block; }
-
-        .btn-primary { background: var(--primary); color: #fff; padding: 10px 22px; border-radius: 50px; text-decoration: none; font-weight: 600; display: inline-block; border: none; cursor: pointer; font-size: 1rem; }
-        .btn-primary:hover { opacity: 0.9; }
-
-        .contact-section { padding: 60px 0; }
-        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 30px; }
-
-        .contact-info { background: var(--card-bg); padding: 35px; border-radius: 16px; border: 1px solid var(--border-color); }
-        .contact-info h2 { color: var(--primary); font-size: 1.6rem; margin-bottom: 15px; }
-        .contact-info p { color: var(--text-muted); margin-bottom: 25px; }
-
-        .info-item { margin-bottom: 20px; }
-        .info-item strong { display: block; color: #fff; font-size: 0.9rem; text-transform: uppercase; margin-bottom: 5px; }
-        .info-item a { color: var(--text-muted); text-decoration: none; transition: 0.3s; }
-        .info-item a:hover { color: var(--primary); }
-
-        .social-links { display: flex; gap: 15px; margin-top: 20px; }
-        .social-btn { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.05); color: #fff; padding: 10px 18px; border-radius: 30px; text-decoration: none; border: 1px solid var(--border-color); transition: 0.3s; font-size: 0.95rem; }
-        .social-btn:hover { border-color: var(--primary); color: var(--primary); }
-
-        .contact-form { background: var(--card-bg); padding: 35px; border-radius: 16px; border: 1px solid var(--border-color); }
-        .contact-form h2 { font-size: 1.6rem; color: #fff; margin-bottom: 20px; }
-        .form-group { margin-bottom: 20px; }
-        .form-group label { display: block; color: var(--text-muted); font-size: 0.9rem; margin-bottom: 8px; }
-        .form-group input, .form-group textarea { width: 100%; padding: 12px 15px; background: var(--bg-color); border: 1px solid var(--border-color); border-radius: 8px; color: #fff; font-size: 1rem; }
-        .form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--primary); }
-
-        footer { text-align: center; padding: 40px 20px; border-top: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.9rem; margin-top: 60px; }
-        .footer-links { display: flex; justify-content: center; gap: 15px; margin-bottom: 15px; flex-wrap: wrap; }
-        .footer-links a { color: var(--text-muted); text-decoration: none; }
-        .footer-links a:hover { color: var(--primary); }
-
-        @media (max-width: 768px) {
-            .contact-grid { grid-template-columns: 1fr; }
-            .nav-links { display: none; }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header>
-        <a href="index.html" class="logo">VD <span>FLOW</span></a>
-        <nav>
-            <ul class="nav-links">
+    <!-- NAVIGACIJA -->
+    <header class="header">
+        <div class="logo">
+            <a href="index.html">
+                <span class="logo-text">VD FLOW</span>
+            </a>
+        </div>
+        <nav class="nav">
+            <ul>
                 <li><a href="index.html">Početna</a></li>
                 <li><a href="o-nama.html">O nama</a></li>
-                <li class="dropdown">
-                    <a href="#">Usluge ▾</a>
-                    <div class="dropdown-menu">
-                        <a href="usluge/vodjenje-mreza.html">Vođenje Društvenih Mreža</a>
-                        <a href="usluge/google-meta-oglasi.html">Google & Meta Oglasi</a>
-                        <a href="usluge/izrada-sadrzaja.html">Izrada Sadržaja (Content)</a>
-                        <a href="usluge/strategija-audit.html">Strategija & Audit</a>
-                    </div>
-                </li>
+                <li><a href="usluge.html">Usluge</a></li>
                 <li><a href="cjenik.html">Cjenik</a></li>
-                <li><a href="kontakt.html">Kontakt</a></li>
+                <li><a href="kontakt.html" class="active">Kontakt</a></li>
             </ul>
         </nav>
         <a href="kontakt.html" class="btn-primary">Zatraži ponudu</a>
     </header>
 
+    <!-- KONTAKT SEKCIJA -->
     <main class="container contact-section">
         <div class="contact-grid">
             
+            <!-- INFORMACIJE -->
             <div class="contact-info">
                 <h2>Javite nam se</h2>
                 <p>Spremne opcije za rast vašeg poslovanja. Pošaljite upit ili nas zapratite na društvenim mrežama.</p>
-
+                
                 <div class="info-item">
                     <strong>E-mail</strong>
                     <a href="mailto:vdflow.kontakt@gmail.com">vdflow.kontakt@gmail.com</a>
@@ -122,48 +47,47 @@
                 <div class="info-item">
                     <strong>Društvene mreže</strong>
                     <div class="social-links">
-                        <a href="https://www.instagram.com/vd_flow_" target="_blank" class="social-btn">
-                            📷 Instagram
-                        </a>
-                        <a href="https://www.facebook.com/profile.php?id=61593904174614" target="_blank" class="social-btn">
-    📘 Facebook
-</a>
+                        <a href="https://www.instagram.com/vd_flow_" target="_blank" class="social-btn">📷 Instagram</a>
+                        <a href="https://www.facebook.com/profile.php?id=61593904174614" target="_blank" class="social-btn">📘 Facebook</a>
                     </div>
                 </div>
             </div>
 
+            <!-- FORMA -->
             <div class="contact-form">
                 <h2>Pošaljite poruku</h2>
                 <form action="https://api.web3forms.com/submit" method="POST">
                     
+                    <!-- WEB3FORMS ACCESS KEY -->
                     <input type="hidden" name="access_key" value="d9a57dfa-cce4-45a8-a7d6-2e6e3c46ede4">
+                    
+                    <!-- REDIRECT SPREČAVA MC AFEE UPOZORENJE -->
+                    <input type="hidden" name="redirect" value="https://vdflow.hr/kontakt.html">
 
                     <div class="form-group">
                         <label for="name">Vaše ime / Naziv tvrtke</label>
-                        <input type="text" id="name" name="name" required placeholder="Ime i prezime">
+                        <input type="text" id="name" name="name" placeholder="Ime i prezime" required>
                     </div>
+
                     <div class="form-group">
                         <label for="email">E-mail adresa</label>
-                        <input type="email" id="email" name="email" required placeholder="vas@email.com">
+                        <input type="email" id="email" name="email" placeholder="vas@email.com" required>
                     </div>
+
                     <div class="form-group">
                         <label for="message">Poruka ili opis potreba</label>
-                        <textarea id="message" name="message" rows="5" required placeholder="Napišite ukratko što trebate..."></textarea>
+                        <textarea id="message" name="message" rows="5" placeholder="Napišite ukratko što trebate..." required></textarea>
                     </div>
-                    <button type="submit" class="btn-primary" style="width: 100%;">Pošalji upit</button>
+
+                    <button type="submit" class="btn-primary">Pošalji upit</button>
                 </form>
             </div>
 
         </div>
     </main>
 
-    <footer>
-        <div class="footer-links">
-            <a href="index.html">Početna</a> • 
-            <a href="o-nama.html">O nama</a> • 
-            <a href="cjenik.html">Cjenik</a> • 
-            <a href="kontakt.html">Kontakt</a>
-        </div>
+    <!-- FOOTER -->
+    <footer class="footer">
         <p>&copy; 2026 VD FLOW. Sva prava pridržana.</p>
     </footer>
 
