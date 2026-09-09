@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VD FLOW | Digitalni Marketing & Vođenje Društvenih Mreža</title>
     
-    <!-- SEO Meta Opis -->
-    <meta name="description" content="VD FLOW pruža usluge digitalnog marketinga: vođenje društvenih mreža, izrada sadržaja, Google i Meta oglasi te strategija rasta za male biznise.">
+    <!-- SEO Meta Oznake -->
+    <meta name="description" content="VD FLOW pruža profesionalne usluge digitalnog marketinga: vođenje društvenih mreža, izrada vizualnog sadržaja, Google i Meta oglasi te strategije rasta.">
     <meta name="keywords" content="digitalni marketing, vođenje društvenih mreža, Google oglasi, Meta oglasi, izrada sadržaja, Instagram vođenje">
     <meta name="author" content="VD FLOW">
 
@@ -53,10 +53,10 @@
             justify-content: space-between;
             align-items: center;
             padding: 20px;
-            background: rgba(11, 12, 16, 0.9);
+            background: rgba(11, 12, 16, 0.95);
             position: sticky;
             top: 0;
-            z-index: 100;
+            z-index: 1000;
             backdrop-filter: blur(8px);
             border-bottom: 1px solid var(--border-color);
         }
@@ -76,7 +76,8 @@
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 20px;
+            gap: 25px;
+            align-items: center;
         }
 
         .nav-links a {
@@ -90,14 +91,53 @@
             color: var(--primary);
         }
 
+        /* Dropdown izbornik za Usluge */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: var(--card-bg);
+            min-width: 230px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.5);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 10px 0;
+            z-index: 1001;
+        }
+
+        .dropdown-menu a {
+            color: var(--text-muted);
+            padding: 10px 20px;
+            text-decoration: none;
+            display: block;
+            font-size: 0.95rem;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: var(--border-color);
+            color: var(--primary);
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
         .btn-primary {
             background: var(--primary);
             color: #fff;
-            padding: 10px 20px;
+            padding: 10px 22px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 600;
             transition: 0.3s;
+            display: inline-block;
         }
 
         .btn-primary:hover {
@@ -105,61 +145,87 @@
             transform: translateY(-2px);
         }
 
-        /* Hero sekcija */
-        .hero {
+        /* Video Hero Sekcija */
+        .hero-video-container {
+            position: relative;
+            width: 100%;
+            height: 82vh;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
             text-align: center;
-            padding: 80px 20px 40px;
         }
 
-        .hero h1 {
-            font-size: 2.8rem;
+        .hero-bg-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: 1;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(11, 12, 16, 0.75);
+            z-index: 2;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            max-width: 850px;
+            padding: 0 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            color: #fff;
             margin-bottom: 20px;
             line-height: 1.2;
         }
 
-        .hero p {
-            font-size: 1.2rem;
+        .hero-content p {
+            font-size: 1.25rem;
             color: var(--text-muted);
-            max-width: 700px;
-            margin: 0 auto 30px;
+            margin-bottom: 35px;
         }
 
-        /* Kontakt gumbi u Hero sekciji */
-        .contact-buttons-container {
+        .hero-buttons {
             display: flex;
-            justify-content: center;
             gap: 15px;
+            justify-content: center;
             flex-wrap: wrap;
-            margin-top: 25px;
-            width: 100%;
         }
 
-        .contact-btn {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid var(--primary);
             color: #fff;
-            padding: 12px 20px;
+            padding: 10px 22px;
             border-radius: 50px;
             text-decoration: none;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            font-weight: 500;
+            font-weight: 600;
             transition: 0.3s;
-            flex: 1;
-            min-width: 220px;
-            max-width: 300px;
         }
 
-        .contact-btn:hover {
-            border-color: var(--primary);
-            transform: translateY(-3px);
+        .btn-secondary:hover {
+            background: var(--primary);
         }
 
-        /* Sekcije općenito */
+        /* Sekcije */
         .section-padding {
-            padding: 60px 20px;
+            padding: 80px 20px;
         }
 
         .section-title {
@@ -172,11 +238,62 @@
         .section-subtitle {
             text-align: center;
             color: var(--text-muted);
-            max-width: 600px;
-            margin: 0 auto 40px;
+            max-width: 650px;
+            margin: 0 auto 50px;
         }
 
-        /* O nama sekcija */
+        /* Usluge Grid na Početnoj */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+        }
+
+        .service-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 30px 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        .service-icon {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+        }
+
+        .service-card h3 {
+            color: #fff;
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .card-link {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .card-link:hover {
+            text-decoration: underline;
+        }
+
+        /* O nama box */
         .about-box {
             background: var(--card-bg);
             border: 1px solid var(--border-color);
@@ -194,173 +311,14 @@
             margin-bottom: 20px;
         }
 
-        .about-box p:last-child {
-            margin-bottom: 0;
-        }
-
-        /* Sekcija Usluge */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 25px;
-        }
-
-        .service-box {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            padding: 30px 25px;
-            transition: 0.3s;
-        }
-
-        .service-box:hover {
-            border-color: var(--primary);
-            transform: translateY(-5px);
-        }
-
-        .service-icon {
-            font-size: 2.2rem;
-            margin-bottom: 15px;
-            display: inline-block;
-        }
-
-        .service-box h3 {
-            color: #fff;
-            font-size: 1.3rem;
-            margin-bottom: 12px;
-        }
-
-        .service-box p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            line-height: 1.6;
-            margin-bottom: 15px;
-        }
-
-        .service-box ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .service-box ul li {
-            color: #ddd;
-            font-size: 0.9rem;
-            margin-bottom: 8px;
-            position: relative;
-            padding-left: 18px;
-        }
-
-        .service-box ul li::before {
-            content: "✓";
-            color: var(--primary);
-            position: absolute;
-            left: 0;
-            font-weight: bold;
-        }
-
-        /* Stilovi za Cjenik i Kartice (zamijenjeni h4 s .card-title radi SEO-a) */
-        .cards-slider {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-bottom: 30px;
-        }
-
-        .price-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            padding: 24px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            transition: 0.3s;
-        }
-
-        .price-card:hover {
-            border-color: var(--primary);
-            transform: translateY(-4px);
-        }
-
-        .card-title {
-            color: #fff;
-            font-size: 1.25rem;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        .price-card .price {
-            color: var(--primary);
-            font-weight: 700;
-            font-size: 1.3rem;
-            margin-bottom: 12px;
-        }
-
-        .price-card .price span {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            font-weight: normal;
-        }
-
-        .price-card p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            line-height: 1.5;
-        }
-
-        .price-card ul {
-            list-style: none;
-            padding: 0;
-            margin: 15px 0 0 0;
-        }
-
-        .price-card ul li {
-            color: #ddd;
-            font-size: 0.9rem;
-            margin-bottom: 8px;
-            position: relative;
-            padding-left: 18px;
-        }
-
-        .price-card ul li::before {
-            content: "•";
-            color: var(--primary);
-            position: absolute;
-            left: 0;
-            font-weight: bold;
-        }
-
         /* Responsive */
         @media (max-width: 768px) {
-            .hero h1 {
+            .hero-content h1 {
                 font-size: 2.1rem;
             }
 
             .nav-links {
                 display: none;
-            }
-
-            .about-box {
-                padding: 25px;
-            }
-
-            .cards-slider {
-                display: flex !important;
-                overflow-x: auto !important;
-                scroll-snap-type: x mandatory;
-                -webkit-overflow-scrolling: touch;
-                gap: 15px !important;
-                padding-bottom: 15px !important;
-            }
-
-            .cards-slider::-webkit-scrollbar {
-                display: none;
-            }
-
-            .price-card {
-                flex: 0 0 85% !important;
-                min-width: 260px !important;
-                scroll-snap-align: start;
             }
         }
 
@@ -378,6 +336,7 @@
             justify-content: center;
             gap: 15px;
             margin-bottom: 15px;
+            flex-wrap: wrap;
         }
 
         .footer-links a {
@@ -392,291 +351,116 @@
 </head>
 <body>
 
-    <!-- Navigacija s više internih linkova -->
+    <!-- Navigacija s Padajućim Izbornikom -->
     <header>
-        <a href="#" class="logo">VD <span>FLOW</span></a>
+        <a href="index.html" class="logo">VD <span>FLOW</span></a>
         <nav>
             <ul class="nav-links">
-                <li><a href="#o-nama">O nama</a></li>
-                <li><a href="#usluge">Usluge</a></li>
-                <li><a href="#cjenik">Cjenik</a></li>
-                <li><a href="#kontakt">Kontakt</a></li>
+                <li><a href="index.html">Početna</a></li>
+                <li><a href="o-nama.html">O nama</a></li>
+                
+                <!-- Dropdown za Usluge -->
+                <li class="dropdown">
+                    <a href="#">Usluge ▾</a>
+                    <div class="dropdown-menu">
+                        <a href="usluge/vodjenje-mreza.html">Vođenje Društvenih Mreža</a>
+                        <a href="usluge/google-meta-oglasi.html">Google & Meta Oglasi</a>
+                        <a href="usluge/izrada-sadrzaja.html">Izrada Sadržaja (Content)</a>
+                        <a href="usluge/strategija-audit.html">Strategija & Audit</a>
+                    </div>
+                </li>
+
+                <li><a href="cjenik.html">Cjenik</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
             </ul>
         </nav>
-        <a href="mailto:vdflow.kontakt@gmail.com?subject=Upit%20za%20ponudu%20-%20VD%20FLOW&body=Pozdrav,%0A%0AZanima%20me%20ponuda%20za%20sljede%C4%87e%20usluge/pakete:%0A-%20%0A%0AKratki%20opis%20mog%20biznisa/projekta:%0A" class="btn-primary">Zatraži ponudu</a>
+        <a href="kontakt.html" class="btn-primary">Zatraži ponudu</a>
     </header>
 
-    <!-- Hero Sekcija s optimiziranim H1 naslovom -->
-    <section class="hero container">
-        <h1>Digitalni marketing, vođenje društvenih mreža i oglasi koji donose rezultate</h1>
-        <p>Preuzimamo brigu o vođenju društvenih mreža, izradi sadržaja i oglasnim kampanjama na Google i Meta platformama kako bi se ti mogao posvetiti svom poslu.</p>
-        
-        <!-- Brzi kontakt gumbi -->
-        <div class="contact-buttons-container" id="kontakt">
-            <a href="https://www.instagram.com/vd_flow_" target="_blank" class="contact-btn">
-                <svg viewBox="0 0 24 24" width="18" height="18" style="fill: #fff;">
-                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                </svg>
-                <span>Javi nam se u DM</span>
-            </a>
+    <!-- Hero Sekcija s Pozadinskim Videom -->
+    <section class="hero-video-container">
+        <!-- Pozadinski Video (Putanja do tvoje mp4 datoteke) -->
+        <video autoplay muted loop playsinline class="hero-bg-video">
+            <source src="video-bg.mp4" type="video/mp4">
+        </video>
 
-            <a href="https://wa.me/385981774774?text=Pozdrav!%20Zanima%20me%20ponuda%20za%20VD%20FLOW%20usluge." target="_blank" class="contact-btn">
-                <span>💬 WhatsApp</span>
-            </a>
+        <!-- Tamni preklop preko videa -->
+        <div class="hero-overlay"></div>
 
-            <a href="mailto:vdflow.kontakt@gmail.com?subject=Upit%20za%20ponudu%20-%20VD%20FLOW&body=Pozdrav,%0A%0AZanima%20me%20ponuda%20za%20sljede%C4%87e%20usluge/pakete:%0A-%20%0A%0AKratki%20opis%20mog%20biznisa/projekta:%0A" class="contact-btn">
-                <span>✉️ Pošalji Email</span>
-            </a>
+        <!-- Sadržaj preko videa -->
+        <div class="hero-content">
+            <h1>Digitalni marketing, vođenje društvenih mreža i oglasi koji donose rezultate</h1>
+            <p>Preuzimamo brigu o vođenju profila, izradi vizualnog sadržaja i oglasima kako bi se ti mogao posvetiti svom poslu.</p>
+            <div class="hero-buttons">
+                <a href="cjenik.html" class="btn-primary">Pogledaj Cjenik</a>
+                <a href="kontakt.html" class="btn-secondary">Kontaktiraj Nas</a>
+            </div>
         </div>
     </section>
 
-    <!-- O nama Sekcija -->
-    <section id="o-nama" class="container section-padding">
-        <h2 class="section-title">O Nama</h2>
-        <p class="section-subtitle">Tvoj partner za rast, digitalni marketing i vidljivost na mreži.</p>
+    <!-- Pregled Usluga na Početnoj Stranici -->
+    <section class="container section-padding">
+        <h2 class="section-title">Kako ti možemo pomoći?</h2>
+        <p class="section-subtitle">Odaberi uslugu i saznaj kako možemo unaprijediti tvoju digitalnu prisutnost.</p>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div>
+                    <div class="service-icon">📱</div>
+                    <h3>Vođenje Mreža</h3>
+                    <p>Izrada mjesečnih planova objava, pisanje teksta i kompletno vođenje Vašeg profila.</p>
+                </div>
+                <a href="usluge/vodjenje-mreza.html" class="card-link">Saznaj više →</a>
+            </div>
+
+            <div class="service-card">
+                <div>
+                    <div class="service-icon">🎯</div>
+                    <h3>Google & Meta Oglasi</h3>
+                    <p>Targetiranje željenih kupaca na Googleu i Instagramu uz maksimalan povrat ulaganja.</p>
+                </div>
+                <a href="usluge/google-meta-oglasi.html" class="card-link">Saznaj više →</a>
+            </div>
+
+            <div class="service-card">
+                <div>
+                    <div class="service-icon">🎨</div>
+                    <h3>Izrada Sadržaja</h3>
+                    <p>Kreiranje coursela, grafika i montaža Reels/TikTok videa za Vaš brend.</p>
+                </div>
+                <a href="usluge/izrada-sadrzaja.html" class="card-link">Saznaj više →</a>
+            </div>
+
+            <div class="service-card">
+                <div>
+                    <div class="service-icon">📊</div>
+                    <h3>Strategija & Audit</h3>
+                    <p>Analiza postojećeg profila i postavljanje praćenja konverzija.</p>
+                </div>
+                <a href="usluge/strategija-audit.html" class="card-link">Saznaj više →</a>
+            </div>
+        </div>
+    </section>
+    <!-- Kratki O nama na Početnoj -->
+    <section class="container section-padding" style="padding-top: 0;">
+        <h2 class="section-title">O VD FLOW</h2>
+        <p class="section-subtitle">Tvoj partner za rast i vidljivost na digitalnim kanalima.</p>
         
         <div class="about-box">
             <p><strong>VD FLOW</strong> je obrt za digitalni marketing specijaliziran za vođenje društvenih mreža, izradu vizualnog sadržaja i vođenje ciljanih oglasnih kampanja na Google i Meta platformama.</p>
-            <p>Naša misija je jednostavna: osloboditi tvoje vrijeme i pomoći ti da dođeš do idealnih klijenata. Bilo da ti treba kompletno vođenje profila, izrada modernog sadržaja ili optimizacija oglasa – tu smo da stvorimo jasnu strategiju i dovedemo tvoj biznis do rezultata.</p>
+            <p>Naša misija je osloboditi tvoje vrijeme i pomoći ti da dođeš do idealnih klijenata. Bilo da ti treba kompletno vođenje profila ili optimizacija oglasa – tu smo za tebe.</p>
+            <br>
+            <a href="o-nama.html" class="btn-primary">Pročitaj više o nama</a>
         </div>
     </section>
 
-    <!-- Naše Usluge Sekcija -->
-    <section id="usluge" class="container section-padding">
-        <h2 class="section-title">Naše Usluge</h2>
-        <p class="section-subtitle">Cjelovita rješenja prilagođena potrebnome rastu i ciljevima tvog biznisa.</p>
-
-        <div class="services-grid">
-            <div class="service-box">
-                <span class="service-icon">📱</span>
-                <h3>Vođenje Društvenih Mreža</h3>
-                <p>Gradi profesionalnu i prepoznatljivu prisutnost bez gubljenja vremena na osmišljavanje objava.</p>
-                <ul>
-                    <li>Strategija i mjesečni plan objava</li>
-                    <li>Pisanje tekstova i odabir hashtagova</li>
-                    <li>Povezivanje s publikom (odgovaranje)</li>
-                </ul>
-            </div>
-
-            <div class="service-box">
-                <span class="service-icon">🎯</span>
-                <h3>Google & Meta Oglasi</h3>
-                <p>Pretvori posjetitelje u kupce uz ciljane reklame na platformama gdje se nalaze tvoji klijenti.</p>
-                <ul>
-                    <li>Postavljanje i izrada kampanja</li>
-                    <li>Ciljanje točne publike i lokalnih kupaca</li>
-                    <li>Optimizacija budžeta za maksimalan ROI</li>
-                </ul>
-            </div>
-
-            <div class="service-box">
-                <span class="service-icon">🎨</span>
-                <h3>Izrada Sadržaja (Content)</h3>
-                <p>Dizajn i montaža koji privlače pažnju i ističu te u odnosu na konkurenciju.</p>
-                <ul>
-                    <li>Statične i karusel objave</li>
-                    <li>Montaža i snimanje Reels / Short videa</li>
-                    <li>Grafičko oblikovanje Story objava</li>
-                </ul>
-            </div>
-
-            <div class="service-box">
-                <span class="service-icon">📊</span>
-                <h3>Strategija & Audit</h3>
-                <p>Pronađi slabe točke na profilu ili u oglasima i dobit ćeš jasne korake za poboljšanje.</p>
-                <ul>
-                    <li>Detaljan pregled postojećeg profila</li>
-                    <li>Postavljanje Meta Pixela i konverzija</li>
-                    <li>1-na-1 strateške konzultacije</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-    <!-- Cjenik Sekcija -->
-    <section id="cjenik" class="container section-padding">
-        
-        <div style="text-align: center; margin-bottom: 50px;">
-            <h2 class="section-title">Cjenik Usluga</h2>
-            <p class="section-subtitle">Jednostavni paketi i usluge za sadržaj, oglase i vođenje profila – prilagođeni malim biznisima.</p>
-        </div>
-
-        <!-- 1. GLAVNI MJESEČNI PAKETI -->
-        <h3 style="color: #fff; margin: 30px 0 20px; font-size: 1.5rem; border-left: 4px solid var(--primary); padding-left: 12px;">Glavni Mjesečni Paketi</h3>
-        <div class="cards-slider">
-            <div class="price-card">
-                <div>
-                    <div class="card-title">Profil Start</div>
-                    <div class="price">180 – 250 € <span>/ mj</span></div>
-                    <p>Za mali biznis koji želi uredan i živ profil na Instagramu bez svakodnevnog smišljanja objava.</p>
-                    <ul>
-                        <li>Vođenje 1 profila (Instagram)</li>
-                        <li>8 objava mjesečno</li>
-                        <li>Osnovni copy & vizuali</li>
-                        <li>Plan objava i mjesečni pregled</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="price-card">
-                <div>
-                    <div class="card-title">Profil Aktivno</div>
-                    <div class="price">300 – 450 € <span>/ mj</span></div>
-                    <p>Za salone, restorane i obrte koji žele redovitu komunikaciju i jaču prisutnost.</p>
-                    <ul>
-                        <li>Vođenje 1 profila</li>
-                        <li>12 objava + 8–12 Storyja</li>
-                        <li>Community management</li>
-                        <li>1 Reel edit + mjesečni report & call</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="price-card">
-                <div>
-                    <div class="card-title">Ads Fokus</div>
-                    <div class="price">220 – 350 € <span>/ mj</span></div>
-                    <p>Za biznise s jasnim ciljem (pozivi, upiti, prodaja) putem Google ili Meta oglasa.</p>
-                    <ul>
-                        <li>Vođenje 1 platforme (Google/Meta)</li>
-                        <li>1 – 3 kampanje / ad seta</li>
-                        <li>Osnovni copy i optimizacija publika</li>
-                        <li>Mjesečni pregled rezultata</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="price-card">
-                <div>
-                    <div class="card-title">Lokalni Rast</div>
-                    <div class="price">450 – 650 € <span>/ mj</span></div>
-                    <p>Kombinacija vođenja profila i oglasa za maksimalan lokalni doseg i upite.</p>
-                    <ul>
-                        <li>Vođenje 1 profila (8 objava + storyji)</li>
-                        <li>Vođenje 1 oglasne platforme</li>
-                        <li>Content plan + oglasne kampanje</li>
-                        <li>Mjesečni izvještaj i kratki poziv</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- 2. CONTENT PAKETI -->
-        <h3 style="color: #fff; margin: 50px 0 20px; font-size: 1.5rem; border-left: 4px solid var(--primary); padding-left: 12px;">Content Paketi (Izrada sadržaja)</h3>
-        <div class="cards-slider">
-            <div class="price-card">
-                <div>
-                    <div class="card-title">Post Paket Mini</div>
-                    <div class="price">140 – 180 €</div>
-                    <p>4 gotove objave mjesečno (vizual + caption). Za klijente koji sami objavljuju, ali ne žele gubiti vrijeme na izradu.</p>
-                </div>
-            </div>
-
-            <div class="price-card">
-                <div>
-                    <div class="card-title">Post Paket Standard</div>
-                    <div class="price">260 – 360 €</div>
-                    <p>8 gotovih objava mjesečno. Kontinuitet bez mjesečnog smišljanja svake objave iznova.</p>
-                </div>
-            </div>
-
-            <div class="price-card">
-                <div>
-                    <div class="card-title">Reels Paket – Edit Only</div>
-                    <div class="price">120 – 220 €</div>
-                    <p>4 montirana Reels videa od materijala koje nam sami pošaljete.</p>
-                </div>
-            </div>
-
-            <div class="price-card">
-                <div>
-                    <div class="card-title">Reels Paket – Snimanje + Montaža</div>
-                    <div class="price">280 – 480 €</div>
-                    <p>4 kratka videa + 1 dolazak na lokaciju (saloni, ugostitelji, teretane, showroom...).</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- 3. JEDNOKRATNE USLUGE -->
-        <h3 style="color: #fff; margin: 50px 0 20px; font-size: 1.5rem; border-left: 4px solid var(--primary); padding-left: 12px;">Jednokratne Usluge</h3>
-        <div class="cards-slider">
-            <div class="price-card">
-                <div>
-                    <div class="card-title">Audit Instagram Profila</div>
-                    <div class="price">60 – 120 €</div>
-                    <p>Detaljna analiza profila, uočavanje grešaka i konkretne preporuke.</p>
-                </div>
-            </div>
-
-            <div class="price-card">
-                <div>
-                    <div class="card-title">Setup Google / Meta Ads</div>
-                    <div class="price">120 – 250 €</div>
-                    <p>Kompletno postavljanje računa i prvih kampanja.</p>
-                </div>
-            </div>
-
-            <div class="price-card">
-                <div>
-                    <div class="card-title">Audit Oglasa</div>
-                    <div class="price">80 – 180 €</div>
-                    <p>Pregled postojećih kampanja i prijedlog poboljšanja.</p>
-                </div>
-            </div>
-
-            <div class="price-card">
-                <div>
-                    <div class="card-title">Content Plan / Konzultacije</div>
-                    <div class="price">40 – 90 €</div>
-                    <p>Strateški poziv (45-60 min) ili mjesečni plan objava bez izrade vizuala.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- 4. POJEDINAČNE USLUGE (ADD-ONS) -->
-        <h3 style="color: #fff; margin: 50px 0 20px; font-size: 1.5rem; border-left: 4px solid var(--primary); padding-left: 12px;">Pojedinačne Usluge (Add-ons)</h3>
-        <div class="cards-slider">
-            <div class="price-card">
-                <div>
-                    <div class="card-title">1 Statična Objava</div>
-                    <div class="price">45 – 60 €</div>
-                    <p>Dizajniran vizual + pripremljen tekst (caption).</p>
-                </div>
-            </div>
-
-            <div class="price-card">
-                <div>
-                    <div class="card-title">1 Carousel Objava</div>
-                    <div class="price">55 – 80 €</div>
-                    <p>Interaktivni vizual u više slika za veću angažiranost.</p>
-                </div>
-            </div>
-
-            <div class="price-card">
-                <div>
-                    <div class="card-title">1 Story Set (3–5 storyja)</div>
-                    <div class="price">25 – 45 €</div>
-                    <p>Grafički oblikovane objave za priče.</p>
-                </div>
-            </div>
-
-            <div class="price-card">
-                <div>
-                    <div class="card-title">1 Montirani Reel / Snimanje</div>
-                    <div class="price">25 – 150 €</div>
-                    <p>Montaža Vašeg materijala (25–60 €) ili reel sa snimanjem na lokaciji (80–150 €).</p>
-                </div>
-            </div>
-        </div>
-
-    </section>
-
-    <!-- Footer s internim navigacijskim linkovima -->
+    <!-- Footer s linkovima -->
     <footer>
         <div class="footer-links">
-            <a href="#o-nama">O nama</a> • 
-            <a href="#usluge">Usluge</a> • 
-            <a href="#cjenik">Cjenik</a> • 
-            <a href="#kontakt">Kontakt</a>
+            <a href="index.html">Početna</a> • 
+            <a href="o-nama.html">O nama</a> • 
+            <a href="cjenik.html">Cjenik</a> • 
+            <a href="kontakt.html">Kontakt</a>
         </div>
         <p>&copy; 2026 VD FLOW. Sva prava pridržana.</p>
     </footer>
