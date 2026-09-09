@@ -1,17 +1,156 @@
-<!-- Kratki O nama na Početnoj -->
-    <section class="container section-padding" style="padding-top: 0;">
-        <h2 class="section-title">O VD FLOW</h2>
-        <p class="section-subtitle">Tvoj partner za rast i vidljivost na digitalnim kanalima.</p>
-        
-        <div class="about-box">
-            <p><strong>VD FLOW</strong> je obrt za digitalni marketing specijaliziran za vođenje društvenih mreža, izradu vizualnog sadržaja i vođenje ciljanih oglasnih kampanja na Google i Meta platformama.</p>
-            <p>Naša misija je osloboditi tvoje vrijeme i pomoći ti da dođeš do idealnih klijenata. Bilo da ti treba kompletno vođenje profila ili optimizacija oglasa – tu smo za tebe.</p>
-            <br>
-            <a href="o-nama.html" class="btn-primary">Pročitaj više o nama</a>
-        </div>
-    </section>
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cjenik & Paketi Usluga | VD FLOW</title>
+    <meta name="description" content="Pregledajte pakete i cijene digitalnog marketinga, vođenja društvenih mreža i oglašavanja. Zašto trošiti vrijeme kad ga možete umnožiti?">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-    <!-- Footer s linkovima -->
+    <style>
+        :root {
+            --bg-color: #0b0c10;
+            --card-bg: #1f2833;
+            --primary: #a855f7;
+            --text-main: #ffffff;
+            --text-muted: #c5c6c7;
+            --border-color: #2d3748;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background-color: var(--bg-color); color: var(--text-main); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+        header {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 20px; background: rgba(11, 12, 16, 0.95);
+            position: sticky; top: 0; z-index: 1000;
+            backdrop-filter: blur(8px); border-bottom: 1px solid var(--border-color);
+        }
+
+        .logo { font-size: 1.5rem; font-weight: 800; color: var(--primary); text-decoration: none; }
+        .logo span { color: #fff; }
+        .nav-links { display: flex; list-style: none; gap: 25px; align-items: center; }
+        .nav-links a { color: var(--text-muted); text-decoration: none; font-weight: 500; transition: 0.3s; }
+        .nav-links a:hover { color: var(--primary); }
+
+        .dropdown { position: relative; display: inline-block; }
+        .dropdown-menu {
+            display: none; position: absolute; top: 100%; left: 0;
+            background-color: var(--card-bg); min-width: 230px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.5);
+            border: 1px solid var(--border-color); border-radius: 12px;
+            padding: 10px 0; z-index: 1001;
+        }
+        .dropdown-menu a { color: var(--text-muted); padding: 10px 20px; text-decoration: none; display: block; font-size: 0.95rem; }
+        .dropdown-menu a:hover { background-color: var(--border-color); color: var(--primary); }
+        .dropdown:hover .dropdown-menu { display: block; }
+
+        .btn-primary { background: var(--primary); color: #fff; padding: 10px 22px; border-radius: 50px; text-decoration: none; font-weight: 600; display: inline-block; }
+
+        .page-header { text-align: center; padding: 60px 0 20px; }
+        .page-header h1 { font-size: 2.5rem; color: #fff; margin-bottom: 10px; }
+        .page-header p { color: var(--text-muted); font-size: 1.1rem; }
+
+        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin: 40px 0 60px; }
+        .price-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 16px; padding: 35px 25px; display: flex; flex-direction: column; position: relative; transition: transform 0.3s ease; }
+        .price-card:hover { transform: translateY(-5px); border-color: var(--primary); }
+        .price-card.featured { border: 2px solid var(--primary); }
+        .badge { position: absolute; top: -12px; right: 20px; background: var(--primary); color: #fff; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; }
+
+        .price-card h3 { font-size: 1.5rem; margin-bottom: 10px; color: #fff; }
+        .price-card .desc { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 25px; min-height: 45px; }
+        .price-card .price { font-size: 2rem; font-weight: 800; color: var(--primary); margin-bottom: 25px; }
+        .price-card ul { list-style: none; margin-bottom: 30px; flex-grow: 1; }
+        .price-card ul li { color: var(--text-muted); margin-bottom: 12px; font-size: 0.95rem; padding-left: 20px; position: relative; }
+        .price-card ul li::before { content: "✓"; position: absolute; left: 0; color: var(--primary); font-weight: bold; }
+
+        footer { text-align: center; padding: 40px 20px; border-top: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.9rem; margin-top: 60px; }
+        .footer-links { display: flex; justify-content: center; gap: 15px; margin-bottom: 15px; flex-wrap: wrap; }
+        .footer-links a { color: var(--text-muted); text-decoration: none; }
+        .footer-links a:hover { color: var(--primary); }
+
+        @media (max-width: 768px) { .nav-links { display: none; } }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">VD <span>FLOW</span></a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Početna</a></li>
+                <li><a href="o-nama.html">O nama</a></li>
+                <li class="dropdown">
+                    <a href="#">Usluge ▾</a>
+                    <div class="dropdown-menu">
+                        <a href="usluge/vodjenje-mreza.html">Vođenje Društvenih Mreža</a>
+                        <a href="usluge/google-meta-oglasi.html">Google & Meta Oglasi</a>
+                        <a href="usluge/izrada-sadrzaja.html">Izrada Sadržaja (Content)</a>
+                        <a href="usluge/strategija-audit.html">Strategija & Audit</a>
+                    </div>
+                </li>
+                <li><a href="cjenik.html">Cjenik</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+        <a href="kontakt.html" class="btn-primary">Zatraži ponudu</a>
+    </header>
+
+    <main class="container">
+        <div class="page-header">
+            <h1>Paketi & Usluge</h1>
+            <p>Odaberite model suradnje koji najbolje odgovara potrebama vašeg poslovanja.</p>
+        </div>
+
+        <div class="pricing-grid">
+            <!-- Paket 1 -->
+            <div class="price-card">
+                <h3>START</h3>
+                <p class="desc">Za brendove koji žele uredan i redovit vizualni nastup na društvenim mrežama.</p>
+                <div class="price">Na upit</div>
+                <ul>
+                    <li>Vođenje 1 društvene mreže (IG ili FB)</li>
+                    <li>8 objava mjesečno (grafike/karuseli)</li>
+                    <li>Pisanje tekstova i istraživanje hashtagova</li>
+                    <li>Održavanje vizualnog identiteta</li>
+                </ul>
+                <a href="kontakt.html" class="btn-primary" style="text-align:center;">Odaberi START</a>
+            </div>
+
+            <!-- Paket 2 -->
+            <div class="price-card featured">
+                <div class="badge">Najpopularnije</div>
+                <h3>GROWTH</h3>
+                <p class="desc">Cjelovito rješenje za rastezanje dosega i stalni priljev novih upita.</p>
+                <div class="price">Na upit</div>
+                <ul>
+                    <li>Vođenje IG + FB profila</li>
+                    <li>12-15 objava mjesečno + Stories</li>
+                    <li>Izrada Reels i video sadržaja</li>
+                    <li>Upravljanje Meta oglasnim kampanjama</li>
+                    <li>Mjesečno izvješće i optimizacija</li>
+                </ul>
+                <a href="kontakt.html" class="btn-primary" style="text-align:center;">Odaberi GROWTH</a>
+            </div>
+
+            <!-- Paket 3 -->
+            <div class="price-card">
+                <h3>PERFORMANCE</h3>
+                <p class="desc">Usmjereno na napredne oglasne kampanje i maksimalne konverzije.</p>
+                <div class="price">Na upit</div>
+                <ul>
+                    <li>Google Ads (Search & Performance Max)</li>
+                    <li>Meta Ads (Facebook & Instagram)</li>
+                    <li>Postavljanje piksela i analitike</li>
+                    <li>Kontinuirano A/B testiranje oglasa</li>
+                    <li>Tjedna optimizacija i prilagodbe</li>
+                </ul>
+                <a href="kontakt.html" class="btn-primary" style="text-align:center;">Odaberi PERFORMANCE</a>
+            </div>
+        </div>
+    </main>
+
     <footer>
         <div class="footer-links">
             <a href="index.html">Početna</a> • 
