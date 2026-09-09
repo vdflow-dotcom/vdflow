@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cjenik & Paketi Usluga | VD FLOW</title>
-    <meta name="description" content="Pregledajte pakete i cijene digitalnog marketinga, vođenja društvenih mreža i oglašavanja. Zašto trošiti vrijeme kad ga možete umnožiti?">
+    <title>Cjenik Usluga | VD FLOW</title>
+    <meta name="description" content="Digitalni marketing za male biznise – jednostavni paketi za sadržaj, oglase i vođenje profila.">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
     <style>
@@ -48,22 +48,34 @@
 
         .btn-primary { background: var(--primary); color: #fff; padding: 10px 22px; border-radius: 50px; text-decoration: none; font-weight: 600; display: inline-block; }
 
-        .page-header { text-align: center; padding: 60px 0 20px; }
+        .page-header { text-align: center; padding: 50px 0 20px; }
         .page-header h1 { font-size: 2.5rem; color: #fff; margin-bottom: 10px; }
-        .page-header p { color: var(--text-muted); font-size: 1.1rem; }
+        .page-header p { color: var(--text-muted); font-size: 1.05rem; max-width: 700px; margin: 0 auto; }
 
-        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin: 40px 0 60px; }
-        .price-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 16px; padding: 35px 25px; display: flex; flex-direction: column; position: relative; transition: transform 0.3s ease; }
+        .section-title { font-size: 1.8rem; color: var(--primary); margin: 50px 0 20px; text-align: center; }
+
+        /* Grid za Pakete */
+        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px; margin-bottom: 40px; }
+        .price-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 16px; padding: 30px 20px; display: flex; flex-direction: column; position: relative; transition: transform 0.3s ease; }
         .price-card:hover { transform: translateY(-5px); border-color: var(--primary); }
         .price-card.featured { border: 2px solid var(--primary); }
-        .badge { position: absolute; top: -12px; right: 20px; background: var(--primary); color: #fff; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; }
+        .badge { position: absolute; top: -12px; right: 20px; background: var(--primary); color: #fff; padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; }
 
-        .price-card h3 { font-size: 1.5rem; margin-bottom: 10px; color: #fff; }
-        .price-card .desc { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 25px; min-height: 45px; }
-        .price-card .price { font-size: 2rem; font-weight: 800; color: var(--primary); margin-bottom: 25px; }
-        .price-card ul { list-style: none; margin-bottom: 30px; flex-grow: 1; }
-        .price-card ul li { color: var(--text-muted); margin-bottom: 12px; font-size: 0.95rem; padding-left: 20px; position: relative; }
+        .price-card h3 { font-size: 1.4rem; margin-bottom: 10px; color: #fff; }
+        .price-card .desc { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 20px; min-height: 40px; }
+        .price-card .price { font-size: 1.5rem; font-weight: 800; color: var(--primary); margin-bottom: 20px; }
+        .price-card ul { list-style: none; margin-bottom: 25px; flex-grow: 1; }
+        .price-card ul li { color: var(--text-muted); margin-bottom: 10px; font-size: 0.9rem; padding-left: 18px; position: relative; }
         .price-card ul li::before { content: "✓"; position: absolute; left: 0; color: var(--primary); font-weight: bold; }
+
+        /* Tablice za pojedinačne i jednokratne usluge */
+        .price-table { width: 100%; border-collapse: collapse; margin-bottom: 40px; background: var(--card-bg); border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color); }
+        .price-table th, .price-table td { padding: 15px 20px; text-align: left; border-bottom: 1px solid var(--border-color); }
+        .price-table th { background-color: rgba(168, 85, 247, 0.1); color: var(--primary); font-size: 1rem; }
+        .price-table td { color: var(--text-muted); font-size: 0.95rem; }
+        .price-table td.price-col { font-weight: bold; color: #fff; text-align: right; }
+
+        .note-box { background: rgba(31, 40, 51, 0.6); border-left: 4px solid var(--primary); padding: 20px; border-radius: 8px; margin: 40px 0; color: var(--text-muted); font-size: 0.9rem; }
 
         footer { text-align: center; padding: 40px 20px; border-top: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.9rem; margin-top: 60px; }
         .footer-links { display: flex; justify-content: center; gap: 15px; margin-bottom: 15px; flex-wrap: wrap; }
@@ -99,55 +111,148 @@
 
     <main class="container">
         <div class="page-header">
-            <h1>Paketi & Usluge</h1>
-            <p>Odaberite model suradnje koji najbolje odgovara potrebama vašeg poslovanja.</p>
+            <h1>Cjenik Usluga</h1>
+            <p>Digitalni marketing za male biznise – jednostavni paketi za sadržaj, oglase i vođenje profila prilagođeni vašim ciljevima.</p>
         </div>
 
+        <!-- SEKCIJA 1: GLAVNI PAKETI -->
+        <h2 class="section-title">Glavni Mjesečni Paketi</h2>
         <div class="pricing-grid">
-            <!-- Paket 1 -->
             <div class="price-card">
-                <h3>START</h3>
-                <p class="desc">Za brendove koji žele uredan i redovit vizualni nastup na društvenim mrežama.</p>
-                <div class="price">Na upit</div>
+                <h3>Profil Start</h3>
+                <p class="desc">Za mali lokalni biznis koji želi uredan i živ Instagram profil.</p>
+                <div class="price">180 – 250 € <span style="font-size:0.8rem; font-weight:normal;">/ mj</span></div>
                 <ul>
-                    <li>Vođenje 1 društvene mreže (IG ili FB)</li>
-                    <li>8 objava mjesečno (grafike/karuseli)</li>
-                    <li>Pisanje tekstova i istraživanje hashtagova</li>
-                    <li>Održavanje vizualnog identiteta</li>
+                    <li>Vođenje 1 profila (Instagram)</li>
+                    <li>8 objava mjesečno</li>
+                    <li>Osnovni copy / caption za svaku objavu</li>
+                    <li>Osnovni vizuali / prilagodba materijala</li>
+                    <li>Plan objava i objava sadržaja</li>
+                    <li>Kratki mjesečni pregled</li>
                 </ul>
-                <a href="kontakt.html" class="btn-primary" style="text-align:center;">Odaberi START</a>
+                <a href="kontakt.html" class="btn-primary" style="text-align:center;">Zatraži Start</a>
             </div>
 
-            <!-- Paket 2 -->
             <div class="price-card featured">
-                <div class="badge">Najpopularnije</div>
-                <h3>GROWTH</h3>
-                <p class="desc">Cjelovito rješenje za rastezanje dosega i stalni priljev novih upita.</p>
-                <div class="price">Na upit</div>
+                <div class="badge">Preporučeno</div>
+                <h3>Profil Aktivno</h3>
+                <p class="desc">Za biznise koji žele redovitiji profil i više aktivnosti na mreži.</p>
+                <div class="price">300 – 450 € <span style="font-size:0.8rem; font-weight:normal;">/ mj</span></div>
                 <ul>
-                    <li>Vođenje IG + FB profila</li>
-                    <li>12-15 objava mjesečno + Stories</li>
-                    <li>Izrada Reels i video sadržaja</li>
-                    <li>Upravljanje Meta oglasnim kampanjama</li>
-                    <li>Mjesečno izvješće i optimizacija</li>
+                    <li>Vođenje 1 profila</li>
+                    <li>12 objava mjesečno + 8–12 Stories</li>
+                    <li>Osnovni community management</li>
+                    <li>1 Reel / edit od dostavljenog materijala</li>
+                    <li>Prijedlozi tema za objave</li>
+                    <li>Mjesečni mini izvještaj + call</li>
                 </ul>
-                <a href="kontakt.html" class="btn-primary" style="text-align:center;">Odaberi GROWTH</a>
+                <a href="kontakt.html" class="btn-primary" style="text-align:center;">Zatraži Aktivno</a>
             </div>
 
-            <!-- Paket 3 -->
             <div class="price-card">
-                <h3>PERFORMANCE</h3>
-                <p class="desc">Usmjereno na napredne oglasne kampanje i maksimalne konverzije.</p>
-                <div class="price">Na upit</div>
+                <h3>Ads Fokus</h3>
+                <p class="desc">Za generiranje upita, poziva i direktne prodaje putem oglasa.</p>
+                <div class="price">220 – 350 € <span style="font-size:0.8rem; font-weight:normal;">/ mj</span></div>
                 <ul>
-                    <li>Google Ads (Search & Performance Max)</li>
-                    <li>Meta Ads (Facebook & Instagram)</li>
-                    <li>Postavljanje piksela i analitike</li>
-                    <li>Kontinuirano A/B testiranje oglasa</li>
-                    <li>Tjedna optimizacija i prilagodbe</li>
+                    <li>Vođenje 1 platforme (Google ili Meta Ads)</li>
+                    <li>Postavljanje i slaganje kampanja</li>
+                    <li>1 – 3 kampanje / ad seta</li>
+                    <li>Osnovni copy i optimizacija publika</li>
+                    <li>Mjesečni pregled rezultata i preporuke</li>
                 </ul>
-                <a href="kontakt.html" class="btn-primary" style="text-align:center;">Odaberi PERFORMANCE</a>
+                <a href="kontakt.html" class="btn-primary" style="text-align:center;">Zatraži Ads Fokus</a>
             </div>
+
+            <div class="price-card">
+                <h3>Lokalni Rast</h3>
+                <p class="desc">Kombinacija vođenja profila i oglasnih kampanja za maksimalni rezultat.</p>
+                <div class="price">450 – 650 € <span style="font-size:0.8rem; font-weight:normal;">/ mj</span></div>
+                <ul>
+                    <li>Vođenje 1 profila (8 objava + 4-8 stories)</li>
+                    <li>Vođenje 1 oglasne platforme (Google ili Meta)</li>
+                    <li>Osnovni content plan</li>
+                    <li>Mjesečni izvještaj + 1 kratki call</li>
+                </ul>
+                <a href="kontakt.html" class="btn-primary" style="text-align:center;">Zatraži Lokalni Rast</a>
+            </div>
+        </div>
+
+        <!-- SEKCIJA 2: CONTENT PAKETI -->
+        <h2 class="section-title">Content Paketi (bez vođenja profila)</h2>
+        <div class="pricing-grid">
+            <div class="price-card">
+                <h3>Post paket Mini</h3>
+                <p class="desc">4 gotove objave mjesečno (vizual + caption) za samostalno objavljivanje.</p>
+                <div class="price">140 – 180 €</div>
+                <a href="kontakt.html" class="btn-primary" style="text-align:center; margin-top:auto;">Naruči Mini</a>
+            </div>
+
+            <div class="price-card">
+                <h3>Post paket Standard</h3>
+                <p class="desc">8 gotovih objava mjesečno (vizual + caption) – mjesec unaprijed riješen sadržaj.</p>
+                <div class="price">260 – 360 €</div>
+                <a href="kontakt.html" class="btn-primary" style="text-align:center; margin-top:auto;">Naruči Standard</a>
+            </div>
+
+            <div class="price-card">
+                <h3>Reels paket (Edit)</h3>
+                <p class="desc">4 montirana Reels videa od materijala koji vi pošaljete.</p>
+                <div class="price">120 – 220 €</div>
+                <a href="kontakt.html" class="btn-primary" style="text-align:center; margin-top:auto;">Naruči Reels Edit</a>
+            </div>
+
+            <div class="price-card">
+                <h3>Reels (Snimanje + Edit)</h3>
+                <p class="desc">4 kratka videa + 1 dolazak na lokaciju + montaža.</p>
+                <div class="price">280 – 480 €</div>
+                <a href="kontakt.html" class="btn-primary" style="text-align:center; margin-top:auto;">Naruči Snimanje</a>
+            </div>
+        </div>
+
+        <!-- SEKCIJA 3: DODATNE I JEDNOKRATNE USLUGE -->
+        <h2 class="section-title">Dodatne & Jednokratne Usluge</h2>
+        
+        <table class="price-table">
+            <thead>
+                <tr>
+                    <th>Pojedinačne usluge (Add-ons)</th>
+                    <th style="text-align:right;">Cijena</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>1 statična objava (vizual + caption)</td><td class="price-col">45 – 60 €</td></tr>
+                <tr><td>1 carousel objava</td><td class="price-col">55 – 80 €</td></tr>
+                <tr><td>1 story set (3 – 5 storyja)</td><td class="price-col">25 – 45 €</td></tr>
+                <tr><td>1 video objava / kratka animacija</td><td class="price-col">50 – 80 €</td></tr>
+                <tr><td>1 montirani reel od dostavljenih snimki</td><td class="price-col">25 – 60 €</td></tr>
+                <tr><td>1 reel sa snimanjem na lokaciji</td><td class="price-col">80 – 150 €</td></tr>
+            </tbody>
+        </table>
+
+        <table class="price-table">
+            <thead>
+                <tr>
+                    <th>Jednokratne usluge</th>
+                    <th style="text-align:right;">Cijena</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Audit Instagram profila</td><td class="price-col">60 – 120 €</td></tr>
+                <tr><td>Audit oglasa (Google / Meta)</td><td class="price-col">80 – 150 €</td></tr>
+                <tr><td>Setup Google Ads kampanje</td><td class="price-col">150 – 250 €</td></tr>
+                <tr><td>Setup Meta Ads kampanje</td><td class="price-col">120 – 220 €</td></tr>
+                <tr><td>Pixel / praćenje konverzija / povezivanje računa</td><td class="price-col">80 – 180 €</td></tr>
+                <tr><td>Mjesečni content plan bez izrade objava</td><td class="price-col">50 – 90 €</td></tr>
+                <tr><td>Kratki savjetodavni poziv (45 – 60 min)</td><td class="price-col">40 – 80 €</td></tr>
+            </tbody>
+        </table>
+
+        <div class="note-box">
+            <p><strong>Napomene za suradnju:</strong></p>
+            <ul>
+                <li>Sve cijene su informativne i prilagođavaju se opsegu posla, količini materijala i cilju kampanje.</li>
+                <li>Budžet za oglašavanje nije uključen u mjesečne naknade za Ads pakete.</li>
+            </ul>
         </div>
     </main>
 
