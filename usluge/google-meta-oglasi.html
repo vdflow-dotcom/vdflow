@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google & Meta Oglasi | VD FLOW</title>
+    <meta name="description" content="Plaćene oglasne kampanje na Googleu, Meta (Instagram & Facebook) platformama koje donose stvarne konverzije i upite.">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+    <style>
+        :root {
+            --bg-color: #0b0c10;
+            --card-bg: #1f2833;
+            --primary: #a855f7;
+            --text-main: #ffffff;
+            --text-muted: #c5c6c7;
+            --border-color: #2d3748;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background-color: var(--bg-color); color: var(--text-main); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; }
+        .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+
+        header {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 20px; background: rgba(11, 12, 16, 0.95);
+            position: sticky; top: 0; z-index: 1000;
+            backdrop-filter: blur(8px); border-bottom: 1px solid var(--border-color);
+        }
+
+        .logo { font-size: 1.5rem; font-weight: 800; color: var(--primary); text-decoration: none; }
+        .logo span { color: #fff; }
+        .nav-links { display: flex; list-style: none; gap: 25px; align-items: center; }
+        .nav-links a { color: var(--text-muted); text-decoration: none; font-weight: 500; transition: 0.3s; }
+        .nav-links a:hover { color: var(--primary); }
+
+        .dropdown { position: relative; display: inline-block; }
+        .dropdown-menu {
+            display: none; position: absolute; top: 100%; left: 0;
+            background-color: var(--card-bg); min-width: 230px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.5);
+            border: 1px solid var(--border-color); border-radius: 12px;
+            padding: 10px 0; z-index: 1001;
+        }
+        .dropdown-menu a { color: var(--text-muted); padding: 10px 20px; text-decoration: none; display: block; font-size: 0.95rem; }
+        .dropdown-menu a:hover { background-color: var(--border-color); color: var(--primary); }
+        .dropdown:hover .dropdown-menu { display: block; }
+
+        .btn-primary { background: var(--primary); color: #fff; padding: 10px 22px; border-radius: 50px; text-decoration: none; font-weight: 600; display: inline-block; }
+
+        .service-detail { padding: 60px 0; }
+        .service-detail h1 { font-size: 2.5rem; color: #fff; margin-bottom: 20px; text-align: center; }
+        .card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 16px; padding: 40px; margin-top: 20px; }
+        .card h2 { color: var(--primary); font-size: 1.4rem; margin-bottom: 15px; }
+        .card p { color: var(--text-muted); font-size: 1.05rem; margin-bottom: 20px; }
+        .card ul { list-style: none; margin-bottom: 30px; }
+        .card ul li { color: var(--text-muted); margin-bottom: 10px; padding-left: 20px; position: relative; }
+        .card ul li::before { content: "•"; position: absolute; left: 0; color: var(--primary); font-size: 1.2rem; }
+
+        footer { text-align: center; padding: 40px 20px; border-top: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.9rem; margin-top: 60px; }
+        .footer-links { display: flex; justify-content: center; gap: 15px; margin-bottom: 15px; flex-wrap: wrap; }
+        .footer-links a { color: var(--text-muted); text-decoration: none; }
+        .footer-links a:hover { color: var(--primary); }
+
+        @media (max-width: 768px) { .nav-links { display: none; } }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="../index.html" class="logo">VD <span>FLOW</span></a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="../index.html">Početna</a></li>
+                <li><a href="../o-nama.html">O nama</a></li>
+                <li class="dropdown">
+                    <a href="#">Usluge ▾</a>
+                    <div class="dropdown-menu">
+                        <a href="vodjenje-mreza.html">Vođenje Društvenih Mreža</a>
+                        <a href="google-meta-oglasi.html">Google & Meta Oglasi</a>
+                        <a href="izrada-sadrzaja.html">Izrada Sadržaja (Content)</a>
+                        <a href="strategija-audit.html">Strategija & Audit</a>
+                    </div>
+                </li>
+                <li><a href="../cjenik.html">Cjenik</a></li>
+                <li><a href="../kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+        <a href="../kontakt.html" class="btn-primary">Zatraži ponudu</a>
+    </header>
+
+    <main class="container service-detail">
+        <h1>Google & Meta Oglasi</h1>
+        <div class="card">
+            <h2>Dosegnite prave kupce u pravom trenutku</h2>
+            <p>Plaćeni oglasi pružaju najbrži povrat ulaganja kada su precizno usmjereni. Specijalizirani smo za izradu, vođenje i stalnu optimizaciju Google Ads i Meta (FB/IG) kampanja.</p>
+
+            <h2>Što uključuje kampanja:</h2>
+            <ul>
+                <li>Postavljanje Google Search & Performance Max kampanja</li>
+                <li>Dizajniranje i testiranje oglasnih vizuala (A/B testovi)</li>
+                <li>Precizno ciljanje publike i analitika konverzija</li>
+                <li>Integritet praćenja preko Google Tag Managera & Pixela</li>
+                <li>Kontinuirano smanjenje troška po kliku i upitu</li>
+            </ul>
+
+            <a href="../kontakt.html" class="btn-primary">Pokrenite Ads Kampanju</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="../index.html">Početna</a> • 
+            <a href="../o-nama.html">O nama</a> • 
+            <a href="../cjenik.html">Cjenik</a> • 
+            <a href="../kontakt.html">Kontakt</a>
+        </div>
+        <p>&copy; 2026 VD FLOW. Sva prava pridržana.</p>
+    </footer>
+
+</body>
+</html>
