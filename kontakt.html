@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kontakt | VD FLOW</title>
+
+    <meta name="description" content="Stupite u kontakt s VD FLOW. Pošaljite upit za vođenje društvenih mreža, Google i Meta oglase ili izradu contenta.">
+    <!-- Open Graph (Social Preview) -->
+    <meta property="og:title" content="Kontakt | VD FLOW Digitalni Marketing">
+    <meta property="og:description" content="Stupite u kontakt s nama. Zatražite ponudu za vođenje društvenih mreža, Google ili Meta oglase.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vdflow.hr/kontakt.html">
+    
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,6 +33,7 @@
                 <li><a href="usluge.html">Usluge</a></li>
                 <li><a href="cjenik.html">Cjenik</a></li>
                 <li><a href="kontakt.html" class="active">Kontakt</a></li>
+                
             </ul>
         </nav>
         <a href="kontakt.html" class="btn-primary">Zatraži ponudu</a>
@@ -36,8 +45,7 @@
             
             <!-- INFORMACIJE -->
             <div class="contact-info">
-                <h2>Javite nam se</h2>
-                <p>Spremne opcije za rast vašeg poslovanja. Pošaljite upit ili nas zapratite na društvenim mrežama.</p>
+                <p>Imate pitanje ili ste zainteresirani za suradnju? Pošaljite nam poruku ili nas zapratite na društvenim mrežama i pišite u DM, a mi ćemo Vam odgovoriti u najkraćem roku.</p>
                 
                 <div class="info-item">
                     <strong>E-mail</strong>
@@ -88,8 +96,32 @@
 
     <!-- FOOTER -->
     <footer class="footer">
+<div class="footer-links">
+            <a href="index.html">Početna</a> •
+            <a href="o-nama.html">O nama</a> •
+            <a href="cjenik.html">Cjenik</a> •
+            <a href="kontakt.html">Kontakt</a> •
+            <a href="politika-privatnosti.html">Politika privatnosti</a>
+        </div>
         <p>&copy; 2026 VD FLOW. Sva prava pridržana.</p>
     </footer>
 
+    <!-- COOKIE CONSENT BANNER -->
+<div id="cookie-banner" style="position: fixed; bottom: 20px; left: 20px; right: 20px; background: rgba(15, 23, 42, 0.95); border: 1px solid rgba(255,255,255,0.1); padding: 15px 20px; border-radius: 12px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 10px 25px rgba(0,0,0,0.5); backdrop-filter: blur(8px); z-index: 9999; flex-wrap: wrap; gap: 15px;">
+    <p style="margin: 0; color: #cbd5e0; font-size: 0.9rem; max-width: 800px;">
+        Ova web stranica koristi kolačiće kako bi vam osigurala najbolje korisničko iskustvo. Saznajte više u našoj <a href="politika-privatnosti.html" style="color: #a855f7; text-decoration: underline;">Politici privatnosti</a>.
+    </p>
+    <button onclick="acceptCookies()" class="btn-primary" style="padding: 8px 20px; font-size: 0.85rem; cursor: pointer;">Prihvaćam</button>
+</div>
+
+<script>
+    function acceptCookies() {
+        localStorage.setItem('cookieAccepted', 'true');
+        document.getElementById('cookie-banner').style.display = 'none';
+    }
+    if (localStorage.getItem('cookieAccepted') === 'true') {
+        document.getElementById('cookie-banner').style.display = 'none';
+    }
+</script>
 </body>
 </html>
