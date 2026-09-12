@@ -11,7 +11,7 @@
     <meta name="author" content="VD FLOW">
     <link rel="canonical" href="https://vdflow.hr/">
     
-    <!-- Open Graph (Facebook, LinkedIn, WhatsApp) -->
+    <!-- Open Graph -->
     <meta property="og:title" content="VD FLOW | Digitalni Marketing">
     <meta property="og:description" content="Povećajte vidljivost i dođite do novih klijenata uz stručno vođenje i oglašavanje.">
     <meta property="og:type" content="website">
@@ -27,49 +27,133 @@
       "description": "Stručne usluge digitalnog marketinga, oglašavanja i vođenja društvenih mreža.",
       "sameAs": [
         "https://www.instagram.com/vd_flow_"
-      ],
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Usluge digitalnog marketinga",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Vođenje društvenih mreža"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Upravljanje oglasnim kampanjama"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Izrada vizualnog sadržaja"
-            }
-          }
-        ]
-      }
+      ]
     }
     </script>
 
-    <!-- VAŽNO: Poveznica na vanjski stil koja vraća dizajn -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- UGRAĐENI DIZAJN DA SE ODMAH PRIKAŽE ISPRAVNO -->
+    <style>
+        :root {
+            --bg-color: #0b0c10;
+            --card-bg: #1f2833;
+            --primary: #a855f7;
+            --text-main: #ffffff;
+            --text-muted: #c5c6c7;
+        }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header.header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background: rgba(11, 12, 16, 0.9);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            letter-spacing: 2px;
+        }
+        nav.nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+        nav.nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 400;
+            transition: color 0.3s;
+        }
+        nav.nav a:hover, nav.nav a.active {
+            color: var(--primary);
+        }
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+            padding: 10px 22px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: opacity 0.3s;
+        }
+        .btn-primary:hover {
+            opacity: 0.9;
+        }
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid var(--primary);
+            padding: 10px 22px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .hero-section {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 60px 20px;
+        }
+        .hero-content {
+            max-width: 800px;
+        }
+        .hero-content h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        .hero-content p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+        footer.footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(11, 12, 16, 0.9);
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        .footer-links {
+            margin-bottom: 10px;
+        }
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            margin: 0 5px;
+        }
+    </style>
 </head>
 <body>
 
     <!-- NAVIGACIJA -->
     <header class="header">
         <div class="logo">
-            <a href="index.html">
+            <a href="index.html" style="text-decoration: none;">
                 <span class="logo-text">VD FLOW</span>
             </a>
         </div>
@@ -110,7 +194,7 @@
     </footer>
 
     <!-- COOKIE CONSENT BANNER -->
-    <div id="cookie-banner" style="position: fixed; bottom: 20px; left: 20px; right: 20px; background: rgba(15, 23, 42, 0.95); border: 1px solid rgba(255,255,255,0.1); padding: 15px 20px; border-radius: 12px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 10px 25px rgba(0,0,0,0.5); backdrop-filter: blur(8px); z-index: 9999; flex-wrap: wrap; gap: 15px;">
+    <div id="cookie-banner" style="position: fixed; bottom: 20px; left: 20px; right: 20px; background: rgba(31, 40, 51, 0.95); border: 1px solid rgba(255,255,255,0.1); padding: 15px 20px; border-radius: 12px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 10px 25px rgba(0,0,0,0.5); z-index: 9999; flex-wrap: wrap; gap: 15px;">
         <p style="margin: 0; color: #cbd5e0; font-size: 0.9rem; max-width: 800px;">
             Ova web stranica koristi kolačiće kako bi Vam osigurala najbolje korisničko iskustvo. Saznajte više u našoj <a href="politika-privatnosti.html" style="color: #a855f7; text-decoration: underline;">Politici privatnosti</a>.
         </p>
