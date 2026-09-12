@@ -3,249 +3,258 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VD FLOW | Digitalni Marketing & Vođenje Društvenih Mreža</title>
     
-    <!-- SEO & Open Graph Meta Tags -->
-    <meta name="description" content="VD FLOW - Stručne usluge digitalnog marketinga, oglašavanja i vođenja društvenih mreža. Povećajte vidljivost i dođite do novih klijenata.">
-    <meta name="keywords" content="digitalni marketing, vođenje društvenih mreža, oglasi, Google Ads, Meta Ads, izrada sadržaja, VD FLOW">
+    <!-- SEO & AI Optimizacija -->
+    <title>VD FLOW | Obrt za digitalni marketing i vođenje društvenih mreža</title>
+    <meta name="description" content="VD FLOW - Stručno vođenje društvenih mreža, izrada vizualnog sadržaja i ciljani oglasi koji donose rezultate za vaš obrt ili tvrtku. Vlasnica: Vlatka Dizdarević.">
+    <meta name="keywords" content="digitalni marketing, vođenje društvenih mreža, izrada oglasa, obrt za marketing, VD FLOW, Vlatka Dizdarević">
     <meta name="author" content="VD FLOW">
-    <link rel="canonical" href="https://vdflow.hr/">
+    <meta name="robots" content="index, follow">
     
-    <!-- Open Graph (Facebook, LinkedIn, WhatsApp) -->
-    <meta property="og:title" content="VD FLOW | Digitalni Marketing">
-    <meta property="og:description" content="Povećajte vidljivost i dođite do novih klijenata uz stručno vođenje i oglašavanje.">
+    <!-- Open Graph / AI / Social Sharing -->
+    <meta property="og:title" content="VD FLOW | Digitalni marketing i vođenje društvenih mreža">
+    <meta property="og:description" content="Preuzimamo brigu o vođenju profila, izradi vizualnog sadržaja i oglasima kako biste se Vi mogli posvetiti svom poslovanju.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://vdflow.hr/">
-    
-    <!-- Schema.org / AI Optimizacija (GEO) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "VD FLOW",
-      "url": "https://vdflow.hr/",
-      "description": "Stručne usluge digitalnog marketinga, oglašavanja i vođenja društvenih mreža.",
-      "sameAs": [
-        "https://www.instagram.com/vd_flow_"
-      ],
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Usluge digitalnog marketinga",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Vođenje društvenih mreža"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Upravljanje oglasnim kampanjama"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Izrada vizualnog sadržaja"
-            }
-          }
-        ]
-      }
-    }
-    </script>
+    <meta property="og:locale" content="hr_HR">
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-    <!-- UGRAĐENI DIZAJN (NE OVISI O VANJSKIM DATOTEKAMA) -->
     <style>
-        :root {
-            --bg-color: #0b0c10;
-            --card-bg: #1f2833;
-            --primary: #a855f7;
-            --primary-hover: #9333ea;
-            --text-main: #ffffff;
-            --text-muted: #c5c6c7;
-            --border-color: rgba(255, 255, 255, 0.1);
-        }
-
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
         body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            font-family: 'Poppins', sans-serif;
+            background-color: #0d0f18;
+            color: #e0e0e0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
-            min-height: 100vh;
-            line-height: 1.6;
+            position: relative;
+            overflow-x: hidden;
         }
 
-        /* HEADER & NAV */
-        header.header {
+        /* Pozadinski video ili efekt */
+        .bg-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+            opacity: 0.35;
+        }
+
+        /* Tamni overlay preko videa da se tekst čita */
+        .bg-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(13, 15, 24, 0.75);
+            z-index: -1;
+        }
+
+        header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 5%;
-            background: rgba(11, 12, 16, 0.95);
-            border-bottom: 1px solid var(--border-color);
+            padding: 20px 40px;
+            background-color: rgba(13, 15, 24, 0.85);
+            border-bottom: 1px solid rgba(168, 85, 247, 0.2);
+            backdrop-filter: blur(10px);
             position: sticky;
             top: 0;
-            z-index: 1000;
-            backdrop-filter: blur(8px);
+            z-index: 100;
         }
 
-        .logo-text {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary);
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
             letter-spacing: 2px;
-            text-decoration: none;
+            text-shadow: 0 0 10px rgba(168, 85, 247, 0.5);
         }
 
-        nav.nav ul {
+        nav ul {
             display: flex;
             list-style: none;
             gap: 25px;
-            align-items: center;
         }
 
-        nav.nav a {
-            color: var(--text-muted);
+        nav ul li a {
+            color: #b4b4b4;
             text-decoration: none;
-            font-weight: 400;
             transition: color 0.3s ease;
-            font-size: 0.95rem;
+            font-size: 15px;
         }
 
-        nav.nav a:hover, nav.nav a.active {
-            color: var(--primary);
+        nav ul li a:hover,
+        nav ul li a.active {
+            color: #c084fc;
+            text-shadow: 0 0 8px rgba(192, 132, 252, 0.4);
         }
 
-        /* BUTTONS */
-        .btn-primary {
-            background-color: var(--primary);
-            color: white;
-            padding: 10px 22px;
-            border-radius: 6px;
+        .hero {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 80px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            color: #fff;
+            margin-bottom: 20px;
+            text-shadow: 0 0 15px rgba(168, 85, 247, 0.4);
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #d1d5db;
+            margin-bottom: 35px;
+            max-width: 700px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn-primary, .btn-secondary {
+            padding: 12px 28px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
             text-decoration: none;
-            font-weight: 600;
-            transition: background-color 0.3s ease, opacity 0.3s ease;
-            display: inline-block;
-            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #7c3aed, #c084fc);
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(124, 58, 237, 0.4);
+            border: none;
         }
 
         .btn-primary:hover {
-            background-color: var(--primary-hover);
-            opacity: 0.95;
+            opacity: 0.9;
+            transform: translateY(-2px);
         }
 
         .btn-secondary {
             background: transparent;
-            color: white;
-            border: 2px solid var(--primary);
-            padding: 10px 22px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: background 0.3s ease;
-            display: inline-block;
-            font-size: 0.95rem;
+            color: #fff;
+            border: 1px solid rgba(192, 132, 252, 0.5);
         }
 
         .btn-secondary:hover {
-            background: rgba(168, 85, 247, 0.1);
+            background: rgba(192, 132, 252, 0.1);
+            border-color: #c084fc;
         }
 
-        /* HERO SECTION */
-        .hero-section {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        footer {
             text-align: center;
-            padding: 80px 20px;
-        }
-
-        .hero-content {
-            max-width: 850px;
-        }
-
-        .hero-content h1 {
-            font-size: 2.8rem;
-            margin-bottom: 20px;
-            font-weight: 700;
-            letter-spacing: -0.5px;
-        }
-
-        .hero-content p {
-            font-size: 1.15rem;
-            color: var(--text-muted);
-            margin-bottom: 35px;
-            line-height: 1.7;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        /* FOOTER */
-        footer.footer {
-            text-align: center;
-            padding: 25px 20px;
-            background: rgba(11, 12, 16, 0.95);
-            border-top: 1px solid var(--border-color);
-            color: var(--text-muted);
-            font-size: 0.9rem;
+            padding: 30px 20px;
+            background-color: rgba(13, 15, 24, 0.95);
+            border-top: 1px solid rgba(168, 85, 247, 0.2);
+            font-size: 13px;
+            color: #9ca3af;
         }
 
         .footer-links {
-            margin-bottom: 10px;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 15px;
         }
 
-        .footer-links a {
-            color: var(--text-muted);
+        .footer-links li a {
+            color: #9ca3af;
             text-decoration: none;
-            margin: 0 8px;
             transition: color 0.3s;
         }
 
-        .footer-links a:hover {
-            color: var(--primary);
+        .footer-links li a:hover {
+            color: #c084fc;
         }
 
-        /* RESPONSIVE */
+        .footer-legal {
+            margin-bottom: 12px;
+            line-height: 1.6;
+            color: #b4b4b4;
+            font-size: 13px;
+        }
+
+        footer p {
+            color: #6b7280;
+            font-size: 12px;
+        }
+
+        /* Cookie banner */
+        #cookie-banner {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            background: rgba(15, 23, 42, 0.95);
+            border: 1px solid rgba(168, 85, 247, 0.3);
+            padding: 15px 20px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            z-index: 1000;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+            backdrop-filter: blur(8px);
+        }
+
+        #cookie-banner p {
+            color: #cbd5e0;
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        #cookie-banner a {
+            color: #c084fc;
+            text-decoration: underline;
+        }
+
         @media (max-width: 768px) {
-            nav.nav {
-                display: none; /* Može se kasnije proširiti za mobilni meni ako zatreba */
-            }
-            .hero-content h1 {
-                font-size: 2.1rem;
-            }
+            header { padding: 15px 20px; flex-direction: column; gap: 10px; }
+            nav ul { gap: 15px; font-size: 14px; }
+            .hero h1 { font-size: 32px; }
+            #cookie-banner { flex-direction: column; align-items: flex-start; }
         }
     </style>
 </head>
 <body>
 
-    <!-- NAVIGACIJA -->
-    <header class="header">
-        <div class="logo">
-            <a href="index.html" class="logo-text">VD FLOW</a>
-        </div>
-        <nav class="nav">
+    <!-- Pozadinski video (zamijeni "video.mp4" s nazivom svog video fajla ako ga imaš u mapi, ili ostavi ako si ga tako nazvala) -->
+    <video autoplay muted loop class="bg-video">
+        <source src="video.mp4" type="video/mp4">
+    </video>
+    <div class="bg-overlay"></div>
+
+    <header>
+        <div class="logo">VD FLOW</div>
+        <nav>
             <ul>
                 <li><a href="index.html" class="active">Početna</a></li>
                 <li><a href="o-nama.html">O nama</a></li>
@@ -254,39 +263,38 @@
                 <li><a href="kontakt.html">Kontakt</a></li>
             </ul>
         </nav>
-        <a href="kontakt.html" class="btn-primary">Zatražite ponudu</a>
     </header>
 
-    <!-- HERO SEKCIJA -->
-    <main class="hero-section">
-        <div class="hero-content">
-            <h1>Digitalni marketing, vođenje društvenih mreža i oglasi koji donose rezultate</h1>
-            <p>Preuzimamo brigu o vođenju profila, izradi vizualnog sadržaja i oglasima kako biste se Vi mogli posvetiti svom poslovanju.</p>
-            <div class="hero-buttons">
-                <a href="cjenik.html" class="btn-secondary">Pogledajte cjenik</a>
-                <a href="kontakt.html" class="btn-primary">Kontaktirajte nas</a>
-            </div>
+    <main class="hero">
+        <h1>Digitalni marketing, vođenje društvenih mreža i oglasi koji donose rezultate</h1>
+        <p>Preuzimamo brigu o vođenju profila, izradi vizualnog sadržaja i oglasima kako bi se Vi mogli posvetiti svom poslovanju.</p>
+        <div class="cta-buttons">
+            <a href="cjenik.html" class="btn-primary">Pogledajte cjenik</a>
+            <a href="kontakt.html" class="btn-secondary">Kontaktirajte nas</a>
         </div>
     </main>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="footer-links">
-            <a href="index.html">Početna</a> •
-            <a href="o-nama.html">O nama</a> •
-            <a href="cjenik.html">Cjenik</a> •
-            <a href="kontakt.html">Kontakt</a> •
-            <a href="politika-privatnosti.html">Politika privatnosti</a>
+    <footer>
+        <ul class="footer-links">
+            <li><a href="index.html">Početna</a></li>
+            <li><a href="o-nama.html">O nama</a></li>
+            <li><a href="usluge.html">Usluge</a></li>
+            <li><a href="cjenik.html">Cjenik</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="politika-privatnosti.html">Politika privatnosti</a></li>
+        </ul>
+        
+        <div class="footer-legal">
+            <strong>VD FLOW</strong> • Obrt za digitalni marketing | Vlasnik: Vlatka Dizdarević | Sjedište: Gradek 26, 10255 Gornji Stupnik | OIB: 77462129969 | Upisano u Obrtni registar
         </div>
+
         <p>&copy; 2026 VD FLOW. Sva prava pridržana.</p>
     </footer>
 
-    <!-- COOKIE CONSENT BANNER -->
-    <div id="cookie-banner" style="position: fixed; bottom: 20px; left: 20px; right: 20px; background: rgba(31, 40, 51, 0.95); border: 1px solid rgba(255,255,255,0.1); padding: 15px 20px; border-radius: 12px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 10px 25px rgba(0,0,0,0.5); backdrop-filter: blur(8px); z-index: 9999; flex-wrap: wrap; gap: 15px;">
-        <p style="margin: 0; color: #cbd5e0; font-size: 0.9rem; max-width: 800px;">
-            Ova web stranica koristi kolačiće kako bi Vam osigurala najbolje korisničko iskustvo. Saznajte više u našoj <a href="politika-privatnosti.html" style="color: #a855f7; text-decoration: underline;">Politici privatnosti</a>.
-        </p>
-        <button onclick="acceptCookies()" class="btn-primary" style="padding: 8px 20px; font-size: 0.85rem; cursor: pointer; border: none;">Prihvaćam</button>
+    <!-- Cookie Banner Skripta -->
+    <div id="cookie-banner">
+        <p>Ova web stranica koristi kolačiće kako bi Vam osigurala najbolje korisničko iskustvo. Saznajte više u našoj <a href="politika-privatnosti.html">Politici privatnosti</a>.</p>
+        <button onclick="acceptCookies()" class="btn-primary" style="padding: 8px 16px; font-size: 0.85rem;">Prihvaćam</button>
     </div>
 
     <script>
@@ -298,5 +306,6 @@
             document.getElementById('cookie-banner').style.display = 'none';
         }
     </script>
+
 </body>
 </html>
