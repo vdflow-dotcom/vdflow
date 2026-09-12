@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vođenje Društvenih Mreža | VD FLOW Digitalni Marketing</title>
-    <meta name="description" content="Profesionalno vođenje Instagram i Facebook profila, izrada vizualnog sadržaja i kreiranje angažiranog communityja za vaš brend. Zatražite ponudu.">
+    <meta name="description" content="Profesionalno vođenje Instagram i Facebook profila, izrada vizualnog sadržaja i kreiranje angažiranog communityja za Vaš brend. Zatražite ponudu.">
     
     <!-- Open Graph / Social Media Preview -->
     <meta property="og:title" content="Vođenje Društvenih Mreža | VD FLOW Digitalni Marketing">
@@ -26,23 +26,72 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Service",
-      "name": "Vođenje Društvenih Mreža",
-      "serviceType": "Social Media Management",
-      "provider": {
-        "@type": "LocalBusiness",
-        "name": "VD FLOW - Obrt za digitalni marketing",
-        "email": "vdflow.kontakt@gmail.com",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Gradek 26",
-          "addressLocality": "Gornji Stupnik",
-          "postalCode": "10255",
-          "addressCountry": "HR"
+      "@graph": [
+        {
+          "@type": "Service",
+          "name": "Vođenje Društvenih Mreža",
+          "serviceType": "Social Media Management",
+          "provider": {
+            "@type": "LocalBusiness",
+            "name": "VD FLOW - Obrt za digitalni marketing",
+            "email": "vdflow.kontakt@gmail.com",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Gradek 26",
+              "addressLocality": "Gornji Stupnik",
+              "postalCode": "10255",
+              "addressCountry": "HR"
+            }
+          },
+          "areaServed": "HR",
+          "description": "Profesionalno vođenje društvenih mreža (Instagram, Facebook), planiranje sadržaja, dizajna grafika, copywriting i mjesečna analitika."
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Zašto je izrada sadržaja uključena u pakete vođenja mreža?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Da bismo postigli kvalitetu i konzistentnost, radimo s vizualnim materijalima i tekstovima prilagođenim Vašem brendu. Sve što kreiramo usklađeno je s vizualnim identitetom i ciljevima komunikacije."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Moram li poslati vlastite fotografije i videozapise?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ako imate autentične materijale (proizvode, radnu atmosferu, tim), to je velik plus. Ukoliko ih nemate, koristimo kombinaciju dizajna, stock fotografija i stock video materijala visoke kvalitete."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Koliko često se objavljuje sadržaj?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Učestalost ovisi o odabranom paketu i strategiji — obično od 2 do 4 objave tjedno, uz redovite Story objave kako bi profil ostao aktivan i privlačan publici."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Mogu li pregledati objave prije nego što budu objavljene?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Da, naravno. Svaki mjesec pripremamo i šaljemo plan sadržaja (kalendar objava) na Vaše odobrenje prije nego bilo što ide uživo."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Uključuje li vođenje mreža i plaćene oglase?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Osnovno vođenje društvenih mreža fokusira se na organski sadržaj i izgradnju zajednice. Za napredne prodajne kampanje i sponzorirane oglase nudimo uslugu Google & Meta Oglasi."
+              }
+            }
+          ]
         }
-      },
-      "areaServed": "HR",
-      "description": "Profesionalno vođenje društvenih mreža (Instagram, Facebook), planiranje sadržaja, dizajna grafika, copywriting i mjesečna analitika."
+      ]
     }
     </script>
 
@@ -134,6 +183,53 @@
         .card ul li { color: var(--text-muted); margin-bottom: 12px; padding-left: 24px; position: relative; font-size: 1rem; }
         .card ul li::before { content: "•"; position: absolute; left: 0; color: var(--primary); font-size: 1.5rem; line-height: 1; top: -2px; }
 
+        /* FAQ STILOVI (HARMONIKA) */
+        .faq-section { margin-top: 40px; }
+        .faq-item {
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            margin-bottom: 12px;
+            overflow: hidden;
+            background: rgba(11, 12, 16, 0.4);
+            transition: border-color 0.3s;
+        }
+        .faq-item:hover { border-color: var(--primary); }
+        .faq-question {
+            width: 100%;
+            text-align: left;
+            padding: 18px 20px;
+            background: none;
+            border: none;
+            color: var(--text-main);
+            font-size: 1.05rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-question::after {
+            content: '+';
+            font-size: 1.3rem;
+            color: var(--primary);
+            transition: transform 0.3s;
+        }
+        .faq-item.active .faq-question::after {
+            content: '−';
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease;
+            padding: 0 20px;
+            color: var(--text-muted);
+            font-size: 0.98rem;
+        }
+        .faq-item.active .faq-answer {
+            padding: 0 20px 18px 20px;
+            max-height: 300px;
+        }
+
         /* FOOTER */
         footer { 
             text-align: center; 
@@ -215,7 +311,47 @@
                 <li>Analiza angažmana i mjesečno izvještavanje</li>
             </ul>
 
-            <a href="../kontakt.html" class="btn-primary">Zatraži prilagođenu ponudu</a>
+            <!-- FAQ SEKCIJA -->
+            <div class="faq-section">
+                <h2>Često postavljana pitanja (FAQ)</h2>
+
+                <div class="faq-item">
+                    <button class="faq-question">Zašto je izrada sadržaja uključena u pakete vođenja mreža?</button>
+                    <div class="faq-answer">
+                        <p>Da bismo postigli kvalitetu i konzistentnost, radimo s vizualnim materijalima i tekstovima prilagođenim vašem brendu. Sve što kreiramo usklađeno je s vizualnim identitetom i ciljevima komunikacije.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">Moram li poslati vlastite fotografije i videozapise?</button>
+                    <div class="faq-answer">
+                        <p>Ako imate autentične materijale (proizvode, radnu atmosferu, tim), to je velik plus. Ukoliko ih nemate, koristimo kombinaciju dizajna, stock fotografija i stock video materijala visoke kvalitete.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">Koliko često se objavljuje sadržaj?</button>
+                    <div class="faq-answer">
+                        <p>Učestalost ovisi o odabranom paketu i strategiji — obično od 2 do 4 objave tjedno, uz redovite Story objave kako bi profil ostao aktivan i privlačan publici.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">Mogu li pregledati objave prije nego što budu objavljene?</button>
+                    <div class="faq-answer">
+                        <p>Da, naravno. Svaki mjesec pripremamo i šaljemo plan sadržaja (kalendar objava) na Vaše odobrenje prije nego bilo što ide uživo.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">Uključuje li vođenje mreža i plaćene oglase?</button>
+                    <div class="faq-answer">
+                        <p>Osnovno vođenje društvenih mreža fokusira se na organski sadržaj i izgradnju zajednice. Za napredne prodajne kampanje i sponzorirane oglase nudimo uslugu Google & Meta Oglasi.</p>
+                    </div>
+                </div>
+            </div>
+
+            <a href="../kontakt.html" class="btn-primary" style="margin-top: 25px;">Zatraži prilagođenu ponudu</a>
         </div>
     </main>
 
@@ -250,6 +386,23 @@
 
         menuToggle.addEventListener('click', () => {
             navLinks.classList.toggle('active');
+        });
+
+        // FAQ Harmonika Logika
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                
+                // Zatvori sve ostale (opcionalno za čišći izgled)
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    if (item !== faqItem) {
+                        item.classList.remove('active');
+                    }
+                });
+
+                faqItem.classList.toggle('active');
+            });
         });
 
         // Cookie banner logika
