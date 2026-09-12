@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Strategija & Marketing Audit | VD FLOW Digitalni Marketing</title>
-    <meta name="description" content="Detaljna analiza vaših postojećih marketinških kanala, oglasa i izrada jasnog akcijskog plana za skaliranje poslovanja. Zatražite audit.">
+    <meta name="description" content="Detaljna analiza Vaših postojećih marketinških kanala, oglasa i izrada jasnog akcijskog plana za skaliranje poslovanja. Zatražite audit.">
     
     <!-- Open Graph / Social Media Preview -->
     <meta property="og:title" content="Strategija & Marketing Audit | VD FLOW Digitalni Marketing">
-    <meta property="og:description" content="Pronađite uska grla u marketingu i prilike za rast. Izrađujemo detaljan audit i stratagiju za narednih 3-6 mjeseci.">
+    <meta property="og:description" content="Pronađite "uska grla" u marketingu i prilike za rast. Izrađujemo detaljan audit i stratagiju za narednih 3-6 mjeseci.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://vdflow.hr/usluge/strategija-audit.html">
     <meta property="og:image" content="https://vdflow.hr/images/og-strategija-audit.jpg">
@@ -134,6 +134,51 @@
         .card ul li { color: var(--text-muted); margin-bottom: 12px; padding-left: 24px; position: relative; font-size: 1rem; }
         .card ul li::before { content: "•"; position: absolute; left: 0; color: var(--primary); font-size: 1.5rem; line-height: 1; top: -2px; }
 
+        /* FAQ STILOVI */
+        .faq-section { margin-top: 50px; }
+        .faq-section h2 { font-size: 1.8rem; color: #fff; text-align: center; margin-bottom: 30px; }
+        .faq-item { 
+            background: var(--card-bg); 
+            border: 1px solid var(--border-color); 
+            border-radius: 12px; 
+            margin-bottom: 15px; 
+            overflow: hidden;
+        }
+        .faq-question { 
+            width: 100%; 
+            padding: 20px; 
+            background: none; 
+            border: none; 
+            color: #fff; 
+            font-size: 1.1rem; 
+            font-weight: 600; 
+            text-align: left; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        .faq-question:hover { color: var(--primary); }
+        .faq-answer { 
+            max-height: 0; 
+            overflow: hidden; 
+            transition: max-height 0.3s ease-out, padding 0.3s ease; 
+            padding: 0 20px; 
+            color: var(--text-muted); 
+            font-size: 0.98rem;
+        }
+        .faq-item.active .faq-answer { 
+            max-height: 300px; 
+            padding: 0 20px 20px 20px; 
+        }
+        .faq-icon { 
+            transition: transform 0.3s; 
+            font-size: 1.2rem; 
+            color: var(--primary);
+        }
+        .faq-item.active .faq-icon { transform: rotate(180deg); }
+
         /* FOOTER */
         footer { 
             text-align: center; 
@@ -210,12 +255,57 @@
             <ul>
                 <li>Analiza profilnih postavki, tehničkog dijela i vizualnog identiteta</li>
                 <li>Detaljan pregled dosadašnjih oglasnih kampanja i optimizacija troškova</li>
-                <li>Analiza konkurencije i pozicioniranja vaše robne marke na tržištu</li>
+                <li>Analiza konkurencije i pozicioniranja Vaše robne marke na tržištu</li>
                 <li>Izrada jasnog i izvedivog akcijskog plana za narednih 3–6 mjeseci</li>
             </ul>
 
             <a href="../kontakt.html" class="btn-primary">Zatražite Audit</a>
         </div>
+
+        <!-- ČESTO POSTAVLJANA PITANJA (FAQ) -->
+        <section class="faq-section">
+            <h2>Često postavljana pitanja</h2>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    Što je točno marketing audit i kome je namijenjen?
+                    <span class="faq-icon">▾</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Marketing audit je detaljna analiza Vaših trenutnih marketinških aktivnosti (profila, oglasnih računa, sadržaja i prodajnog lijevka). Namijenjena je tvrtkama koje već ulažu u marketing, ali nisu zadovoljne rezultatima ili žele pronaći nova mjesta za rast i optimizaciju budžeta.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Koliko traje izrada audita i strategije?
+                    <span class="faq-icon">▾</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Proces obično traje između 7 i 10 radnih dana od trenutka kada nam osigurate pristup potrebnim analitičkim i oglasnim računima te se dogovorimo oko Vaših poslovnih ciljeva.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Da li je ova usluga korisna za potpuno nove brendove?
+                    <span class="faq-icon">▾</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Za potpuno nove brendove fokusiramo se na izradu marketinške strategije iz nule umjesto audita. To uključuje analizu tržišta, definiranje ciljane publike, pozicioniranje brenda i izradu akcijskog plana za lansiranje.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Što dobivam na kraju procesa i što slijedi nakon isporuke?
+                    <span class="faq-icon">▾</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Dobivate detaljanu analizu postojećeg stanja, sa uočenim nedostacima i konkretnim korak-po-korak planom za narednih 3 do 6 mjeseci. Nakon isporuke, organiziramo zajednički poziv gdje prolazimo kroz sve stavke, a dalje plan možete provoditi sami ili vođenje prepustiti nama.</p>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
@@ -259,6 +349,24 @@
         if (localStorage.getItem('cookieAccepted') === 'true') {
             document.getElementById('cookie-banner').style.display = 'none';
         }
+
+        // FAQ Akordeon logika
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                
+                // Zatvori ostala otvorena pitanja (opcionalno)
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    if (item !== faqItem) {
+                        item.classList.remove('active');
+                    }
+                });
+
+                // Otvori ili zatvori kliknuto pitanje
+                faqItem.classList.toggle('active');
+            });
+        });
     </script>
 </body>
 </html>
