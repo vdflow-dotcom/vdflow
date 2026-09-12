@@ -3,18 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VD FLOW | Digitalni Marketing & Vođenje Društvenih Mreža</title>
-        
-    <!-- SEO & Open Graph Meta Tags -->
-<meta name="description" content="VD FLOW - Stručne usluge digitalnog marketinga, oglašavanja i vođenja društvenih mreža za Vaš obrt ili tvrtku.">
-<meta property="og:title" content="VD FLOW | Digitalni Marketing Services">
-<meta property="og:description" content="Povećajte vidljivost i dođite do novih klijenata uz prilagođene strategije digitalnog marketinga.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://vdflow.hr/">
     
+    <!-- Primarni SEO Meta Tagovi -->
+    <title>VD FLOW | Digitalni Marketing & Vođenje Društvenih Mreža</title>
+    <meta name="description" content="VD FLOW - Stručne usluge digitalnog marketinga, oglašavanja i vođenja društvenih mreža za vaš obrt ili tvrtku. Povećajte vidljivost i dođite do novih klijenata.">
+    <meta name="keywords" content="digitalni marketing, vođenje društvenih mreža, Google oglasi, Meta oglasi, izrada sadržaja, Gornji Stupnik, Zagreb">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://vdflow.hr/">
+
+    <!-- Open Graph / Facebook / LinkedIn Meta Tagovi -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vdflow.hr/">
+    <meta property="og:title" content="VD FLOW | Digitalni Marketing & Vođenje Društvenih Mreža">
+    <meta property="og:description" content="Povećajte vidljivost i dođite do novih klijenata uz prilagođene strategije digitalnog marketinga.">
+    <meta property="og:image" content="https://vdflow.hr/og-image.jpg">
+    <meta property="og:locale" content="hr_HR">
+
+    <!-- Twitter Meta Tagovi -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="VD FLOW | Digitalni Marketing Services">
+    <meta name="twitter:description" content="Stručne usluge digitalnog marketinga i vođenja društvenih mreža.">
+    <meta name="twitter:image" content="https://vdflow.hr/og-image.jpg">
+
     <!-- Favicon & Apple Touch Icon -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="favicon.ico">
+
+    <!-- Schema.org JSON-LD za AI i SEO (Lokalno poslovanje & Usluge) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "VD FLOW",
+      "legalName": "VD FLOW, obrt za digitalni marketing, vl. Vlatka Dizdarević",
+      "url": "https://vdflow.hr/",
+      "logo": "https://vdflow.hr/favicon.ico",
+      "description": "Obrt za digitalni marketing specijaliziran za vođenje društvenih mreža, izradu vizualnog sadržaja i Google & Meta oglasne kampanje.",
+      "telephone": "+38500000000",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Gradek 26",
+        "addressLocality": "Gornji Stupnik",
+        "postalCode": "10255",
+        "addressCountry": "HR"
+      },
+      "vatID": "HR77462129969",
+      "taxID": "77462129969",
+      "priceRange": "$$",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Usluge Digitalnog Marketinga",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Vođenje Društvenih Mreža",
+              "description": "Izrada mjesečnih planova objava, pisanje tekstova i vođenje profila."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Google & Meta Oglasi",
+              "description": "Ciljani oglasi na Googleu, Facebooku i Instagramu."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Izrada Sadržaja (Content Creation)",
+              "description": "Kreiranje karusela, grafika i montaža Reels/TikTok videa."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Strategija & Audit",
+              "description": "Analiza postojecih profila i izrada strategije rast."
+            }
+          }
+        ]
+      }
+    }
+    </script>
+
+    <!-- Schema.org JSON-LD za Često Postavljana Pitanja (FAQ za AI modele) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Koje usluge nudi VD FLOW?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "VD FLOW nudi kompletno vođenje društvenih mreža (Instagram, Facebook, TikTok), vođenje Google i Meta oglasa, kreiranje sadržaja (grafike, Reels, karuseli) te izradu marketinških strategija."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Gdje se nalazi sjedište obrta VD FLOW?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "VD FLOW se nalazi na adresi Gradek 26, 10255 Gornji Stupnik, no usluge pružamo klijentima diljem Hrvatske i inozemstva."
+          }
+        }
+      ]
+    }
+    </script>
 
     <style>
         :root {
@@ -295,15 +396,14 @@
             text-decoration: underline;
         }
 
-        /* O nama box */
-        .about-box {
+        /* O nama box & FAQ Box */
+        .about-box, .faq-box {
             background: var(--card-bg);
             border: 1px solid var(--border-color);
             border-radius: 20px;
             padding: 40px;
             max-width: 850px;
             margin: 0 auto;
-            text-align: center;
         }
 
         .about-box p {
@@ -311,6 +411,23 @@
             font-size: 1.05rem;
             line-height: 1.8;
             margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .faq-item h3 {
+            color: #fff;
+            font-size: 1.15rem;
+            margin-bottom: 8px;
+        }
+
+        .faq-item p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
         }
 
         /* Responsive */
@@ -355,15 +472,15 @@
 
     <!-- Navigacija s Padajućim Izbornikom -->
     <header>
-        <a href="index.html" class="logo">VD <span>FLOW</span></a>
-        <nav>
+        <a href="index.html" class="logo" aria-label="VD FLOW Početna">VD <span>FLOW</span></a>
+        <nav aria-label="Glavna navigacija">
             <ul class="nav-links">
                 <li><a href="index.html">Početna</a></li>
                 <li><a href="o-nama.html">O nama</a></li>
                 
                 <!-- Dropdown za Usluge -->
                 <li class="dropdown">
-                    <a href="#">Usluge ▾</a>
+                    <a href="usluge/vodjenje-mreza.html">Usluge ▾</a>
                     <div class="dropdown-menu">
                         <a href="usluge/vodjenje-mreza.html">Vođenje Društvenih Mreža</a>
                         <a href="usluge/google-meta-oglasi.html">Google & Meta Oglasi</a>
@@ -380,16 +497,13 @@
     </header>
 
     <!-- Hero Sekcija s Pozadinskim Videom -->
-    <section class="hero-video-container">
-        <!-- Pozadinski Video (Putanja do tvoje mp4 datoteke) -->
+    <section class="hero-video-container" aria-label="Uvodna sekcija">
         <video autoplay muted loop playsinline class="hero-bg-video">
             <source src="video-bg.mp4.mp4" type="video/mp4">
         </video>
 
-        <!-- Tamni preklop preko videa -->
         <div class="hero-overlay"></div>
 
-        <!-- Sadržaj preko videa -->
         <div class="hero-content">
             <h1>Digitalni marketing, vođenje društvenih mreža i oglasi koji donose rezultate</h1>
             <p>Preuzimamo brigu o vođenju profila, izradi vizualnog sadržaja i oglasima kako biste se Vi mogli posvetiti onom najbitnijem - svom poslovanju.</p>
@@ -401,58 +515,77 @@
     </section>
 
     <!-- Pregled Usluga na Početnoj Stranici -->
-    <section class="container section-padding">
-        <h2 class="section-title">Kako Vam možemo pomoći?</h2>
+    <section class="container section-padding" aria-labelledby="usluge-heading">
+        <h2 id="usluge-heading" class="section-title">Kako Vam možemo pomoći?</h2>
         <p class="section-subtitle">Odaberite uslugu i saznajte kako možemo unaprijediti Vašu digitalnu prisutnost.</p>
 
         <div class="services-grid">
-            <div class="service-card">
+            <article class="service-card">
                 <div>
-                    <div class="service-icon">📱</div>
+                    <div class="service-icon" aria-hidden="true">📱</div>
                     <h3>Vođenje Mreža</h3>
-                    <p>Izrada mjesečnih planova objava, pisanje teksta i kompletno vođenje Vašeg profila.</p>
+                    <p>Izrada mjesečnih planova objava, pisanje teksta i kompletno vođenje Vašeg profila na Instagramu, Facebooku i TikTok-u.</p>
                 </div>
-                <a href="usluge/vodjenje-mreza.html" class="card-link">Saznaj više →</a>
-            </div>
+                <a href="usluge/vodjenje-mreza.html" class="card-link" aria-label="Saznaj više o vođenju mreža">Saznaj više →</a>
+            </article>
 
-            <div class="service-card">
+            <article class="service-card">
                 <div>
-                    <div class="service-icon">🎯</div>
+                    <div class="service-icon" aria-hidden="true">🎯</div>
                     <h3>Google & Meta Oglasi</h3>
-                    <p>Targetiranje željenih kupaca na Googleu i Instagramu uz maksimalan povrat ulaganja.</p>
+                    <p>Targetiranje željenih kupaca na Googleu i Instagramu uz maksimalan povrat ulaganja (ROAS).</p>
                 </div>
-                <a href="usluge/google-meta-oglasi.html" class="card-link">Saznaj više →</a>
-            </div>
+                <a href="usluge/google-meta-oglasi.html" class="card-link" aria-label="Saznaj više o Google i Meta oglasima">Saznaj više →</a>
+            </article>
 
-            <div class="service-card">
+            <article class="service-card">
                 <div>
-                    <div class="service-icon">🎨</div>
+                    <div class="service-icon" aria-hidden="true">🎨</div>
                     <h3>Izrada Sadržaja</h3>
-                    <p>Kreiranje coursela, grafika i montaža Reels/TikTok videa za Vaš brend.</p>
+                    <p>Kreiranje karusela, profesionalnih grafika i montaža Reels/TikTok videa prilagođenih vašem brendu.</p>
                 </div>
-                <a href="usluge/izrada-sadrzaja.html" class="card-link">Saznaj više →</a>
-            </div>
+                <a href="usluge/izrada-sadrzaja.html" class="card-link" aria-label="Saznaj više o izradi sadržaja">Saznaj više →</a>
+            </article>
 
-            <div class="service-card">
+            <article class="service-card">
                 <div>
-                    <div class="service-icon">📊</div>
+                    <div class="service-icon" aria-hidden="true">📊</div>
                     <h3>Strategija & Audit</h3>
-                    <p>Analiza postojećeg profila i prijedlog poboljšanja.</p>
+                    <p>Detaljna analiza postojećeg profila i prijedlog konkretnih poboljšanja za veći doseg i konverzije.</p>
                 </div>
-                <a href="usluge/strategija-audit.html" class="card-link">Saznaj više →</a>
-            </div>
+                <a href="usluge/strategija-audit.html" class="card-link" aria-label="Saznaj više o strategiji i auditu">Saznaj više →</a>
+            </article>
         </div>
     </section>
+
     <!-- Kratki O nama na Početnoj -->
-    <section class="container section-padding" style="padding-top: 0;">
-        <h2 class="section-title">O VD FLOW</h2>
+    <section class="container section-padding" style="padding-top: 0;" aria-labelledby="o-nama-heading">
+        <h2 id="o-nama-heading" class="section-title">O VD FLOW</h2>
         <p class="section-subtitle">Vaš partner za rast i vidljivost na digitalnim kanalima.</p>
         
         <div class="about-box">
             <p><strong>VD FLOW</strong> je obrt za digitalni marketing specijaliziran za vođenje društvenih mreža, izradu vizualnog sadržaja i vođenje ciljanih oglasnih kampanja na Google i Meta platformama.</p>
             <p>Naša misija je osloboditi Vaše vrijeme i pomoći Vam da dođete do idealnih klijenata. Bilo da Vam treba kompletno vođenje profila ili optimizacija oglasa – tu smo za Vas.</p>
-            <br>
-            <a href="o-nama.html" class="btn-primary">Pročitaj više o nama</a>
+            <div style="text-align: center; margin-top: 20px;">
+                <a href="o-nama.html" class="btn-primary">Pročitaj više o nama</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sekcija Često Postavljanih Pitanja (Dodatno optimizirano za AI pretraživanje) -->
+    <section class="container section-padding" style="padding-top: 0;" aria-labelledby="faq-heading">
+        <h2 id="faq-heading" class="section-title">Često postavljana pitanja</h2>
+        <p class="section-subtitle">Brzi odgovori na najčešća pitanja o našim uslugama.</p>
+
+        <div class="faq-box">
+            <div class="faq-item">
+                <h3>Za koga su namijenjene usluge VD FLOW-a?</h3>
+                <p>Usluge su namijenjene malim i srednjim tvrtkama, obrtima, brendovima i poduzetnicima koji žele povećati svoju vidljivost i doći do novih klijenata putem digitalnih kanala.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Kako započeti suradnju?</h3>
+                <p>Kontaktirajte nas putem obrasca na stranici Kontakt ili zatražite ponudu. Nakon toga radimo analizu vaših potreba i predlažemo optimalan paket usluga.</p>
+            </div>
         </div>
     </section>
 
@@ -462,34 +595,33 @@
             <a href="index.html">Početna</a> • 
             <a href="o-nama.html">O nama</a> • 
             <a href="cjenik.html">Cjenik</a> • 
-            <a href="kontakt.html">Kontakt</a>
-         • <a href="politika-privatnosti.html">Politika privatnosti</a>
+            <a href="kontakt.html">Kontakt</a> • 
+            <a href="politika-privatnosti.html">Politika privatnosti</a>
         </div>
 
-          <!-- OVDJE SU DODANI ZAKONSKI PODACI O OBRTU -->
         <div class="footer-legal">
-            <strong>VD FLOW</strong> • Obrt za digitalni marketing | Vlasnik: Vlatka Dizdarević | Sjedište: Gradek 26, 10255 Gornji Stupnik | OIB:77462129969 | Upisano u Obrtni registar nadležnog ureda
+            <strong>VD FLOW</strong> • Obrt za digitalni marketing | Vlasnik: Vlatka Dizdarević | Sjedište: Gradek 26, 10255 Gornji Stupnik | OIB: 77462129969 | Upisano u Obrtni registar nadležnog ureda
         </div>
         
-        <p>&copy; 2026 VD FLOW. Sva prava pridržana.</p>
+        <p style="margin-top: 15px;">&copy; 2026 VD FLOW. Sva prava pridržana.</p>
     </footer>
 
-   <!-- COOKIE CONSENT BANNER -->
-<div id="cookie-banner" style="position: fixed; bottom: 20px; left: 20px; right: 20px; background: rgba(15, 23, 42, 0.95); border: 1px solid rgba(255,255,255,0.1); padding: 15px 20px; border-radius: 12px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 10px 25px rgba(0,0,0,0.5); backdrop-filter: blur(8px); z-index: 9999; flex-wrap: wrap; gap: 15px;">
-    <p style="margin: 0; color: #cbd5e0; font-size: 0.9rem; max-width: 800px;">
-        Ova web stranica koristi kolačiće kako bi Vam osigurala najbolje korisničko iskustvo. Saznajte više u našoj <a href="politika-privatnosti.html" style="color: #a855f7; text-decoration: underline;">Politici privatnosti</a>.
-    </p>
-    <button onclick="acceptCookies()" class="btn-primary" style="padding: 8px 20px; font-size: 0.85rem; cursor: pointer;">Prihvaćam</button>
-</div>
+    <!-- COOKIE CONSENT BANNER -->
+    <div id="cookie-banner" style="position: fixed; bottom: 20px; left: 20px; right: 20px; background: rgba(15, 23, 42, 0.95); border: 1px solid rgba(255,255,255,0.1); padding: 15px 20px; border-radius: 12px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 10px 25px rgba(0,0,0,0.5); backdrop-filter: blur(8px); z-index: 9999; flex-wrap: wrap; gap: 15px;">
+        <p style="margin: 0; color: #cbd5e0; font-size: 0.9rem; max-width: 800px;">
+            Ova web stranica koristi kolačiće kako bi Vam osigurala najbolje korisničko iskustvo. Saznajte više u našoj <a href="politika-privatnosti.html" style="color: #a855f7; text-decoration: underline;">Politici privatnosti</a>.
+        </p>
+        <button onclick="acceptCookies()" class="btn-primary" style="padding: 8px 20px; font-size: 0.85rem; cursor: pointer;">Prihvaćam</button>
+    </div>
 
-<script>
-    function acceptCookies() {
-        localStorage.setItem('cookieAccepted', 'true');
-        document.getElementById('cookie-banner').style.display = 'none';
-    }
-    if (localStorage.getItem('cookieAccepted') === 'true') {
-        document.getElementById('cookie-banner').style.display = 'none';
-    }
-</script>        
+    <script>
+        function acceptCookies() {
+            localStorage.setItem('cookieAccepted', 'true');
+            document.getElementById('cookie-banner').style.display = 'none';
+        }
+        if (localStorage.getItem('cookieAccepted') === 'true') {
+            document.getElementById('cookie-banner').style.display = 'none';
+        }
+    </script>        
 </body>
 </html>
