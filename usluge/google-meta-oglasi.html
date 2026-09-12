@@ -134,6 +134,51 @@
         .card ul li { color: var(--text-muted); margin-bottom: 12px; padding-left: 24px; position: relative; font-size: 1rem; }
         .card ul li::before { content: "•"; position: absolute; left: 0; color: var(--primary); font-size: 1.5rem; line-height: 1; top: -2px; }
 
+        /* FAQ STILOVI */
+        .faq-section { margin-top: 50px; }
+        .faq-section h2 { font-size: 1.8rem; color: #fff; text-align: center; margin-bottom: 30px; }
+        .faq-item { 
+            background: var(--card-bg); 
+            border: 1px solid var(--border-color); 
+            border-radius: 12px; 
+            margin-bottom: 15px; 
+            overflow: hidden;
+        }
+        .faq-question { 
+            width: 100%; 
+            padding: 20px; 
+            background: none; 
+            border: none; 
+            color: #fff; 
+            font-size: 1.1rem; 
+            font-weight: 600; 
+            text-align: left; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        .faq-question:hover { color: var(--primary); }
+        .faq-answer { 
+            max-height: 0; 
+            overflow: hidden; 
+            transition: max-height 0.3s ease-out, padding 0.3s ease; 
+            padding: 0 20px; 
+            color: var(--text-muted); 
+            font-size: 0.98rem;
+        }
+        .faq-item.active .faq-answer { 
+            max-height: 300px; 
+            padding: 0 20px 20px 20px; 
+        }
+        .faq-icon { 
+            transition: transform 0.3s; 
+            font-size: 1.2rem; 
+            color: var(--primary);
+        }
+        .faq-item.active .faq-icon { transform: rotate(180deg); }
+
         /* FOOTER */
         footer { 
             text-align: center; 
@@ -217,6 +262,41 @@
 
             <a href="../kontakt.html" class="btn-primary">Pokrenite Ads Kampanju</a>
         </div>
+
+        <!-- ČESTO POSTAVLJANA PITANJA (FAQ) -->
+        <section class="faq-section">
+            <h2>Često postavljana pitanja</h2>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    Koliki budžet mi je potreban za Google i Meta oglase?
+                    <span class="faq-icon">▾</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Budžet za same platforme plaćate izravno Googleu i Meta-i, a visina ovisi o Vašoj industriji i ciljevima. Za lokalno tržište u Hrvatskoj preporučujemo minimalni dnevni budžet od 5 do 10 € po platformi kako bi algoritam prikupio dovoljno podataka za optimizaciju.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Koja je razlika između Google i Meta (Facebook/Instagram) oglasa?
+                    <span class="faq-icon">▾</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Google oglasi hvataju korisnike u trenutku kada aktivno pretražuju Vaš proizvod ili uslugu (visoka namjera kupnje). Meta oglasi prikazuju se korisnicima na temelju njihovih interesa i ponašanja dok pregledavaju društvene mreže, što je odlično za stvaranje potražnje i vizualnu prezentaciju.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Kada mogu očekivati prvih rezultate i konverzije?
+                    <span class="faq-icon">▾</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Za razliku od organskog sadržaja, plaćeni oglasi mogu generirati prve upite ili prodaje već unutar nekoliko dana od pokretanja. Ipak, prva 2-4 tjedna služe kao faza učenja i A/B testiranja u kojoj algoritam i mi definiramo najprofitabilnije kombinacije oglasa.</p>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
@@ -260,6 +340,24 @@
         if (localStorage.getItem('cookieAccepted') === 'true') {
             document.getElementById('cookie-banner').style.display = 'none';
         }
+
+        // FAQ Akordeon logika
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                
+                // Zatvori ostala otvorena pitanja
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    if (item !== faqItem) {
+                        item.classList.remove('active');
+                    }
+                });
+
+                // Otvori ili zatvori kliknuto pitanje
+                faqItem.classList.toggle('active');
+            });
+        });
     </script>
 </body>
 </html>
