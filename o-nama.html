@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>O nama | VD FLOW Digitalni Marketing</title>
-    <meta name="description" content="Saznajte više o VD FLOW agenciji za digitalni marketing. Naša misija je osigurati rast Vašeg brenda kroz ciljane strategije i vizualni sadržaj.">
+    <meta name="description" content="Saznajte više o VD FLOW agenciji za digitalni marketing. Naša misija je osigurati rast Vašeg brenda kroz ciljane strategije i kreativni sadržaj.">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
     <style>
@@ -12,15 +12,23 @@
             --bg-color: #0b0c10;
             --card-bg: #1f2833;
             --primary: #a855f7;
+            --primary-hover: #9333ea;
             --text-main: #ffffff;
             --text-muted: #c5c6c7;
             --border-color: #2d3748;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { background-color: var(--bg-color); color: var(--text-main); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; }
-        .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+        body { 
+            background-color: var(--bg-color); 
+            color: var(--text-main); 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+            line-height: 1.6; 
+        }
 
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+
+        /* HEADER & NAVIGACIJA */
         header {
             display: flex; justify-content: space-between; align-items: center;
             padding: 20px; background: rgba(11, 12, 16, 0.95);
@@ -30,10 +38,12 @@
 
         .logo { font-size: 1.5rem; font-weight: 800; color: var(--primary); text-decoration: none; }
         .logo span { color: #fff; }
+        
         .nav-links { display: flex; list-style: none; gap: 25px; align-items: center; }
         .nav-links a { color: var(--text-muted); text-decoration: none; font-weight: 500; transition: 0.3s; }
-        .nav-links a:hover { color: var(--primary); }
+        .nav-links a:hover, .nav-links a.active { color: var(--primary); }
 
+        /* DROPDOWN MENU */
         .dropdown { position: relative; display: inline-block; }
         .dropdown-menu {
             display: none; position: absolute; top: 100%; left: 0;
@@ -46,30 +56,106 @@
         .dropdown-menu a:hover { background-color: var(--border-color); color: var(--primary); }
         .dropdown:hover .dropdown-menu { display: block; }
 
-        .btn-primary { background: var(--primary); color: #fff; padding: 10px 22px; border-radius: 50px; text-decoration: none; font-weight: 600; display: inline-block; }
+        .btn-primary { 
+            background: var(--primary); 
+            color: #fff; 
+            padding: 10px 22px; 
+            border-radius: 50px; 
+            text-decoration: none; 
+            font-weight: 600; 
+            display: inline-block;
+            transition: background 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        .btn-primary:hover { background: var(--primary-hover); }
 
+        /* HAMBURGER MENU ZA MOBITELE */
+        .menu-toggle { display: none; background: none; border: none; color: #fff; font-size: 1.8rem; cursor: pointer; }
+
+        /* SADRŽAJ */
         .content-section { padding: 60px 0; }
-        .content-section h1 { font-size: 2.5rem; margin-bottom: 20px; color: #fff; text-align: center; }
-        .content-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 16px; padding: 40px; margin-top: 30px; }
-        .content-card h2 { color: var(--primary); margin-bottom: 15px; font-size: 1.5rem; }
-        .content-card p { color: var(--text-muted); font-size: 1.05rem; margin-bottom: 20px; }
+        .hero-title { text-align: center; margin-bottom: 40px; }
+        .hero-title h1 { font-size: 2.5rem; color: #fff; margin-bottom: 10px; }
+        .hero-title p { color: var(--text-muted); font-size: 1.1rem; }
 
-        footer { text-align: center; padding: 40px 20px; border-top: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.9rem; margin-top: 60px; }
+        .content-card { 
+            background: var(--card-bg); 
+            border: 1px solid var(--border-color); 
+            border-radius: 16px; 
+            padding: 40px; 
+            margin-bottom: 30px; 
+        }
+        .content-card h2 { color: var(--primary); margin-bottom: 15px; font-size: 1.6rem; }
+        .content-card p { color: var(--text-muted); font-size: 1.05rem; margin-bottom: 15px; }
+        .content-card p:last-child { margin-bottom: 0; }
+
+        /* MREŽA ZA VRIJEDNOSTI / STUPOVE */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .feature-box {
+            background: rgba(11, 12, 16, 0.5);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 25px;
+        }
+        .feature-box h3 { color: #fff; margin-bottom: 10px; font-size: 1.2rem; }
+        .feature-box p { color: var(--text-muted); font-size: 0.95rem; }
+
+        /* FOOTER */
+        footer { 
+            text-align: center; 
+            padding: 40px 20px; 
+            border-top: 1px solid var(--border-color); 
+            color: var(--text-muted); 
+            font-size: 0.9rem; 
+            margin-top: 60px; 
+        }
         .footer-links { display: flex; justify-content: center; gap: 15px; margin-bottom: 15px; flex-wrap: wrap; }
         .footer-links a { color: var(--text-muted); text-decoration: none; }
         .footer-links a:hover { color: var(--primary); }
+        .footer-legal { max-width: 800px; margin: 0 auto 15px auto; font-size: 0.85rem; opacity: 0.8; line-height: 1.4; }
 
-        @media (max-width: 768px) { .nav-links { display: none; } }
+        /* PRILAGODBA ZA MOBITELE */
+        @media (max-width: 768px) {
+            .menu-toggle { display: block; }
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--bg-color);
+                padding: 20px;
+                border-bottom: 1px solid var(--border-color);
+                gap: 15px;
+                text-align: center;
+            }
+            .nav-links.active { display: flex; }
+            .dropdown-menu { position: static; box-shadow: none; background: transparent; border: none; width: 100%; }
+            .header-btn { display: none; }
+            .content-card { padding: 25px; }
+            .hero-title h1 { font-size: 2rem; }
+        }
     </style>
 </head>
 <body>
 
     <header>
         <a href="index.html" class="logo">VD <span>FLOW</span></a>
+        
+        <button class="menu-toggle" id="menu-toggle" aria-label="Otvorite izbornik">☰</button>
+
         <nav>
-            <ul class="nav-links">
+            <ul class="nav-links" id="nav-links">
                 <li><a href="index.html">Početna</a></li>
-                <li><a href="o-nama.html">O nama</a></li>
+                <li><a href="o-nama.html" class="active">O nama</a></li>
                 <li class="dropdown">
                     <a href="#">Usluge ▾</a>
                     <div class="dropdown-menu">
@@ -83,15 +169,42 @@
                 <li><a href="kontakt.html">Kontakt</a></li>
             </ul>
         </nav>
-        <a href="kontakt.html" class="btn-primary">Zatražite ponudu</a>
+        
+        <a href="kontakt.html" class="btn-primary header-btn">Zatražite ponudu</a>
     </header>
 
     <main class="container content-section">
-        <h1>O VD FLOW-u</h1>
+        <div class="hero-title">
+            <h1>O VD FLOW-u</h1>
+            <p>Stvaramo digitalna rješenja koja donose stvarne i mjerljive rezultate.</p>
+        </div>
+
         <div class="content-card">
             <h2>Naša Vizija & Pristup</h2>
-            <p>VD FLOW je specijalizirani obrt za digitalni marketing, usmjeren na građenje jasne i prepoznatljive prisutnosti brendova na mreži. Spajamo analitički pristup vođenju plaćenih kampanja s kreativnim stvaranjem vizualnog sadržaja.</p>
-            <p>Smatramo da digitalni marketing ne treba biti kompliciran – cilj nam je pružiti izravne, mjerljive i kvalitetne rezultate koji olakšavaju poslovanje našim klijentima.</p>
+            <p>VD FLOW je specijalizirani obrt za digitalni marketing, usmjeren na građenje jasne, prepoznatljive i profitabilne prisutnosti brendova na mreži. Spajamo analitički pristup vođenju plaćenih kampanja s kreativnim stvaranjem visoko kvalitetnog vizualnog sadržaja.</p>
+            <p>Smatramo da digitalni marketing ne treba biti kompliciran – naš cilj je pružiti izravne, mjerljive i transparentne rezultate koji olakšavaju poslovanje i potiču stabilan rast naših klijenata.</p>
+        </div>
+
+        <div class="content-card">
+            <h2>Zašto surađivati s nama?</h2>
+            <div class="grid-2">
+                <div class="feature-box">
+                    <h3>🎯 Fokus na rezultate</h3>
+                    <p>Ne mjerimo uspjeh samo "lajkovima", već konkretnim upitima, prodajom i povratom investicije (ROI) za Vaš posao.</p>
+                </div>
+                <div class="feature-box">
+                    <h3>🎨 Autentičan sadržaj</h3>
+                    <p>Izrađujemo prilagođene vizuale i videotipe koji jasno komuniciraju vrijednost Vaših proizvoda i usluga.</p>
+                </div>
+                <div class="feature-box">
+                    <h3>🤝 Izravna komunikacija</h3>
+                    <p>Radite direktno sa stručnjakom bez posrednika. Transparentnost i redovito izvještavanje su nam prioritet.</p>
+                </div>
+                <div class="feature-box">
+                    <h3>⚡ Brzina i fleksibilnost</h3>
+                    <p>Kao specijalizirani obrt, brzo reagiramo na Vaše potrebe i prilagođavamo strategije u hodu.</p>
+                </div>
+            </div>
         </div>
     </main>
 
@@ -100,34 +213,42 @@
             <a href="index.html">Početna</a> • 
             <a href="o-nama.html">O nama</a> • 
             <a href="cjenik.html">Cjenik</a> • 
-            <a href="kontakt.html">Kontakt</a>
-            • <a href="politika-privatnosti.html">Politika privatnosti</a>
+            <a href="kontakt.html">Kontakt</a> • 
+            <a href="politika-privatnosti.html">Politika privatnosti</a>
         </div>
 
-          <!-- OVDJE SU DODANI ZAKONSKI PODACI O OBRTU -->
         <div class="footer-legal">
-            <strong>VD FLOW</strong> • Obrt za digitalni marketing | Vlasnik: Vlatka Dizdarević | Sjedište: Gradek 26, 10255 Gornji Stupnik | OIB:77462129969 | Upisano u Obrtni registar nadležnog ureda
+            <strong>VD FLOW</strong> • Obrt za digitalni marketing | Vlasnik: Vlatka Dizdarević | Sjedište: Gradek 26, 10255 Gornji Stupnik | OIB: 77462129969 | Upisano u Obrtni registar nadležnog ureda
         </div>
         
         <p>&copy; 2026 VD FLOW. Sva prava pridržana.</p>
     </footer>
 
     <!-- COOKIE CONSENT BANNER -->
-<div id="cookie-banner" style="position: fixed; bottom: 20px; left: 20px; right: 20px; background: rgba(15, 23, 42, 0.95); border: 1px solid rgba(255,255,255,0.1); padding: 15px 20px; border-radius: 12px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 10px 25px rgba(0,0,0,0.5); backdrop-filter: blur(8px); z-index: 9999; flex-wrap: wrap; gap: 15px;">
-    <p style="margin: 0; color: #cbd5e0; font-size: 0.9rem; max-width: 800px;">
-        Ova web stranica koristi kolačiće kako bi vam osigurala najbolje korisničko iskustvo. Saznajte više u našoj <a href="politika-privatnosti.html" style="color: #a855f7; text-decoration: underline;">Politici privatnosti</a>.
-    </p>
-    <button onclick="acceptCookies()" class="btn-primary" style="padding: 8px 20px; font-size: 0.85rem; cursor: pointer;">Prihvaćam</button>
-</div>
+    <div id="cookie-banner" style="position: fixed; bottom: 20px; left: 20px; right: 20px; background: rgba(15, 23, 42, 0.95); border: 1px solid rgba(255,255,255,0.1); padding: 15px 20px; border-radius: 12px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 10px 25px rgba(0,0,0,0.5); backdrop-filter: blur(8px); z-index: 9999; flex-wrap: wrap; gap: 15px;">
+        <p style="margin: 0; color: #cbd5e0; font-size: 0.9rem; max-width: 800px;">
+            Ova web stranica koristi kolačiće kako bi Vam osigurala najbolje korisničko iskustvo. Saznajte više u našoj <a href="politika-privatnosti.html" style="color: #a855f7; text-decoration: underline;">Politici privatnosti</a>.
+        </p>
+        <button onclick="acceptCookies()" class="btn-primary" style="padding: 8px 20px; font-size: 0.85rem; cursor: pointer;">Prihvaćam</button>
+    </div>
 
-<script>
-    function acceptCookies() {
-        localStorage.setItem('cookieAccepted', 'true');
-        document.getElementById('cookie-banner').style.display = 'none';
-    }
-    if (localStorage.getItem('cookieAccepted') === 'true') {
-        document.getElementById('cookie-banner').style.display = 'none';
-    }
-</script>
+    <script>
+        // Skripta za mobilni izbornik
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.getElementById('nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Skripta za kolačiće
+        function acceptCookies() {
+            localStorage.setItem('cookieAccepted', 'true');
+            document.getElementById('cookie-banner').style.display = 'none';
+        }
+        if (localStorage.getItem('cookieAccepted') === 'true') {
+            document.getElementById('cookie-banner').style.display = 'none';
+        }
+    </script>
 </body>
 </html>
