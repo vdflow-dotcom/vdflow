@@ -42,7 +42,7 @@
         }
       },
       "areaServed": "HR",
-      "description": "Profesionalna izrada vizualnog i video sadržaja za društvene mreže, uključujući Reels, TikTok formate, grafike, carousele i copywrighting."
+      "description": "Profesionalna izrada vizualnog i video sadržaja za društvene mreže, uključujući Reels, TikTok formate, grafike, carousele i copywriting."
     }
     </script>
 
@@ -134,6 +134,51 @@
         .card ul li { color: var(--text-muted); margin-bottom: 12px; padding-left: 24px; position: relative; font-size: 1rem; }
         .card ul li::before { content: "•"; position: absolute; left: 0; color: var(--primary); font-size: 1.5rem; line-height: 1; top: -2px; }
 
+        /* FAQ STILOVI */
+        .faq-section { margin-top: 50px; }
+        .faq-section h2 { font-size: 1.8rem; color: #fff; text-align: center; margin-bottom: 30px; }
+        .faq-item { 
+            background: var(--card-bg); 
+            border: 1px solid var(--border-color); 
+            border-radius: 12px; 
+            margin-bottom: 15px; 
+            overflow: hidden;
+        }
+        .faq-question { 
+            width: 100%; 
+            padding: 20px; 
+            background: none; 
+            border: none; 
+            color: #fff; 
+            font-size: 1.1rem; 
+            font-weight: 600; 
+            text-align: left; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        .faq-question:hover { color: var(--primary); }
+        .faq-answer { 
+            max-height: 0; 
+            overflow: hidden; 
+            transition: max-height 0.3s ease-out, padding 0.3s ease; 
+            padding: 0 20px; 
+            color: var(--text-muted); 
+            font-size: 0.98rem;
+        }
+        .faq-item.active .faq-answer { 
+            max-height: 300px; 
+            padding: 0 20px 20px 20px; 
+        }
+        .faq-icon { 
+            transition: transform 0.3s; 
+            font-size: 1.2rem; 
+            color: var(--primary);
+        }
+        .faq-item.active .faq-icon { transform: rotate(180deg); }
+
         /* FOOTER */
         footer { 
             text-align: center; 
@@ -216,6 +261,51 @@
 
             <a href="../kontakt.html" class="btn-primary">Naruči vizuale</a>
         </div>
+
+        <!-- ČESTO POSTAVLJANA PITANJA (FAQ) -->
+        <section class="faq-section">
+            <h2>Često postavljana pitanja</h2>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    Što ako već imam vlastite fotografije i video materijale?
+                    <span class="faq-icon">▾</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Izvrsno! Možete nam poslati svoje sirove materijale (fotografije visoke rezolucije ili video snimke), a mi ćemo ih profesionalno urediti, grafički obraditi, dodati brendirane elemente, titlove i glazbu prilagođenu društvenim mrežama.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Dolazite li na teren snimati materijale za Reels i TikTok?
+                    <span class="faq-icon">▾</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Da, terensko snimanje je moguće dogovoriti, ovisno o Vašoj lokaciji i potrebama projekta. Prije samog snimanja pripremamo scenarij (storyboard) kako bi izlazni materijal bio u potpunosti usklađen s ciljevima brenda.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Tko ima autorska prava na izrađene vizuale i videozapise?
+                    <span class="faq-icon">▾</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Nakon isporuke i podmirenja računa, sva autorska i korisnička prava na gotove vizuale, grafike i montirane videozapise u potpunosti pripadaju Vama. Materijale možete slobodno koristiti na svim svojim kanalima.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Da li je moguće zatražiti izmjene, ako mi se ne svidi prvi nacrt?
+                    <span class="faq-icon">▾</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Naravno. Prije same izrade usuglašavamo vizualni stil i smjernice, a svaka ponuda uključuje i krug revizija (sitnih korekcija) kako bismo osigurali da je konačni sadržaj točno onakav kakav želite.</p>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
@@ -259,6 +349,24 @@
         if (localStorage.getItem('cookieAccepted') === 'true') {
             document.getElementById('cookie-banner').style.display = 'none';
         }
+
+        // FAQ Akordeon logika
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                
+                // Zatvori ostala otvorena pitanja
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    if (item !== faqItem) {
+                        item.classList.remove('active');
+                    }
+                });
+
+                // Otvori ili zatvori kliknuto pitanje
+                faqItem.classList.toggle('active');
+            });
+        });
     </script>
 </body>
 </html>
