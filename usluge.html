@@ -186,13 +186,41 @@
         /* HAMBURGER MENU ZA MOBITELE */
         .menu-toggle { display: none; background: none; border: none; color: #fff; font-size: 1.8rem; cursor: pointer; }
 
+        /* TAB INTERFEJS (po uzoru na cjenik.html) */
+        .cjenik-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 30px 0 10px 0;
+            flex-wrap: wrap;
+        }
+        .tab-btn {
+            background: var(--card-bg);
+            color: var(--text-muted);
+            border: 1px solid var(--border-color);
+            padding: 12px 24px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+        .tab-btn:hover, .tab-btn.active {
+            background: var(--primary);
+            color: #fff;
+            border-color: var(--primary);
+        }
+
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+
         /* USLUGE DETAIL SECTIONS */
         .services-wrapper { padding: 40px 0; flex: 1; }
         .page-main-title { font-size: 2.5rem; color: #fff; margin-bottom: 10px; text-align: center; }
         .page-main-subtitle { text-align: center; color: var(--text-muted); font-size: 1.1rem; margin-bottom: 40px; }
         
-        .service-section { margin-bottom: 60px; scroll-margin-top: 100px; }
-        .service-section h2.service-heading { font-size: 2rem; color: #fff; margin-bottom: 20px; border-bottom: 2px solid var(--border-color); padding-bottom: 10px; }
+        .service-section { margin-bottom: 40px; scroll-margin-top: 100px; }
+        .service-section h2.service-heading { font-size: 1.8rem; color: #fff; margin: 30px 0 20px 0; border-left: 4px solid var(--primary); padding-left: 15px; }
         
         .card { 
             background: var(--card-bg); 
@@ -292,6 +320,8 @@
             .page-main-title { font-size: 2rem; }
             .service-section h2.service-heading { font-size: 1.6rem; }
             .card { padding: 25px 20px; }
+            .cjenik-tabs { flex-direction: column; }
+            .tab-btn { width: 100%; text-align: center; }
         }
     </style>
 </head>
@@ -309,10 +339,10 @@
                 <li class="dropdown">
                     <a href="#" class="active">Usluge ▾</a>
                     <div class="dropdown-menu">
-                        <a href="#vodjenje-mreza">Vođenje Društvenih Mreža</a>
-                        <a href="#google-meta-oglasi">Google & Meta Oglasi</a>
-                        <a href="#izrada-sadrzaja">Izrada Sadržaja (Content)</a>
-                        <a href="#strategija-audit">Strategija & Audit</a>
+                        <a href="#vodjenje-mreza" onclick="switchTab('vodjenje-mreza')">Vođenje Društvenih Mreža</a>
+                        <a href="#google-meta-oglasi" onclick="switchTab('google-meta-oglasi')">Google & Meta Oglasi</a>
+                        <a href="#izrada-sadrzaja" onclick="switchTab('izrada-sadrzaja')">Izrada Sadržaja (Content)</a>
+                        <a href="#strategija-audit" onclick="switchTab('strategija-audit')">Strategija & Audit</a>
                     </div>
                 </li>
                 <li><a href="../cjenik.html">Cjenik</a></li>
@@ -327,9 +357,17 @@
         <h1 class="page-main-title">Naše Usluge</h1>
         <p class="page-main-subtitle">Sveobuhvatna rješenja za rast vašeg poslovanja i prepoznatljivost na digitalnom tržištu.</p>
 
+        <!-- 4 GUMBA / TABA PO UZORU NA CJENIK -->
+        <div class="cjenik-tabs">
+            <button class="tab-btn active" id="tab-btn-vodjenje-mreza" onclick="switchTab('vodjenje-mreza')">Vođenje Društvenih Mreža</button>
+            <button class="tab-btn" id="tab-btn-google-meta-oglasi" onclick="switchTab('google-meta-oglasi')">Google & Meta Oglasi</button>
+            <button class="tab-btn" id="tab-btn-izrada-sadrzaja" onclick="switchTab('izrada-sadrzaja')">Izrada Sadržaja (Content)</button>
+            <button class="tab-btn" id="tab-btn-strategija-audit" onclick="switchTab('strategija-audit')">Strategija & Audit</button>
+        </div>
+
         <!-- 1. VOĐENJE DRUŠTVENIH MREŽA -->
-        <section id="vodjenje-mreza" class="service-section">
-            <h2 class="service-heading">Vođenje Društvenih Mreža</h2>
+        <section id="vodjenje-mreza" class="service-section tab-content active">
+            <h2 class="section-title" style="display:none;">Vođenje Društvenih Mreža</h2>
             <div class="card">
                 <h3>Izgradite dosljedan i prepoznatljiv brend</h3>
                 <p>Kroz strateško upravljanje Instagram i Facebook kanalima pretvaramo slučajne prolaznike u vjerne kupce. Preuzimamo cjelokupni proces — od plana objava i pisanja tekstova do vizualne pripreme.</p>
@@ -388,8 +426,8 @@
         </section>
 
         <!-- 2. GOOGLE & META OGLASI -->
-        <section id="google-meta-oglasi" class="service-section">
-            <h2 class="service-heading">Google & Meta Oglasi</h2>
+        <section id="google-meta-oglasi" class="service-section tab-content">
+            <h2 class="section-title" style="display:none;">Google & Meta Oglasi</h2>
             <div class="card">
                 <h3>Usmjerite precizne oglase na kupce koji traže Vaše usluge</h3>
                 <p>Ne trošite budžet na “sreću”. Uz profesionalno vođenje Google (Search, Display) i Meta (Facebook, Instagram) kampanja dovodimo kupce s visokom namjerom kupnje ravno na Vašu web stranicu.</p>
@@ -408,8 +446,8 @@
         </section>
 
         <!-- 3. IZRADA SADRŽAJA (CONTENT) -->
-        <section id="izrada-sadrzaja" class="service-section">
-            <h2 class="service-heading">Izrada Sadržaja (Content)</h2>
+        <section id="izrada-sadrzaja" class="service-section tab-content">
+            <h2 class="section-title" style="display:none;">Izrada Sadržaja (Content)</h2>
             <div class="card">
                 <h3>Sadržaj koji privlači pažnju i gradi povjerenje</h3>
                 <p>Kvalitetan sadržaj srce je svakog uspješnog digitalnog nastupa. Pomažemo vam stvoriti pamtljivu priču kroz vizuale, grafike i tekstove koji rezoniraju s vašom ciljanom publikom.</p>
@@ -427,8 +465,8 @@
         </section>
 
         <!-- 4. STRATEGIJA & MARKETING AUDIT -->
-        <section id="strategija-audit" class="service-section">
-            <h2 class="service-heading">Strategija & Marketing Audit</h2>
+        <section id="strategija-audit" class="service-section tab-content">
+            <h2 class="section-title" style="display:none;">Strategija & Marketing Audit</h2>
             <div class="card">
                 <h3>Pronađite "uska grla" i prilike za rast</h3>
                 <p>Ako već ulažete u marketing, ali ne vidite očekivani povrat, radimo detaljan pregled postojećih profila, oglasa i web stranice te dajemo jasne i primjenjive smjernice za poboljšanje.</p>
@@ -520,6 +558,29 @@
             navLinks.classList.toggle('active');
         });
 
+        // FUNKCIJA ZA PREBACIVANJE TABOVA (po uzoru na cjenik.html)
+        function switchTab(tabId) {
+            const contents = document.querySelectorAll('.tab-content');
+            const buttons = document.querySelectorAll('.tab-btn');
+
+            contents.forEach(content => content.classList.remove('active'));
+            buttons.forEach(button => button.classList.remove('active'));
+
+            const selectedTab = document.getElementById(tabId);
+            const selectedBtn = document.getElementById('tab-btn-' + tabId);
+
+            if (selectedTab) selectedTab.classList.add('active');
+            if (selectedBtn) selectedBtn.classList.add('active');
+        }
+
+        // PODRŠKA ZA IZRAVNE LINKOVE S HASH-OM (#vodjenje-mreza, ITD.)
+        window.addEventListener('DOMContentLoaded', () => {
+            const hash = window.location.hash.replace('#', '');
+            if (hash && ['vodjenje-mreza', 'google-meta-oglasi', 'izrada-sadrzaja', 'strategija-audit'].includes(hash)) {
+                switchTab(hash);
+            }
+        });
+
         // FAQ Harmonika Logika za sve FAQ sekcije
         const faqQuestions = document.querySelectorAll('.faq-question');
         faqQuestions.forEach(question => {
@@ -527,7 +588,7 @@
                 const faqItem = question.parentElement;
                 const faqSection = faqItem.closest('.faq-section');
                 
-                // Zatvori ostala otvorena pitanja unutar iste sekcije (opcionalno)
+                // Zatvori ostala otvorena pitanja unutar iste sekcije
                 faqSection.querySelectorAll('.faq-item').forEach(item => {
                     if (item !== faqItem) {
                         item.classList.remove('active');
