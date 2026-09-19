@@ -4,133 +4,133 @@
     <usluga>
         <naziv>Profil Start</naziv>
         <kategorija>Mjesečni paketi</kategorija>
-        <aktualna_cijena>180-250 EUR/mj</aktualna_cijena>
-        <sidrena_cijena_10_09_2026>180-250 EUR/mj</sidrena_cijena_10_09_2026>
+        <aktualna_cijena>180 – 250 EUR/mj</aktualna_cijena>
+        <sidrena_cijena_10_09_2026>180 – 250 EUR/mj</sidrena_cijena_10_09_2026>
     </usluga>
     <usluga>
         <naziv>Profil Aktivno</naziv>
         <kategorija>Mjesečni paketi</kategorija>
-        <aktualna_cijena>300-450 EUR/mj</aktualna_cijena>
-        <sidrena_cijena_10_09_2026>300-450 EUR/mj</sidrena_cijena_10_09_2026>
+        <aktualna_cijena>300 – 450 EUR/mj</aktualna_cijena>
+        <sidrena_cijena_10_09_2026>300 – 450 EUR/mj</sidrena_cijena_10_09_2026>
     </usluga>
     <usluga>
         <naziv>Ads Fokus</naziv>
         <kategorija>Mjesečni paketi</kategorija>
-        <aktualna_cijena>220-350 EUR/mj</aktualna_cijena>
-        <sidrena_cijena_10_09_2026>220-350 EUR/mj</sidrena_cijena_10_09_2026>
+        <aktualna_cijena>220 – 350 EUR/mj</aktualna_cijena>
+        <sidrena_cijena_10_09_2026>220 – 350 EUR/mj</sidrena_cijena_10_09_2026>
     </usluga>
     <usluga>
         <naziv>Lokalni Rast</naziv>
         <kategorija>Mjesečni paketi</kategorija>
-        <aktualna_cijena>450-650 EUR/mj</aktualna_cijena>
-        <sidrena_cijena_10_09_2026>450-650 EUR/mj</sidrena_cijena_10_09_2026>
+        <aktualna_cijena>450 – 650 EUR/mj</aktualna_cijena>
+        <sidrena_cijena_10_09_2026>450 – 650 EUR/mj</sidrena_cijena_10_09_2026>
     </usluga>
 
     <!-- CONTENT PAKETI -->
     <usluga>
         <naziv>Post paket Mini</naziv>
         <kategorija>Content paketi</kategorija>
-        <aktualna_cijena>140-180 EUR</aktualna_cijena>
-        <sidrena_cijena_10_09_2026>140-180 EUR</sidrena_cijena_10_09_2026>
+        <aktualna_cijena>140 – 180 EUR</aktualna_cijena>
+        <sidrena_cijena_10_09_2026>140 – 180 EUR</sidrena_cijena_10_09_2026>
     </usluga>
     <usluga>
         <naziv>Post paket Standard</naziv>
         <kategorija>Content paketi</kategorija>
-        <aktualna_cijena>260-360 EUR</aktualna_cijena>
-        <sidrena_cijena_10_09_2026>260-360 EUR</sidrena_cijena_10_09_2026>
+        <aktualna_cijena>260 – 360 EUR</aktualna_cijena>
+        <sidrena_cijena_10_09_2026>260 – 360 EUR</sidrena_cijena_10_09_2026>
     </usluga>
     <usluga>
         <naziv>Reels paket – edit only</naziv>
         <kategorija>Content paketi</kategorija>
-        <aktualna_cijena>120-220 EUR</aktualna_cijena>
-        <sidrena_cijena_10_09_2026>120-220 EUR</sidrena_cijena_10_09_2026>
+        <aktualna_cijena>120 – 220 EUR</aktualna_cijena>
+        <sidrena_cijena_10_09_2026>120 – 220 EUR</sidrena_cijena_10_09_2026>
     </usluga>
     <usluga>
         <naziv>Reels paket – Lite</naziv>
         <kategorija>Content paketi</kategorija>
-        <aktualna_cijena>280-480 EUR</aktualna_cijena>
-        <sidrena_cijena_10_09_2026>280-480 EUR</sidrena_cijena_10_09_2026>
+        <aktualna_cijena>280 – 480 EUR</aktualna_cijena>
+        <sidrena_cijena_10_09_2026>280 – 480 EUR</sidrena_cijena_10_09_2026>
     </usluga>
 
     <!-- JEDNOKRATNE USLUGE -->
     <usluga>
         <naziv>Audit Instagram profila</naziv>
         <kategorija>Jednokratne usluge</kategorija>
-        <aktualna_cijena>60-120 EUR</aktualna_cijena>
-        <sidrena_cijena_10_09_2026>60-120 EUR</sidrena_cijena_10_09_2026>
+        <aktualna_cijena>60 – 120 EUR</aktualna_cijena>
+        <sidrena_cijena_10_09_2026>60 – 120 EUR</sidrena_cijena_10_09_2026>
     </usluga>
     <usluga>
         <naziv>Audit oglasa (Google / Meta)</naziv>
         <kategorija>Jednokratne usluge</kategorija>
-        <aktualna_cijena>80-150 EUR</aktualna_cijena>
-        <sidrena_cijena_10_09_2026>80-150 EUR</sidrena_cijena_10_09_2026>
+        <aktualna_cijena>80 – 150 EUR</aktualna_cijena>
+        <sidrena_cijena_10_09_2026>80 – 150 EUR</sidrena_cijena_10_09_2026>
     </usluga>
     <usluga>
         <naziv>Setup Google Ads kampanje</naziv>
         <kategorija>Jednokratne usluge</kategorija>
-        <aktualna_cijena>150-250 EUR</aktualna_cijena>
-        <sidrena_cijena_10_09_2026>150-250 EUR</sidrena_cijena_10_09_2026>
+        <aktualna_cijena>150 – 250 EUR</aktualna_cijena>
+        <sidrena_cijena_10_09_2026>150 – 250 EUR</sidrena_cijena_10_09_2026>
     </usluga>
     <usluga>
         <naziv>Setup Meta Ads kampanje</naziv>
         <kategorija>Jednokratne usluge</kategorija>
-        <aktualna_cijena>120-220 EUR</aktualna_cijena>
-        <sidrena_cijena_10_09_2026>120-220 EUR</sidrena_cijena_10_09_2026>
+        <aktualna_cijena>120 – 220 EUR</aktualna_cijena>
+        <sidrena_cijena_10_09_2026>120 – 220 EUR</sidrena_cijena_10_09_2026>
     </usluga>
     <usluga>
         <naziv>Pixel / osnovno praćenje konverzija / povezivanje računa</naziv>
         <kategorija>Jednokratne usluge</kategorija>
-        <aktualna_cijena>80-180 EUR</aktualna_cijena>
-        <sidrena_cijena_10_09_2026>80-180 EUR</sidrena_cijena_10_09_2026>
+        <aktualna_cijena>80 – 180 EUR</aktualna_cijena>
+        <sidrena_cijena_10_09_2026>80 – 180 EUR</sidrena_cijena_10_09_2026>
     </usluga>
     <usluga>
         <naziv>Mjesečni content plan bez izrade objava</naziv>
         <kategorija>Jednokratne usluge</kategorija>
-        <aktualna_cijena>50-90 EUR</aktualna_cijena>
-        <sidrena_cijena_10_09_2026>50-90 EUR</sidrena_cijena_10_09_2026>
+        <aktualna_cijena>50 – 90 EUR</aktualna_cijena>
+        <sidrena_cijena_10_09_2026>50 – 90 EUR</sidrena_cijena_10_09_2026>
     </usluga>
     <usluga>
         <naziv>Kratki savjetodavni poziv (45 – 60 min)</naziv>
         <kategorija>Jednokratne usluge</kategorija>
-        <aktualna_cijena>40-80 EUR</aktualna_cijena>
-        <sidrena_cijena_10_09_2026>40-80 EUR</sidrena_cijena_10_09_2026>
+        <aktualna_cijena>40 – 80 EUR</aktualna_cijena>
+        <sidrena_cijena_10_09_2026>40 – 80 EUR</sidrena_cijena_10_09_2026>
     </usluga>
 
     <!-- DODATNE USLUGE (POJEDINAČNE) -->
     <usluga>
         <naziv>1 statična objava (vizual + caption)</naziv>
         <kategorija>Dodatne usluge</kategorija>
-        <aktualna_cijena>45-60 EUR</aktualna_cijena>
-        <sidrena_cijena_10_09_2026>45-60 EUR</sidrena_cijena_10_09_2026>
+        <aktualna_cijena>45 – 60 EUR</aktualna_cijena>
+        <sidrena_cijena_10_09_2026>45 – 60 EUR</sidrena_cijena_10_09_2026>
     </usluga>
     <usluga>
         <naziv>1 carousel objava</naziv>
         <kategorija>Dodatne usluge</kategorija>
-        <aktualna_cijena>55-80 EUR</aktualna_cijena>
-        <sidrena_cijena_10_09_2026>55-80 EUR</sidrena_cijena_10_09_2026>
+        <aktualna_cijena>55 – 80 EUR</aktualna_cijena>
+        <sidrena_cijena_10_09_2026>55 – 80 EUR</sidrena_cijena_10_09_2026>
     </usluga>
     <usluga>
         <naziv>1 story set (3 – 5 storyja)</naziv>
         <kategorija>Dodatne usluge</kategorija>
-        <aktualna_cijena>25-45 EUR</aktualna_cijena>
-        <sidrena_cijena_10_09_2026>25-45 EUR</sidrena_cijena_10_09_2026>
+        <aktualna_cijena>25 – 45 EUR</aktualna_cijena>
+        <sidrena_cijena_10_09_2026>25 – 45 EUR</sidrena_cijena_10_09_2026>
     </usluga>
     <usluga>
         <naziv>1 video objava / kratka animacija</naziv>
         <kategorija>Dodatne usluge</kategorija>
-        <aktualna_cijena>50-80 EUR</aktualna_cijena>
-        <sidrena_cijena_10_09_2026>50-80 EUR</sidrena_cijena_10_09_2026>
+        <aktualna_cijena>50 – 80 EUR</aktualna_cijena>
+        <sidrena_cijena_10_09_2026>50 – 80 EUR</sidrena_cijena_10_09_2026>
     </usluga>
     <usluga>
         <naziv>1 montirani reel od dostavljenih snimki</naziv>
         <kategorija>Dodatne usluge</kategorija>
-        <aktualna_cijena>25-60 EUR</aktualna_cijena>
-        <sidrena_cijena_10_09_2026>25-60 EUR</sidrena_cijena_10_09_2026>
+        <aktualna_cijena>25 – 60 EUR</aktualna_cijena>
+        <sidrena_cijena_10_09_2026>25 – 60 EUR</sidrena_cijena_10_09_2026>
     </usluga>
     <usluga>
         <naziv>1 reel sa snimanjem na lokaciji</naziv>
         <kategorija>Dodatne usluge</kategorija>
-        <aktualna_cijena>80-150 EUR</aktualna_cijena>
-        <sidrena_cijena_10_09_2026>80-150 EUR</sidrena_cijena_10_09_2026>
+        <aktualna_cijena>80 – 150 EUR</aktualna_cijena>
+        <sidrena_cijena_10_09_2026>80 – 150 EUR</sidrena_cijena_10_09_2026>
     </usluga>
 </cjenik>
