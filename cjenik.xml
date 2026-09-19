@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cjenik vlasnik="VD FLOW - Obrt za digitalni marketing" datum_sidrenja="2026-09-10">
+    <usluga>
+        <naziv>Profil Start</naziv>
+        <kategorija>Mjesečni paketi</kategorija>
+        <aktualna_cijena>180-250 EUR/mj</aktualna_cijena>
+        <sidrena_cijena_10_09_2026>180-250 EUR/mj</sidrena_cijena_10_09_2026>
+    </usluga>
+    <usluga>
+        <naziv>Profil Aktivno</naziv>
+        <kategorija>Mjesečni paketi</kategorija>
+        <aktualna_cijena>300-450 EUR/mj</aktualna_cijena>
+        <sidrena_cijena_10_09_2026>300-450 EUR/mj</sidrena_cijena_10_09_2026>
+    </usluga>
+    <usluga>
+        <naziv>Ads Fokus</naziv>
+        <kategorija>Mjesečni paketi</kategorija>
+        <aktualna_cijena>220-350 EUR/mj</aktualna_cijena>
+        <sidrena_cijena_10_09_2026>220-350 EUR/mj</sidrena_cijena_10_09_2026>
+    </usluga>
+    <usluga>
+        <naziv>Lokalni Rast</naziv>
+        <kategorija>Mjesečni paketi</kategorija>
+        <aktualna_cijena>450-650 EUR/mj</aktualna_cijena>
+        <sidrena_cijena_10_09_2026>450-650 EUR/mj</sidrena_cijena_10_09_2026>
+    </usluga>
+    <usluga>
+        <naziv>Audit Instagram profila</naziv>
+        <kategorija>Jednokratne usluge</kategorija>
+        <aktualna_cijena>60-120 EUR</aktualna_cijena>
+        <sidrena_cijena_10_09_2026>60-120 EUR</sidrena_cijena_10_09_2026>
+    </usluga>
+    <usluga>
+        <naziv>Setup Google Ads kampanje</naziv>
+        <kategorija>Jednokratne usluge</kategorija>
+        <aktualna_cijena>150-250 EUR</aktualna_cijena>
+        <sidrena_cijena_10_09_2026>150-250 EUR</sidrena_cijena_10_09_2026>
+    </usluga>
+</cjenik>
