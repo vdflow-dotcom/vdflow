@@ -20,7 +20,7 @@
     <meta property="twitter:description" content="Kompletna rješenja za rast vašeg brenda na digitalnim kanalima — od društvenih mreža i oglasa do strategije i audita.">
     <meta property="twitter:image" content="https://vdflow.hr/images/og-usluge.jpg">
 
-    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
     <!-- SCHEMA.ORG STRUCTURIRANI PODACI ZA AI I GOOGLE -->
     <script type="application/ld+json">
@@ -623,47 +623,30 @@
             const buttons = document.querySelectorAll('.tab-btn');
 
             contents.forEach(content => content.classList.remove('active'));
-            buttons.forEach(button => button.classList.remove('active'));
+            buttons.forEach(btn => btn.classList.remove('active'));
 
-            const selectedTab = document.getElementById(tabId);
-            const selectedBtn = document.getElementById('tab-btn-' + tabId);
+            const targetSection = document.getElementById(tabId);
+            const targetBtn = document.getElementById('tab-btn-' + tabId);
 
-            if (selectedTab) selectedTab.classList.add('active');
-            if (selectedBtn) selectedBtn.classList.add('active');
+            if (targetSection) targetSection.classList.add('active');
+            if (targetBtn) targetBtn.classList.add('active');
         }
 
-        // PODRŠKA ZA IZRAVNE LINKOVE S HASH-OM (#vodjenje-mreza, ITD.)
-        window.addEventListener('DOMContentLoaded', () => {
-            const hash = window.location.hash.replace('#', '');
-            if (hash && ['vodjenje-mreza', 'google-meta-oglasi', 'izrada-sadrzaja', 'strategija-audit'].includes(hash)) {
-                switchTab(hash);
-            }
-        });
-
-        // FAQ Harmonika Logika za sve FAQ sekcije
-        const faqQuestions = document.querySelectorAll('.faq-question');
-        faqQuestions.forEach(question => {
-            question.addEventListener('click', () => {
-                const faqItem = question.parentElement;
-                const faqSection = faqItem.closest('.faq-section');
-                
-                // Zatvori ostala otvorena pitanja unutar iste sekcije
-                faqSection.querySelectorAll('.faq-item').forEach(item => {
-                    if (item !== faqItem) {
-                        item.classList.remove('active');
-                    }
-                });
-
+        // Accordion logika za FAQ
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
                 faqItem.classList.toggle('active');
             });
         });
 
-        // Cookie banner logika
+        // Cookie Banner logika
         function acceptCookies() {
-            localStorage.setItem('cookieAccepted', 'true');
             document.getElementById('cookie-banner').style.display = 'none';
+            localStorage.setItem('cookiesAccepted', 'true');
         }
-        if (localStorage.getItem('cookieAccepted') === 'true') {
+
+        if (localStorage.getItem('cookiesAccepted') === 'true') {
             document.getElementById('cookie-banner').style.display = 'none';
         }
     </script>
