@@ -152,11 +152,8 @@
             backdrop-filter: blur(8px); border-bottom: 1px solid var(--border-color);
         }
 
-        .logo img {
-            height: 40px;
-            width: auto;
-            display: block;
-        }
+        .logo { font-size: 1.5rem; font-weight: 800; color: var(--primary); text-decoration: none; }
+        .logo span { color: #fff; }
         
         .nav-links { display: flex; list-style: none; gap: 25px; align-items: center; }
         .nav-links a { color: var(--text-muted); text-decoration: none; font-weight: 500; transition: 0.3s; }
@@ -334,9 +331,7 @@
 <body>
 
     <header>
-        <a href="../index.html" class="logo">
-            <img src="../images/logo.png" alt="VD FLOW Logo">
-        </a>
+        <a href="../index.html" class="logo">VD <span>FLOW</span></a>
         
         <button class="menu-toggle" id="menu-toggle" aria-label="Otvorite izbornik">☰</button>
 
