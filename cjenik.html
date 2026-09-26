@@ -288,7 +288,6 @@
             width: 240px;
         }
         .mobile-label { display: none; }
-
         /* Opće napomene istaknute */
         .notes-card { 
             background: var(--card-bg); 
@@ -316,7 +315,6 @@
             color: #ffffff;
             font-weight: 700;
         }
-
         footer { 
             text-align: center; 
             padding: 40px 20px; 
@@ -411,6 +409,56 @@
             .tab-btn { width: 100%; text-align: center; }
             .price-boxes-container { grid-template-columns: 1fr 1fr; }
         }
+
+        /* POSEBNA PRAVILA ZA SPREMANJE U PDF (CTRL + P) */
+        @media print {
+            header, footer, .cjenik-tabs, .machine-readable-box, .btn-primary, .menu-toggle {
+                display: none !important;
+            }
+            body {
+                background-color: #ffffff !important;
+                color: #000000 !important;
+            }
+            .container {
+                max-width: 100% !important;
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+            .tab-content {
+                display: block !important;
+                opacity: 1 !important;
+                visibility: visible !important;
+                page-break-inside: avoid;
+                margin-bottom: 30px;
+            }
+            .pricing-card, .table-container, .notes-card, .price-box, .note-box {
+                background-color: #ffffff !important;
+                border: 1px solid #cccccc !important;
+                color: #000000 !important;
+                box-shadow: none !important;
+                page-break-inside: avoid;
+            }
+            .pricing-card h3, .section-title, .price-val, td.service-title, .notes-card h3, .page-header h1 {
+                color: #000000 !important;
+            }
+            .price-box.anchored {
+                background-color: #f3e8ff !important;
+                border: 1px solid #a855f7 !important;
+            }
+            .section-title {
+                border-left: 4px solid #a855f7 !important;
+            }
+            th, td {
+                border-bottom: 1px solid #cccccc !important;
+                color: #000000 !important;
+            }
+            td.price-col, td.anchored-col {
+                color: #000000 !important;
+            }
+            td.anchored-col {
+                color: #a855f7 !important;
+            }
+        }
     </style>
 </head>
 <body>
@@ -439,6 +487,7 @@
                         <a href="cjenik.html#content" onclick="switchTab('content')">Content paketi</a>
                         <a href="cjenik.html#jednokratni" onclick="switchTab('jednokratni')">Jednokratne usluge</a>
                         <a href="cjenik.html#dodatni" onclick="switchTab('dodatni')">Dodatne usluge</a>
+                        <a href="arhiva-cjenika.html">Arhiva cjenika</a>
                     </div>
                 </li>
                 <li><a href="faq.html">FAQ</a></li>
@@ -851,6 +900,7 @@
             <a href="index.html">Početna</a>
             <a href="o-nama.html">O nama</a>
             <a href="cjenik.html">Cjenik</a>
+            <a href="arhiva-cjenika.html">Arhiva cjenika</a>
             <a href="faq.html">FAQ</a>
             <a href="kontakt.html">Kontakt</a>
         </div>
