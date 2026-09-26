@@ -3,253 +3,212 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Politika privatnosti i Uvjeti korištenja | VD FLOW</title>
+    <title>Politika privatnosti | VD FLOW Digitalni Marketing</title>
+    <meta name="description" content="Politika privatnosti i zaštita osobnih podataka VD FLOW obrta za digitalni marketing.">
     
-    <!-- FAVICON TAGOVI (Ispravljene putanje i dodana verzija radi cacheiranja) -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=2">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=2">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=2">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=2">
+    <!-- Favicon postavke -->
+    <link rel="icon" href="/favicon.ico?v=2" sizes="any">
+    <link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2">
 
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <meta name="description" content="Politika privatnosti, zaštita osobnih podataka i uvjeti korištenja web stranice VD FLOW.">
     <style>
-        body {
-            background-color: #0b0f19 !important;
-            color: #e2e8f0 !important;
-            font-family: 'Poppins', sans-serif !important;
-            margin: 0;
-            padding: 0;
+        :root {
+            --bg-color: #0b0c10;
+            --card-bg: #1f2833;
+            --primary: #a855f7;
+            --primary-hover: #9333ea;
+            --text-main: #ffffff;
+            --text-muted: #c5c6c7;
+            --border-color: #2d3748;
         }
-        /* Header & Navigacija */
-        .header {
-            background: rgba(15, 23, 42, 0.95);
-            padding: 20px 5%;
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { 
+            background-color: var(--bg-color); 
+            color: var(--text-main); 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+            line-height: 1.6; 
+            min-height: 100vh;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            flex-direction: column;
         }
-        .logo-text {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #ffffff;
-            text-decoration: none;
-            letter-spacing: 2px;
+
+        .container { max-width: 900px; margin: 0 auto; padding: 0 20px; width: 100%; }
+
+        header {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 20px; background: rgba(11, 12, 16, 0.95);
+            position: sticky; top: 0; z-index: 1000;
+            backdrop-filter: blur(8px); border-bottom: 1px solid var(--border-color);
         }
-        .logo-text span {
-            color: #a855f7; /* Ljubičasta boja za VD */
+
+        .logo { font-size: 1.5rem; font-weight: 800; color: var(--primary); text-decoration: none; display: flex; align-items: center; gap: 4px; }
+        .logo span { color: #fff; }
+        
+        .nav-links { display: flex; list-style: none; gap: 25px; align-items: center; }
+        .nav-links a { color: var(--text-muted); text-decoration: none; font-weight: 500; transition: 0.3s; }
+        .nav-links a:hover { color: var(--primary); }
+
+        .btn-primary { 
+            background: var(--primary); 
+            color: #fff; 
+            padding: 10px 22px; 
+            border-radius: 50px; 
+            text-decoration: none; 
+            font-weight: 600; 
+            display: inline-block; 
+            transition: background 0.3s;
+            border: none;
+            cursor: pointer;
         }
-        .nav ul {
-            list-style: none;
-            display: flex;
-            gap: 25px;
-            margin: 0;
-            padding: 0;
+        .btn-primary:hover { background: var(--primary-hover); }
+
+        .menu-toggle { display: none; background: none; border: none; color: #fff; font-size: 1.8rem; cursor: pointer; }
+
+        .content-section { padding: 60px 20px; flex: 1; }
+        .content-card { 
+            background: var(--card-bg); 
+            border: 1px solid var(--border-color); 
+            border-radius: 16px; 
+            padding: 40px; 
+            margin-top: 20px; 
         }
-        .nav a {
-            color: #cbd5e0 !important;
-            text-decoration: none;
-            font-size: 0.95rem;
-            transition: color 0.3s;
+        .content-card h1 { font-size: 2.5rem; color: #fff; margin-bottom: 10px; }
+        .content-card h2 { color: var(--primary); font-size: 1.3rem; margin-bottom: 15px; margin-top: 30px; }
+        .content-card p { color: var(--text-muted); font-size: 1rem; margin-bottom: 15px; }
+        .content-card ul { list-style: disc; padding-left: 20px; color: var(--text-muted); margin-bottom: 15px; }
+        .content-card li { margin-bottom: 8px; }
+
+        footer { 
+            text-align: center; 
+            padding: 40px 20px; 
+            border-top: 1px solid var(--border-color); 
+            color: var(--text-muted); 
+            font-size: 0.9rem; 
+            margin-top: auto; 
         }
-        .nav a:hover {
-            color: #a855f7 !important;
-        }
-        .btn-primary {
-            background: linear-gradient(135deg, #a855f7, #6366f1);
-            color: #fff !important;
-            padding: 10px 22px;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
-            display: inline-block;
-        }
-        /* Sadržaj */
-        .legal-container {
-            max-width: 900px;
-            margin: 60px auto;
-            padding: 50px;
-            background: rgba(15, 23, 42, 0.6);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 16px;
-            backdrop-filter: blur(10px);
-        }
-        .legal-container h1 {
-            font-size: 2.2rem;
-            color: #ffffff;
-            margin-bottom: 15px;
-        }
-        .legal-container .update-date {
-            font-size: 0.85rem;
-            color: #64748b;
-            margin-bottom: 30px;
-            display: block;
-        }
-        .legal-container h2 {
-            font-size: 1.3rem;
-            color: #c084fc;
-            margin-top: 35px;
-            margin-bottom: 12px;
-            border-bottom: 1px solid rgba(192, 132, 252, 0.2);
-            padding-bottom: 5px;
-        }
-        .legal-container p, .legal-container li {
-            color: #94a3b8;
-            font-size: 0.95rem;
-            line-height: 1.7;
-            margin-bottom: 12px;
-        }
-        .legal-container ul {
-            margin-bottom: 15px;
-            padding-left: 20px;
-        }
-        .legal-container a {
-            color: #c084fc;
-            text-decoration: none;
-            font-weight: 500;
-        }
-        .legal-container a:hover {
-            text-decoration: underline;
-        }
-        /* Footer */
-        .footer {
-            background: #070a12;
-            padding: 30px 20px;
-            text-align: center;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            margin-top: 80px;
-        }
-        .footer-links {
-            margin-bottom: 15px;
-        }
-        .footer-links a {
-            color: #64748b !important;
-            text-decoration: none;
-            margin: 0 8px;
-            font-size: 0.9rem;
-        }
-        .footer-legal {
-            color: #64748b;
-            font-size: 0.85rem;
-            max-width: 800px;
-            margin: 0 auto 15px auto;
-            line-height: 1.5;
-        }
-        .footer p {
-            color: #475569;
-            font-size: 0.85rem;
-            margin: 0;
+        .footer-links { display: flex; justify-content: center; gap: 12px; margin-bottom: 15px; flex-wrap: wrap; align-items: center; }
+        .footer-links a { color: var(--text-muted); text-decoration: none; transition: color 0.3s ease; }
+        .footer-links a:hover { color: var(--primary); }
+        .footer-links span { color: #64748b; }
+        .footer-legal { max-width: 800px; margin: 0 auto 15px auto; font-size: 0.85rem; opacity: 0.8; line-height: 1.4; }
+
+        @media (max-width: 768px) {
+            .menu-toggle { display: block; }
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--bg-color);
+                padding: 20px;
+                border-bottom: 1px solid var(--border-color);
+                gap: 15px;
+                text-align: center;
+            }
+            .nav-links.active { display: flex; }
+            .header-btn { display: none; }
+            .content-card { padding: 25px 20px; }
+            .content-card h1 { font-size: 2rem; }
         }
     </style>
 </head>
 <body>
 
-    <!-- NAVIGACIJA -->
-    <header class="header">
-        <div class="logo">
-            <a href="index.html" style="text-decoration: none;">
-                <span class="logo-text"><span>VD</span> FLOW</span>
-            </a>
-        </div>
-        <nav class="nav">
-            <ul>
+    <header>
+        <a href="index.html" class="logo"><span style="color: var(--primary);">VD</span> <span>FLOW</span></a>
+        
+        <button class="menu-toggle" id="menu-toggle" aria-label="Otvorite izbornik">☰</button>
+
+        <nav>
+            <ul class="nav-links" id="nav-links">
                 <li><a href="index.html">Početna</a></li>
                 <li><a href="o-nama.html">O nama</a></li>
                 <li><a href="usluge.html">Usluge</a></li>
                 <li><a href="cjenik.html">Cjenik</a></li>
+                <li><a href="arhiva-cjenika.html">Arhiva cjenika</a></li>
+                <li><a href="faq.html">FAQ</a></li>
                 <li><a href="kontakt.html">Kontakt</a></li>
             </ul>
         </nav>
-        <a href="kontakt.html" class="btn-primary">Zatraži ponudu</a>
+        
+        <a href="kontakt.html" class="btn-primary header-btn">Zatraži ponudu</a>
     </header>
 
-    <!-- SADRŽAJ POLITIKE PRIVATNOSTI I UVJETA -->
-    <main class="legal-container">
-        <h1>Politika privatnosti i Uvjeti korištenja</h1>
-        <span class="update-date">Zadnje ažuriranje: Rujan 2026.</span>
-        
-        <p>Ovaj dokument definira Pravila privatnosti, Uvjete korištenja te Opće odredbe o ograničenju odgovornosti za web stranicu i usluge obrta <strong>VD FLOW</strong>. Korištenjem ove web stranice i slanjem upita potvrđujete da ste upoznati s ovim uvjetima te ih u cijelosti prihvaćate.</p>
+    <main class="container content-section">
+        <div class="content-card">
+            <h1>Politika privatnosti</h1>
+            <p style="font-size: 0.85rem; margin-bottom: 30px;">Zadnji put ažurirano: 26. rujna 2026.</p>
 
-        <h2>1. Podaci o pružatelju usluge (Voditelj obrade)</h2>
-        <p>Usluge putem ove internetske stranice pruža:</p>
-        <ul>
-            <li><strong>Naziv obrta:</strong> VD FLOW, obrt za digitalni marketing</li>
-            <li><strong>Vlasnik:</strong> Vlatka Dizdarević</li>
-            <li><strong>Sjedište:</strong> Gradek 26, 10255 Gornji Stupnik, Hrvatska</li>
-            <li><strong>OIB:</strong> 77462129969</li>
-            <li><strong>E-pošta za kontakt:</strong> <a href="mailto:vdflow.kontakt@gmail.com">vdflow.kontakt@gmail.com</a></li>
-        </ul>
+            <h2>1. Opće odredbe</h2>
+            <p>Ova Politika privatnosti uređuje prikupljanje, obradu i zaštitu vaših osobnih podataka prilikom korištenja web stranice <strong style="color: var(--primary);">vdflow.hr</strong>. Obrt VD FLOW ozbiljno shvaća vašu privatnost i obvezuje se štititi vaše osobne podatke u skladu s Općom uredbom o zaštiti podataka (GDPR) i važećim hrvatskim propisima.</p>
 
-        <h2>2. Prikupljanje i obrada osobnih podataka (GDPR)</h2>
-        <p>VD FLOW poštuje Vašu privatnost i obvezuje se štititi Vaše osobne podatke u skladu s Općom uredbom o zaštiti podataka (GDPR) i važećim nacionalnim zakonodavstvom.</p>
-        <p><strong>Koje podatke prikupljamo?</strong> Putem kontakt forme ili izravne e-pošte prikupljamo isključivo podatke koje nam sami dobrovoljno ustupite: ime i/ili naziv tvrtke, e-adresa te sadržaj i specifikacije Vašeg upita.</p>
-        <p><strong>Svrha obrade:</strong> Prikupljeni podaci koriste se isključivo u svrhu komunikacije s Vama, odgovaranja na upite, slanja informativnih ponuda te naknadne realizacije i izvršenja ugovorenih usluga digitalnog marketinga.</p>
-        <p><strong>Pohrana i dijeljenje:</strong> Vaši se podaci čuvaju na sigurnim elektroničkim poslužiteljima te se ni pod kojim uvjetima ne prodaju, ne iznajmljuju niti dijele s trećim stranama, osim ako to izričito ne nalaže zakonska obveza ili nadležno tijelo državne vlasti.</p>
+            <h2>2. Voditelj obrade podataka</h2>
+            <p>Voditelj obrade osobnih podataka je:<br>
+            <strong style="color: var(--primary);">VD FLOW, obrt za digitalni marketing</strong><br>
+            Vlasnik: Vlatka Dizdarević<br>
+            Sjedište: Gradek 26, 10251 Gornji Stupnik<br>
+            OIB: 77462129969<br>
+            E-mail: info@vdflow.hr</p>
 
-        <h2>3. Kolačići (Cookies)</h2>
-        <p>Ova web stranica koristi minimalnu količinu nužnih kolačića koji služe isključivo za funkcioniranje stranice i pamćenje Vašeg izbora na kolačić-beneru (prihvaćanje uvjeta pregledavanja). Na stranici se ne koriste invazivni kolačići trećih strana za praćenje privatnog internetskog prometa.</p>
+            <h2>3. Koje podatke sakupljamo i zašto?</h2>
+            <p>Prilikom korištenja naše web stranice ili slanja upita putem kontakt formi, možemo prikupljati sljedeće podatke:</p>
+            <ul>
+                <li><strong>Osobni podaci:</strong> Ime i prezime, adresa e-pošte, telefonski broj (isključivo kada nam ih dobrovoljno ostavite putem kontakt forme ili upita).</li>
+                <li><strong>Tehnički podaci:</strong> IP adresa, vrsta pretraživača, operativni sustav i podaci o posjeti stranici (putem nužnih kolačića i analitike) radi osiguranja sigurnosti i funkcionalnosti weba.</li>
+            </ul>
+            <p>Prikupljeni podaci koriste se isključivo u svrhu odgovaranja na vaše upite, slanja ponuda, izvršavanja ugovorenih usluga digitalnog marketinga te unaprjeđenja korisničkog iskustva na stranici.</p>
 
-        <h2>4. Ograničenje odgovornosti za marketinške rezultate</h2>
-        <p>Sve usluge koje VD FLOW pruža u području digitalnog marketinga, vođenja društvenih mreža, optimizacije i oglasnih kampanja (poput Google Ads ili Meta Ads sustava) temelje se na stručnom znanju, najboljoj praksi i profesionalnim standardima.</p>
-        <p>Međutim, budući da digitalne platforme, algoritmi trećih strana, tržišni uvjeti i ponašanje potrošača konstantno variraju i izvan su izravne kontrole obrta VD FLOW, <strong>ne jamčimo fiksne financijske rezultate, točan broj konverzija, točan porast prodaje niti pozicioniranje na tražilicama</strong>. Sve preporuke, strategije i procjene daju se u najboljoj vjeri, ali krajnji poslovni uspjeh ovisi o nizu vanjskih faktora na koje pružatelj usluge ne može utjecati.</p>
+            <h2>4. Kolačići (Cookies)</h2>
+            <p>Web stranica koristi kolačiće kako bi osigurala ispravan rad stranice i pružila bolje korisničko iskustvo. Nužni kolačići pohranjuju se na vašem uređaju jer su neophodni za rad weba, dok analitičke ili marketinške kolačiće možete prilagoditi ili odbiti.</p>
 
-        <h2>5. Točnost informacija i funkcioniranje web stranice</h2>
-        <p>VD FLOW ulaže maksimalne napore kako bi osigurao točnost i ažurnost objavljenih informacija na ovim stranicama. Ipak, ne preuzimamo nikakvu odgovornost za eventualne tiskarske pogreške, tehničke poteškoće, privremenu nedostupnost stranice ili štetu nastalu korištenjem sadržaja s ove web lokacije.</p>
-        <p>Stranica može sadržavati poveznice (linkove) na vanjske web stranice koje nisu pod našom kontrolom. VD FLOW ne snosi nikakvu odgovornost za sadržaj, sigurnost ili pravila privatnosti tih vanjskih izvora.</p>
+            <h2>5. Vaša prava</h2>
+            <p>U skladu s GDPR-om, u svakom trenutku imate pravo zatražiti:</p>
+            <ul>
+                <li>Pristup svojim osobnim podacima i uvid u način na koji se obrađuju.</li>
+                <li>Ispravak netočnih ili nepotpunih podataka.</li>
+                <li>Brisanje osobnih podataka ("pravo na zaborav") kada više nisu nužni za svrhe za koje su prikupljeni.</li>
+                <li>Ograničenje obrade ili prigovor na obradu podataka.</li>
+            </ul>
+            <p>Za ostvarivanje bilo kojeg od ovih prava, možete nam se obratiti putem e-pošte na našu službenu adresu.</p>
 
-        <h2>6. Intelektualno vlasništvo</h2>
-        <p>Cjelokupan sadržaj objavljen na ovoj web stranici (uključujući tekstove, vizuale, grafička rješenja, logotip "VD FLOW" i strukturu stranice) vlasništvo je obrta VD FLOW ili se koristi uz izričito dopuštenje. Neovlašteno kopiranje, preuzimanje, modificiranje ili distribucija sadržaja bez prethodne pisane suglasnosti strogo je zabranjeno.</p>
-
-        <h2>7. Izmjene uvjeta i rješavanje sporova</h2>
-        <p>VD FLOW zadržava pravo izmjene ove Politike privatnosti i Uvjeta korištenja u bilo kojem trenutku bez prethodne najave. Sve izmjene stupaju na snagu odmah po objavi na ovim stranicama.</p>
-        <p>Za sve eventualne sporove koji mogu proizaći iz korištenja ove web stranice ili sklapanja poslovne suradnje nadležan je stvarno i mjesno nadležan sud u Republici Hrvatskoj, uz primjenu hrvatskog prava.</p>
+            <h2>6. Izmjene Politike privatnosti</h2>
+            <p>Zadržavamo pravo povremenog ažuriranja ove Politike privatnosti u skladu s promjenama u zakonu ili našem poslovanju. Ažurirana verzija bit će objavljena na ovoj stranici.</p>
+        </div>
     </main>
 
-    <!-- FOOTER -->
-    <footer class="footer">
+    <footer>
         <div class="footer-links">
-            <a href="index.html" class="hover:text-slate-300 transition">Početna</a>
-    <span>•</span>
-    <a href="usluge.html" class="hover:text-slate-300 transition">Usluge</a>
-    <span>•</span>
-    <a href="cjenik.html" class="hover:text-slate-300 transition">Cjenik</a>
-    <span>•</span>
-    <a href="kontakt.html" class="hover:text-slate-300 transition">Kontakt</a>
-    <span>•</span>
-    <a href="uvjeti-koristenja.html" class="hover:text-slate-300 transition">Uvjeti korištenja</a>
-    <span>•</span>
-    <a href="politika-privatnosti.html" class="hover:text-slate-300 transition">Politika privatnosti</a>
+            <a href="index.html">Početna</a>
+            <span>•</span>
+            <a href="o-nama.html">O nama</a>
+            <span>•</span>
+            <a href="usluge.html">Usluge</a>
+            <span>•</span>
+            <a href="cjenik.html">Cjenik</a>
+            <span>•</span>
+            <a href="kontakt.html">Kontakt</a>
+            <span>•</span>
+            <a href="uvjeti-koristenja.html">Uvjeti korištenja</a>
+            <span>•</span>
+            <a href="politika-privatnosti.html">Politika privatnosti</a>
         </div>
 
         <div class="footer-legal">
-            <strong>VD FLOW</strong> • Obrt za digitalni marketing | Vlasnik: Vlatka Dizdarević | Sjedište: Gradek 26, 10255 Gornji Stupnik | OIB: 77462129969 | Upisano u Obrtni registar nadležnog ureda | IBAN:HR1924840081135531768
+            <strong>VD FLOW</strong> • Obrt za digitalni marketing | Vlasnik: Vlatka Dizdarević | Sjedište: Gradek 26, 10251 Gornji Stupnik | OIB: 77462129969 | Upisano u Obrtni registar nadležnog ureda | IBAN: HR1924840081135531768
         </div>
         
         <p>&copy; 2026 VD FLOW. Sva prava pridržana.</p>
     </footer>
 
-    <!-- COOKIE CONSENT BANNER -->
-    <div id="cookie-banner" style="position: fixed; bottom: 20px; left: 20px; right: 20px; background: rgba(15, 23, 42, 0.95); border: 1px solid rgba(255,255,255,0.1); padding: 15px 20px; border-radius: 12px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 10px 25px rgba(0,0,0,0.5); backdrop-filter: blur(8px); z-index: 9999; flex-wrap: wrap; gap: 15px;">
-        <p style="margin: 0; color: #cbd5e0; font-size: 0.9rem; max-width: 800px;">
-            Ova web stranica koristi kolačiće kako bi vam osigurala najbolje korisničko iskustvo. Saznajte više u našoj <a href="politika-privatnosti.html" style="color: #a855f7; text-decoration: underline;">Politici privatnosti</a>.
-        </p>
-        <button onclick="acceptCookies()" class="btn-primary" style="padding: 8px 20px; font-size: 0.85rem; cursor: pointer; border: none;">Prihvaćam</button>
-    </div>
-
     <script>
-        function acceptCookies() {
-            localStorage.setItem('cookieAccepted', 'true');
-            document.getElementById('cookie-banner').style.display = 'none';
-        }
-        if (localStorage.getItem('cookieAccepted') === 'true') {
-            document.getElementById('cookie-banner').style.display = 'none';
-        }
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.getElementById('nav-links');
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
     </script>
 </body>
 </html>
