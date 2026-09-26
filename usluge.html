@@ -12,18 +12,10 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://vdflow.hr/usluge/sve-usluge.html">
     <meta property="og:image" content="https://vdflow.hr/images/og-usluge.jpg">
-
-    <!-- Twitter Card -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://vdflow.hr/usluge/sve-usluge.html">
-    <meta property="twitter:title" content="Naše Usluge | VD FLOW Digitalni Marketing">
-    <meta property="twitter:description" content="Kompletna rješenja za rast Vašeg brenda na digitalnim kanalima — od društvenih mreža i oglasa do strategije i audita.">
-    <meta property="twitter:image" content="https://vdflow.hr/images/og-usluge.jpg">
-
+    
     <!-- Favicon postavke -->
-    <link rel="icon" href="/favicon.ico?v=2" sizes="any">
-    <link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2">
+    <link rel="icon" href="../favicon.ico?v=2" sizes="any">
+    <link rel="icon" href="../favicon.png?v=2" type="image/png">
 
     <!-- SCHEMA.ORG STRUCTURIRANI PODACI ZA AI I GOOGLE -->
     <script type="application/ld+json">
@@ -51,7 +43,7 @@
                 }
               },
               "areaServed": "HR",
-              "description": "Profesionalno vođenje društvenih mreža (Instagram, Facebook,TikTok), planiranje sadržaja, dizajna grafika, copywriting i mjesečna analitika."
+              "description": "Profesionalno vođenje društvenih mreža (Instagram, Facebook, TikTok), planiranje sadržaja, dizajna grafika, copywriting i mjesečna analitika."
             },
             {
               "@type": "Service",
@@ -118,7 +110,6 @@
       ]
     }
     </script>
-
     <style>
         :root {
             --bg-color: #0b0c10;
@@ -129,7 +120,6 @@
             --text-muted: #c5c6c7;
             --border-color: #2d3748;
         }
-
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { 
             background-color: var(--bg-color); 
@@ -141,9 +131,8 @@
             flex-direction: column;
             scroll-behavior: smooth;
         }
-
         .container { max-width: 900px; margin: 0 auto; padding: 0 20px; width: 100%; }
-
+        
         /* HEADER & NAVIGACIJA */
         header {
             display: flex; justify-content: space-between; align-items: center;
@@ -151,14 +140,13 @@
             position: sticky; top: 0; z-index: 1000;
             backdrop-filter: blur(8px); border-bottom: 1px solid var(--border-color);
         }
-
         .logo { font-size: 1.5rem; font-weight: 800; color: var(--primary); text-decoration: none; }
         .logo span { color: #fff; }
         
-        .nav-links { display: flex; list-style: none; gap: 25px; align-items: center; }
-        .nav-links a { color: var(--text-muted); text-decoration: none; font-weight: 500; transition: 0.3s; }
+        .nav-links { display: flex; list-style: none; gap: 20px; align-items: center; flex-wrap: wrap; }
+        .nav-links a { color: var(--text-muted); text-decoration: none; font-weight: 500; transition: 0.3s; font-size: 0.95rem; }
         .nav-links a:hover, .nav-links a.active { color: var(--primary); }
-
+        
         /* DROPDOWN MENU */
         .dropdown { position: relative; display: inline-block; }
         .dropdown-menu {
@@ -171,7 +159,7 @@
         .dropdown-menu a { color: var(--text-muted); padding: 10px 20px; text-decoration: none; display: block; font-size: 0.95rem; }
         .dropdown-menu a:hover, .dropdown-menu a.active { background-color: var(--border-color); color: var(--primary); }
         .dropdown:hover .dropdown-menu { display: block; }
-
+        
         .btn-primary { 
             background: var(--primary); 
             color: #fff; 
@@ -185,11 +173,11 @@
             cursor: pointer;
         }
         .btn-primary:hover { background: var(--primary-hover); }
-
+        
         /* HAMBURGER MENU ZA MOBITELE */
         .menu-toggle { display: none; background: none; border: none; color: #fff; font-size: 1.8rem; cursor: pointer; }
-
-        /* TAB INTERFEJS (po uzoru na cjenik.html) */
+        
+        /* TAB INTERFEJS */
         .cjenik-tabs {
             display: flex;
             justify-content: center;
@@ -213,17 +201,15 @@
             color: #fff;
             border-color: var(--primary);
         }
-
         .tab-content { display: none; }
         .tab-content.active { display: block; }
-
+        
         /* USLUGE DETAIL SECTIONS */
         .services-wrapper { padding: 40px 0; flex: 1; }
         .page-main-title { font-size: 2.5rem; color: #fff; margin-bottom: 10px; text-align: center; }
         .page-main-subtitle { text-align: center; color: var(--text-muted); font-size: 1.1rem; margin-bottom: 40px; }
         
         .service-section { margin-bottom: 40px; scroll-margin-top: 100px; }
-        .service-section h2.service-heading { font-size: 1.8rem; color: #fff; margin: 30px 0 20px 0; border-left: 4px solid var(--primary); padding-left: 15px; }
         
         .card { 
             background: var(--card-bg); 
@@ -238,7 +224,7 @@
         .card ul { list-style: none; margin-bottom: 30px; }
         .card ul li { color: var(--text-muted); margin-bottom: 12px; padding-left: 24px; position: relative; font-size: 1rem; }
         .card ul li::before { content: "•"; position: absolute; left: 0; color: var(--primary); font-size: 1.5rem; line-height: 1; top: -2px; }
-
+        
         /* FAQ STILOVI */
         .faq-section { margin-top: 40px; }
         .faq-section h3.faq-main-title { font-size: 1.5rem; color: #fff; margin-bottom: 20px; }
@@ -286,7 +272,7 @@
             max-height: 300px; 
             padding: 0 20px 18px 20px; 
         }
-
+        
         /* FOOTER */
         footer { 
             text-align: center; 
@@ -300,7 +286,7 @@
         .footer-links a { color: var(--text-muted); text-decoration: none; }
         .footer-links a:hover { color: var(--primary); }
         .footer-legal { max-width: 800px; margin: 0 auto 15px auto; font-size: 0.85rem; opacity: 0.8; line-height: 1.4; }
-
+        
         /* MOBILNA PRILAGODBA */
         @media (max-width: 768px) {
             .menu-toggle { display: block; }
@@ -321,7 +307,6 @@
             .dropdown-menu { position: static; box-shadow: none; background: transparent; border: none; width: 100%; }
             .header-btn { display: none; }
             .page-main-title { font-size: 2rem; }
-            .service-section h2.service-heading { font-size: 1.6rem; }
             .card { padding: 25px 20px; }
             .cjenik-tabs { flex-direction: column; }
             .tab-btn { width: 100%; text-align: center; }
@@ -329,12 +314,10 @@
     </style>
 </head>
 <body>
-
     <header>
         <a href="../index.html" class="logo">VD <span>FLOW</span></a>
         
         <button class="menu-toggle" id="menu-toggle" aria-label="Otvorite izbornik">☰</button>
-
         <nav>
             <ul class="nav-links" id="nav-links">
                 <li><a href="../index.html">Početna</a></li>
@@ -349,6 +332,8 @@
                     </div>
                 </li>
                 <li><a href="../cjenik.html">Cjenik</a></li>
+                <li><a href="../arhiva-cjenika.html">Arhiva cjenika</a></li>
+                <li><a href="../faq.html">FAQ</a></li>
                 <li><a href="../kontakt.html">Kontakt</a></li>
             </ul>
         </nav>
@@ -359,8 +344,8 @@
     <main class="container services-wrapper">
         <h1 class="page-main-title">Naše Usluge</h1>
         <p class="page-main-subtitle">Sveobuhvatna rješenja za rast vašeg poslovanja i prepoznatljivost na digitalnom tržištu.</p>
-
-        <!-- 4 GUMBA / TABA PO UZORU NA CJENIK -->
+        
+        <!-- 4 GUMBA / TABA -->
         <div class="cjenik-tabs">
             <button class="tab-btn active" id="tab-btn-vodjenje-mreza" onclick="switchTab('vodjenje-mreza')">Vođenje Društvenih Mreža</button>
             <button class="tab-btn" id="tab-btn-google-meta-oglasi" onclick="switchTab('google-meta-oglasi')">Google & Meta Oglasi</button>
@@ -370,11 +355,9 @@
 
         <!-- 1. VOĐENJE DRUŠTVENIH MREŽA -->
         <section id="vodjenje-mreza" class="service-section tab-content active">
-            <h2 class="section-title" style="display:none;">Vođenje Društvenih Mreža</h2>
             <div class="card">
                 <h3>Izgradite dosljedan i prepoznatljiv brend</h3>
                 <p>Kroz strateško upravljanje Instagram i Facebook kanalima pretvaramo slučajne prolaznike u vjerne kupce. Preuzimamo cjelokupni proces — od plana objava i pisanja tekstova do vizualne pripreme.</p>
-
                 <h3>Što usluga uključuje:</h3>
                 <ul>
                     <li>Izrada mjesečnog kalendara sadržaja</li>
@@ -383,39 +366,33 @@
                     <li>Istraživanje i optimizacija hashtagova</li>
                     <li>Analiza angažmana i mjesečno izvještavanje</li>
                 </ul>
-
-                <!-- FAQ SEKCIJA ZA VOĐENJE MREŽA -->
+                <!-- FAQ SEKCIJA -->
                 <div class="faq-section">
                     <h3 class="faq-main-title">Često postavljana pitanja (FAQ)</h3>
-
                     <div class="faq-item">
                         <button class="faq-question">Zašto je izrada sadržaja uključena u pakete vođenja mreža?</button>
                         <div class="faq-answer">
                             <p>Da bismo postigli kvalitetu i dosljednost, radimo s vizualnim materijalima i tekstovima prilagođenim Vašem brendu. Sve što kreiramo usklađeno je s vizualnim identitetom i ciljevima komunikacije.</p>
                         </div>
                     </div>
-
                     <div class="faq-item">
                         <button class="faq-question">Moram li poslati vlastite fotografije i videozapise?</button>
                         <div class="faq-answer">
                             <p>Ako imate autentične materijale (proizvode, radnu atmosferu, tim), to je velik plus. Ukoliko ih nemate, koristimo kombinaciju dizajna, stock fotografija i stock video materijala visoke kvalitete.</p>
                         </div>
                     </div>
-
                     <div class="faq-item">
                         <button class="faq-question">Koliko često se objavljuje sadržaj?</button>
                         <div class="faq-answer">
                             <p>Učestalost ovisi o odabranom paketu i strategiji — obično od 2 do 4 objave tjedno, uz redovite Story objave kako bi profil ostao aktivan i privlačan publici.</p>
                         </div>
                     </div>
-
                     <div class="faq-item">
                         <button class="faq-question">Mogu li pregledati objave prije nego što budu objavljene?</button>
                         <div class="faq-answer">
-                            <p>Da, naravno. Nikakav sadržaj neće biti objavljen bez Vaše potvrde jer nam je zadovoljstvo klijenta misao vodilja. Naravno da možemo dogovoriti i potpuno prepuštanje stvari u naše ruke, ukoliko ne želite potvrđivati svaku objavu. Flesibilni smo za dogovor.</p>
+                            <p>Da, naravno. Nikakav sadržaj neće biti objavljen bez Vaše potvrde jer nam je zadovoljstvo klijenta misao vodilja. Fleksibilni smo za dogovor ukoliko želite potpuno prepuštanje u naše ruke.</p>
                         </div>
                     </div>
-
                     <div class="faq-item">
                         <button class="faq-question">Uključuje li vođenje mreža i plaćene oglase?</button>
                         <div class="faq-answer">
@@ -423,52 +400,44 @@
                         </div>
                     </div>
                 </div>
-
                 <a href="../kontakt.html" class="btn-primary" style="margin-top: 25px;">Zatraži prilagođenu ponudu</a>
             </div>
         </section>
 
         <!-- 2. GOOGLE & META OGLASI -->
         <section id="google-meta-oglasi" class="service-section tab-content">
-            <h2 class="section-title" style="display:none;">Google & Meta Oglasi</h2>
             <div class="card">
                 <h3>Usmjerite precizne oglase na kupce koji traže Vaše usluge</h3>
                 <p>Ne trošite budžet na “sreću”. Uz profesionalno vođenje Google i Meta (Facebook, Instagram) kampanja dovodimo kupce s visokom namjerom kupnje ravno na Vašu web stranicu.</p>
-
                 <h3>Što usluga uključuje:</h3>
                 <ul>
                     <li>Detaljna analiza ciljane publike i postavljanje strategije oglašavanja</li>
                     <li>Izrada privlačnih oglasnih vizuala i pisanje tekstova koji prodaju</li>
-                    <li>Podešavanje i praćenje konvencija (Meta Pixel, Google Tag Manager, GA4)</li>
+                    <li>Podešavanje i praćenje konverzija (Meta Pixel, Google Tag Manager, GA4)</li>
                     <li>Kontinuirano testiranje, optimizacija i smanjenje cijene po akviziciji (CPA)</li>
                     <li>Transparentna mjesečna izvješća s naglaskom na povrat ulaganja (ROAS)</li>
                 </ul>
-
-                <!-- FAQ SEKCIJA ZA GOOGLE & META OGLASE -->
+                <!-- FAQ SEKCIJA -->
                 <div class="faq-section">
                     <h3 class="faq-main-title">Često postavljana pitanja</h3>
-
                     <div class="faq-item">
                         <button class="faq-question">Da li je budžet za oglašavanje uključen u cijenu usluge?</button>
                         <div class="faq-answer">
                             <p>Ne, budžet za oglašavanje koji direktno uplaćujete platformama (Google ili Meta) nije uključen u našu mjesečnu naknadu za vođenje kampanja. Vi sami definirate oglasni budžet u dogovoru s nama.</p>
                         </div>
                     </div>
-
                     <div class="faq-item">
                         <button class="faq-question">Koliki je minimalni preporučeni budžet za početak oglasa?</button>
                         <div class="faq-answer">
                             <p>Preporučeni budžet ovisi o djelatnosti i ciljevima, ali za lokalne male biznise obično kreće od 5 do 10 € dnevno po platformi kako bismo dobili stabilne i mjerljive rezultate.</p>
                         </div>
                     </div>
-
                     <div class="faq-item">
                         <button class="faq-question">Koja je razlika između Google i Meta oglasa?</button>
                         <div class="faq-answer">
-                            <p>Google oglasi ciljaju korisnike koji aktivno traže Vaš proizvod ili uslugu u tom trenutku (visoka namjera kupnje). Meta (Facebook/Instagram) oglasi grade svijest o brendu i pronalaze kupce na temelju njihovih interesa i ponašanja.</p>
+                            <p>Google oglasi ciljaju korisnike koji aktivno traže Vaš proizvod ili uslugu u tom trenutku. Meta (Facebook/Instagram) oglasi grade svijest o brendu i pronalaze kupce na temelju njihovih interesa i ponašanja.</p>
                         </div>
                     </div>
-
                     <div class="faq-item">
                         <button class="faq-question">Kada mogu očekivati prve rezultate od oglasnih kampanja?</button>
                         <div class="faq-answer">
@@ -476,18 +445,15 @@
                         </div>
                     </div>
                 </div>
-
                 <a href="../kontakt.html" class="btn-primary" style="margin-top: 25px;">Pokrenite Oglase</a>
             </div>
         </section>
 
         <!-- 3. IZRADA SADRŽAJA (CONTENT) -->
         <section id="izrada-sadrzaja" class="service-section tab-content">
-            <h2 class="section-title" style="display:none;">Izrada Sadržaja (Content)</h2>
             <div class="card">
                 <h3>Sadržaj koji privlači pažnju i gradi povjerenje</h3>
                 <p>Kvalitetan sadržaj srce je svakog uspješnog digitalnog nastupa. Pomažemo Vam stvoriti pamtljivu priču kroz vizuale, grafike i tekstove koji rezoniraju s Vašom ciljanom publikom.</p>
-
                 <h3>Što usluga uključuje:</h3>
                 <ul>
                     <li>Dizajn objava, carousela i vizuala prilagođenih društvenim mrežama</li>
@@ -495,25 +461,21 @@
                     <li>Izrada predložaka za dugoročnu vizualnu dosljednost brenda</li>
                     <li>Kreiranje vizualnih materijala za web stranice i oglasne kampanje</li>
                 </ul>
-
-                <!-- FAQ SEKCIJA ZA IZRADU SADRŽAJA -->
+                <!-- FAQ SEKCIJA -->
                 <div class="faq-section">
                     <h3 class="faq-main-title">Često postavljana pitanja</h3>
-
                     <div class="faq-item">
                         <button class="faq-question">Mogu li naručiti sadržaj jednokratno ili isključivo mjesečno?</button>
                         <div class="faq-answer">
                             <p>Content pakete i pojedinačne objave možete ugovoriti fleksibilno – bilo kao jednokratnu isporuku materijala ili kroz redovite mjesečne pakete sadržaja.</p>
                         </div>
                     </div>
-
                     <div class="faq-item">
                         <button class="faq-question">Kako izgleda proces izrade tekstova i vizuala?</button>
                         <div class="faq-answer">
-                            <p>Nakon što nam pošaljete osnovne informacije o temi ili cilju, pripremamo prijedlog vizuala i tekstova (caption). Imate mogućnost revizije i unosa manjih korekcija prije finalne isporuke.</p>
+                            <p>Nakon što nam pošaljete osnovne informacije o temi ili cilju, pripremamo prijedlog vizuala i tekstova. Imate mogućnost revizije i unosa manjih korekcija prije finalne isporuke.</p>
                         </div>
                     </div>
-
                     <div class="faq-item">
                         <button class="faq-question">Prilagođavate li se vizualnom identitetu mog brenda?</button>
                         <div class="faq-answer">
@@ -521,18 +483,15 @@
                         </div>
                     </div>
                 </div>
-
                 <a href="../kontakt.html" class="btn-primary" style="margin-top: 25px;">Naručite Sadržaj</a>
             </div>
         </section>
 
         <!-- 4. STRATEGIJA & MARKETING AUDIT -->
         <section id="strategija-audit" class="service-section tab-content">
-            <h2 class="section-title" style="display:none;">Strategija & Marketing Audit</h2>
             <div class="card">
                 <h3>Pronađite "uska grla" i prilike za rast</h3>
                 <p>Ako već ulažete u marketing, ali ne vidite očekivani povrat, radimo detaljan pregled postojećih profila, oglasa i web stranice te dajemo jasne i primjenjive smjernice za poboljšanje.</p>
-
                 <h3>Što uključuje audit:</h3>
                 <ul>
                     <li>Analiza profilnih postavki, tehničkog dijela i vizualnog identiteta</li>
@@ -540,48 +499,34 @@
                     <li>Analiza konkurencije i pozicioniranja Vaše robne marke na tržištu</li>
                     <li>Izrada jasnog i izvedivog akcijskog plana za narednih 3–6 mjeseci</li>
                 </ul>
-
-                <!-- ČESTO POSTAVLJANA PITANJA (FAQ) ZA AUDIT -->
+                <!-- FAQ SEKCIJA -->
                 <div class="faq-section">
                     <h3 class="faq-main-title">Često postavljana pitanja</h3>
-                    
                     <div class="faq-item">
-                        <button class="faq-question">
-                            Što je točno marketing audit i kome je namijenjen?
-                        </button>
+                        <button class="faq-question">Što je točno marketing audit i kome je namijenjen?</button>
                         <div class="faq-answer">
-                            <p>Marketing audit je detaljna analiza Vaših trenutnih marketinških aktivnosti (profila, oglasnih računa, sadržaja). Namijenjena je tvrtkama koje već ulažu u marketing, ali nisu zadovoljne rezultatima ili žele pronaći nova mjesta za rast i optimizaciju budžeta.</p>
+                            <p>Marketing audit je detaljna analiza Vaših trenutnih marketinških aktivnosti. Namijenjena je tvrtkama koje već ulažu u marketing, ali nisu zadovoljne rezultatima ili žele pronaći nova mjesta za rast.</p>
                         </div>
                     </div>
-
                     <div class="faq-item">
-                        <button class="faq-question">
-                            Koliko traje izrada audita i strategije?
-                        </button>
+                        <button class="faq-question">Koliko traje izrada audita i strategije?</button>
                         <div class="faq-answer">
                             <p>Proces obično traje između 7 i 10 radnih dana od trenutka kada nam osigurate pristup potrebnim analitičkim i oglasnim računima te se dogovorimo oko Vaših poslovnih ciljeva.</p>
                         </div>
                     </div>
-
                     <div class="faq-item">
-                        <button class="faq-question">
-                            Da li je ova usluga korisna za potpuno nove brendove?
-                        </button>
+                        <button class="faq-question">Da li je ova usluga korisna za potpuno nove brendove?</button>
                         <div class="faq-answer">
-                            <p>Za potpuno nove brendove fokusiramo se na izradu marketinške strategije iz nule umjesto audita. To uključuje analizu tržišta, definiranje ciljane publike, pozicioniranje brenda i izradu akcijskog plana za lansiranje.</p>
+                            <p>Za potpuno nove brendove fokusiramo se na izradu marketinške strategije iz nule umjesto audita, što uključuje analizu tržišta, definiranje ciljane publike i plan lansiranja.</p>
                         </div>
                     </div>
-
                     <div class="faq-item">
-                        <button class="faq-question">
-                            Što dobivam na kraju procesa i što slijedi nakon isporuke?
-                        </button>
+                        <button class="faq-question">Što dobivam na kraju procesa i što slijedi nakon isporuke?</button>
                         <div class="faq-answer">
-                            <p>Dobivate detaljanu analizu postojećeg stanja, sa uočenim nedostacima i konkretnim korak-po-korak planom za narednih 3 do 6 mjeseci. Nakon isporuke, organiziramo zajednički poziv ili sastanak gdje prolazimo kroz sve stavke, a dalje plan možete provoditi sami ili vođenje prepustiti nama.</p>
+                            <p>Dobivate detaljnu analizu s konkretnim korak-po-korak planom za narednih 3 do 6 mjeseci, nakon čega možemo organizirati zajednički sastanak za prolazak kroz sve stavke.</p>
                         </div>
                     </div>
                 </div>
-
                 <a href="../kontakt.html" class="btn-primary" style="margin-top: 25px;">Zatražite Audit</a>
             </div>
         </section>
@@ -589,17 +534,16 @@
 
     <footer>
         <div class="footer-links">
-            <a href="../index.html">Početna</a> • 
-            <a href="../o-nama.html">O nama</a> • 
-            <a href="../cjenik.html">Cjenik</a> • 
-            <a href="../kontakt.html">Kontakt</a> • 
+            <a href="../index.html">Početna</a>
+            <a href="../o-nama.html">O nama</a>
+            <a href="../cjenik.html">Cjenik</a>
+            <a href="../arhiva-cjenika.html">Arhiva cjenika</a>
+            <a href="../kontakt.html">Kontakt</a>
             <a href="../politika-privatnosti.html">Politika privatnosti</a>
         </div>
-
         <div class="footer-legal">
             <strong>VD FLOW</strong> • Obrt za digitalni marketing | Vlasnik: Vlatka Dizdarević | Sjedište: Gradek 26, 10255 Gornji Stupnik | OIB: 77462129969 | Upisano u Obrtni registar nadležnog ureda | IBAN:HR1924840081135531768
         </div>
-        
         <p>&copy; 2026 VD FLOW. Sva prava pridržana.</p>
     </footer>
 
@@ -615,10 +559,11 @@
         // Mobilni izbornik toggle
         const menuToggle = document.getElementById('menu-toggle');
         const navLinks = document.getElementById('nav-links');
-
-        menuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
+        if (menuToggle) {
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        }
 
         // FAQ harmonika skripta
         document.querySelectorAll('.faq-question').forEach(button => {
@@ -632,13 +577,11 @@
         function switchTab(tabId) {
             const contents = document.querySelectorAll('.tab-content');
             const buttons = document.querySelectorAll('.tab-btn');
-
             contents.forEach(content => content.classList.remove('active'));
             buttons.forEach(btn => btn.classList.remove('active'));
-
+            
             const targetContent = document.getElementById(tabId);
             const targetBtn = document.getElementById('tab-btn-' + tabId);
-
             if (targetContent) targetContent.classList.add('active');
             if (targetBtn) targetBtn.classList.add('active');
             
