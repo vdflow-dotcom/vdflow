@@ -97,7 +97,9 @@
 
         /* Hero Video Sekcija */
         .hero-video-container {
-            position: relative; width: 100%; height: 82vh; min-height: 500px;
+            position: relative; width: 100%; 
+            min-height: calc(100vh - 80px);
+            padding: 60px 0 40px 0;
             display: flex; align-items: center; justify-content: center;
             overflow: hidden; text-align: center;
         }
@@ -106,17 +108,25 @@
             width: auto; height: auto; z-index: 1; transform: translate(-50%, -50%); object-fit: cover;
         }
         .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(11, 12, 16, 0.75); z-index: 2; }
-        .hero-content { position: relative; z-index: 3; max-width: 850px; padding: 0 20px; }
+        .hero-content { 
+            position: relative; 
+            z-index: 3; 
+            max-width: 850px; 
+            padding: 0 20px; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
         .hero-content h1 { font-size: 3rem; color: #fff; margin-bottom: 20px; line-height: 1.2; }
-        .hero-content p { font-size: 1.25rem; color: var(--text-muted); margin-bottom: 35px; }
+        .hero-content p { font-size: 1.25rem; color: var(--text-muted); margin-bottom: 25px; }
         
-        /* Ažurirana klasa s dodanom gornjom marginom */
         .hero-buttons { 
             display: flex; 
             gap: 15px; 
             justify-content: center; 
             flex-wrap: wrap; 
-            margin-top: 50px;
+            margin-top: 20px;
+            margin-bottom: 30px;
         }
 
         .btn-secondary {
@@ -127,18 +137,14 @@
 
         /* Animirana ljubičasta strelica za skrolanje */
         .scroll-down-arrow {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 3;
+            display: inline-block;
             color: var(--primary);
-            font-size: 2rem;
+            font-size: 2.2rem;
             text-decoration: none;
             line-height: 1;
             animation: bounce 2s infinite;
             cursor: pointer;
-            transition: color 0.3s;
+            transition: color 0.3s, transform 0.3s;
         }
 
         .scroll-down-arrow:hover {
@@ -148,13 +154,13 @@
         /* Animacija poskakivanja */
         @keyframes bounce {
             0%, 20%, 50%, 80%, 100% {
-                transform: translate(-50%, 0);
+                transform: translateY(0);
             }
             40% {
-                transform: translate(-50%, -10px);
+                transform: translateY(-10px);
             }
             60% {
-                transform: translate(-50%, -5px);
+                transform: translateY(-5px);
             }
         }
 
@@ -205,6 +211,7 @@
             .nav-links.active { display: flex; }
             .header-btn { display: none; }
             .hero-content h1 { font-size: 2.1rem; }
+            .hero-video-container { min-height: auto; padding: 40px 0 30px 0; }
         }
     </style>
 </head>
@@ -246,10 +253,10 @@
                     <a href="cjenik.html" class="btn-primary">Pogledaj Cjenik</a>
                     <a href="kontakt.html" class="btn-secondary">Kontaktirajte nas</a>
                 </div>
+                
+                <!-- Ljubičasta strelica unutar hero sadržaja -->
+                <a href="#usluge" class="scroll-down-arrow" aria-label="Skrolajte prema dolje">&#x25BC;</a>
             </div>
-
-            <!-- Ljubičasta strelica za skrolanje -->
-            <a href="#usluge" class="scroll-down-arrow" aria-label="Skrolajte prema dolje">&#x25BC;</a>
         </section>
 
         <!-- Usluge Grid -->
