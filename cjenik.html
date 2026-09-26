@@ -97,6 +97,7 @@
         .page-header h1 { font-size: 2.5rem; margin-bottom: 15px; }
         .page-header p { color: var(--text-muted); font-size: 1.05rem; max-width: 750px; margin: 0 auto; }
         .note-box { background: rgba(168, 85, 247, 0.1); border: 1px solid var(--primary); padding: 15px 20px; border-radius: 12px; margin-top: 20px; font-size: 0.9rem; color: var(--text-muted); text-align: center; }
+        
         /* STROJNO ČITLJIV CJENIK LINKOVI */
         .machine-readable-box {
             display: flex;
@@ -122,6 +123,7 @@
             border-color: var(--primary);
             background: rgba(168, 85, 247, 0.1);
         }
+        
         /* TAB INTERFEJS ZA BRZU NAVIGACIJU */
         .cjenik-tabs {
             display: flex;
@@ -150,6 +152,7 @@
         .tab-content.active { display: block; }
         .section-title { font-size: 1.8rem; color: #fff; margin: 30px 0 20px 0; border-left: 4px solid var(--primary); padding-left: 15px; }
         
+        /* 2 kartice u redu na računalima */
         .pricing-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -428,6 +431,7 @@
                         <a href="usluge/strategija-audit.html">Strategija & Audit</a>
                     </div>
                 </li>
+                <!-- HIJERARHIJSKI IZBORNIK CJENIK -->
                 <li class="dropdown">
                     <a href="cjenik.html" class="active">Cjenik ▾</a>
                     <div class="dropdown-menu">
@@ -452,13 +456,13 @@
             <div class="note-box">
                 <strong>NAPOMENA:</strong> VD Flow pruža usluge isključivo poslovnim korisnicima (B2B). Navedeni cjenovni rasponi informativnog su karaktera i odnose se na standardni opseg usluge. Konačna cijena određuje se prema opsegu i složenosti projekta, količini sadržaja/materijala, potrebnom vremenu rada te specifičnim zahtjevima klijenta. Za svaki projekt, prije početka suradnje, dostavlja se konačna personalizirana ponuda.
             </div>
+            <!-- DOWLOAD LINKOVI ZA XML / CSV -->
             <div class="machine-readable-box">
                 <span>Strojno čitljivi cjenik:</span>
                 <a href="cjenik.xml" download target="_blank">XML format</a>
                 <a href="cjenik.csv" download target="_blank">CSV format</a>
             </div>
         </section>
-
         <!-- BRZI IZBORNIK KROZ KARTICE (TABS) -->
         <div class="cjenik-tabs">
             <button class="tab-btn active" id="tab-btn-mjesecni" onclick="switchTab('mjesecni')">Mjesečni paketi</button>
@@ -466,7 +470,6 @@
             <button class="tab-btn" id="tab-btn-jednokratni" onclick="switchTab('jednokratni')">Jednokratne usluge</button>
             <button class="tab-btn" id="tab-btn-dodatni" onclick="switchTab('dodatni')">Dodatne usluge (Pojedinačne)</button>
         </div>
-
         <!-- MJESEČNI PAKETI (GLAVNI PAKETI) -->
         <div id="mjesecni" class="tab-content active">
             <h2 class="section-title">Glavni paketi</h2>
@@ -499,7 +502,6 @@
                     </ul>
                     <a href="kontakt.html" class="btn-primary">Zatražite ponudu</a>
                 </div>
-
                 <div class="pricing-card">
                     <h3>2. Profil Aktivno</h3>
                     <div class="subtitle">“Redovita komunikacija i ozbiljan izgled”</div>
@@ -527,7 +529,6 @@
                     </ul>
                     <a href="kontakt.html" class="btn-primary">Zatražite ponudu</a>
                 </div>
-
                 <div class="pricing-card">
                     <h3>3. Ads Fokus</h3>
                     <div class="subtitle">Google ili Meta oglasi</div>
@@ -554,7 +555,6 @@
                     </ul>
                     <a href="kontakt.html" class="btn-primary">Zatražite ponudu</a>
                 </div>
-
                 <div class="pricing-card featured">
                     <div class="badge">Najpraktičnije</div>
                     <h3>4. Lokalni Rast</h3>
@@ -582,10 +582,8 @@
                     </ul>
                     <a href="kontakt.html" class="btn-primary">Zatražite ponudu</a>
                 </div>
-
             </div>
         </div>
-
         <!-- CONTENT PAKETI -->
         <div id="content" class="tab-content">
             <h2 class="section-title">Content paketi</h2>
@@ -610,7 +608,6 @@
                     </ul>
                     <a href="kontakt.html" class="btn-primary">Zatražite ponudu</a>
                 </div>
-
                 <div class="pricing-card">
                     <h3>2. Post paket Standard</h3>
                     
@@ -630,7 +627,6 @@
                     </ul>
                     <a href="kontakt.html" class="btn-primary">Zatražite ponudu</a>
                 </div>
-
                 <div class="pricing-card">
                     <h3>3. Reels paket – edit only</h3>
                     
@@ -650,7 +646,6 @@
                     </ul>
                     <a href="kontakt.html" class="btn-primary">Zatražite ponudu</a>
                 </div>
-
                 <div class="pricing-card">
                     <h3>4. Reels paket – Lite</h3>
                     <div class="subtitle">Snimanje + Montaža</div>
@@ -673,10 +668,8 @@
                     </ul>
                     <a href="kontakt.html" class="btn-primary">Zatražite ponudu</a>
                 </div>
-
             </div>
         </div>
-
         <!-- JEDNOKRATNE USLUGE -->
         <div id="jednokratni" class="tab-content">
             <h2 class="section-title">Jednokratne usluge</h2>
@@ -771,7 +764,6 @@
                 </table>
             </div>
         </div>
-
         <!-- DODATNE USLUGE (POJEDINAČNE) -->
         <div id="dodatni" class="tab-content">
             <h2 class="section-title">Pojedinačne cijene (Add-ons)</h2>
@@ -844,7 +836,6 @@
                 </table>
             </div>
         </div>
-
         <!-- OPĆE NAPOMENE -->
         <section class="notes-card">
             <h3>Opće napomene</h3>
@@ -855,7 +846,6 @@
             </ul>
         </section>
     </main>
-
     <footer>
         <div class="footer-links">
             <a href="index.html">Početna</a>
@@ -869,7 +859,6 @@
         </div>
         <p>&copy; 2026 VD FLOW. Sva prava pridržana.</p>
     </footer>
-
     <script>
         // Prebacivanje tabova
         function switchTab(tabId) {
