@@ -3,176 +3,248 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VD FLOW - Cjenik</title>
+    <title>Cjenik Usluga | VD FLOW Digitalni Marketing</title>
+    <meta name="description" content="Pogledajte cjenik usluga digitalnog marketinga VD FLOW. Paket za vođenje profila, Google i Meta oglase, izradu sadržaja i pojedinačne usluge za male i srednje biznise.">
+    
+    <meta property="og:title" content="Cjenik Usluga | VD FLOW Digitalni Marketing">
+    <meta property="og:description" content="Jednostavni i transparentni paketi za sadržaj, oglase i vođenje profila prilagođeni malim, srednjim i lokalnim biznisima.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vdflow.hr/cjenik.html">
+    <meta property="og:image" content="https://vdflow.hr/images/og-image.jpg">
+    <!-- Favicon postavke -->
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "PriceSpecification",
+      "name": "Cjenik Usluga VD FLOW",
+      "description": "Cjenik usluga digitalnog marketinga, vođenja društvenih mreža i oglasnih kampanja za male i srednje biznise.",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "VD FLOW - Obrt za digitalni marketing",
+        "email": "vdflow.kontakt@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Gradek 26",
+          "addressLocality": "Gornji Stupnik",
+          "postalCode": "10255",
+          "addressCountry": "HR"
+        }
+      }
+    }
+    </script>
     <style>
         :root {
-            --bg-color: #0d0f12;
-            --card-bg: #161920;
+            --bg-color: #0b0c10;
+            --card-bg: #1f2833;
             --primary: #a855f7;
             --primary-hover: #9333ea;
             --text-main: #ffffff;
-            --text-muted: #9ca3af;
-            --border-color: #272a34;
+            --text-muted: #c5c6c7;
+            --border-color: #2d3748;
         }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-        }
-
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            line-height: 1.6;
-            padding: 20px;
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        /* Strojno čitljivi cjenik linkovi na vrhu */
-        .machine-readable {
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { 
+            background-color: var(--bg-color); 
+            color: var(--text-main); 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+            line-height: 1.6; 
+            min-height: 100vh;
             display: flex;
+            flex-direction: column;
+        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; width: 100%; }
+        header {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 20px; background: rgba(11, 12, 16, 0.95);
+            position: sticky; top: 0; z-index: 1000;
+            backdrop-filter: blur(8px); border-bottom: 1px solid var(--border-color);
+        }
+        .logo { font-size: 1.5rem; font-weight: 800; color: var(--primary); text-decoration: none; }
+        .logo span { color: #fff; }
+        
+        .nav-links { display: flex; list-style: none; gap: 25px; align-items: center; }
+        .nav-links a { color: var(--text-muted); text-decoration: none; font-weight: 500; transition: 0.3s; }
+        .nav-links a:hover, .nav-links a.active { color: var(--primary); }
+        .dropdown { position: relative; display: inline-block; }
+        .dropdown-menu {
+            display: none; position: absolute; top: 100%; left: 0;
+            background-color: var(--card-bg); min-width: 230px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.5);
+            border: 1px solid var(--border-color); border-radius: 12px;
+            padding: 10px 0; z-index: 1001;
+        }
+        .dropdown-menu a { color: var(--text-muted); padding: 10px 20px; text-decoration: none; display: block; font-size: 0.95rem; }
+        .dropdown-menu a:hover { background-color: var(--border-color); color: var(--primary); }
+        .dropdown:hover .dropdown-menu { display: block; }
+        .btn-primary { 
+            background: var(--primary); 
+            color: #fff; 
+            padding: 10px 22px; 
+            border-radius: 50px; 
+            text-decoration: none; 
+            font-weight: 600; 
+            display: inline-block; 
+            transition: background 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        .btn-primary:hover { background: var(--primary-hover); }
+        .menu-toggle { display: none; background: none; border: none; color: #fff; font-size: 1.8rem; cursor: pointer; }
+        .page-header { text-align: center; padding: 50px 20px 20px 20px; }
+        .page-header h1 { font-size: 2.5rem; margin-bottom: 15px; }
+        .page-header p { color: var(--text-muted); font-size: 1.05rem; max-width: 750px; margin: 0 auto; }
+        .note-box { background: rgba(168, 85, 247, 0.1); border: 1px solid var(--primary); padding: 15px 20px; border-radius: 12px; margin-top: 20px; font-size: 0.9rem; color: var(--text-muted); text-align: center; }
+        /* STROJNO ČITLJIV CJENIK LINKOVI */
+        .machine-readable-box {
+            display: flex;
+            justify-content: center;
             align-items: center;
-            justify-content: flex-end;
-            gap: 10px;
-            margin-bottom: 25px;
+            gap: 15px;
+            margin-top: 15px;
             font-size: 0.85rem;
             color: var(--text-muted);
-        }
-
-        .btn-mini {
-            background: rgba(255, 255, 255, 0.05);
-            color: var(--text-main);
-            border: 1px solid var(--border-color);
-            padding: 5px 12px;
-            border-radius: 20px;
-            text-decoration: none;
-            font-size: 0.8rem;
-            transition: all 0.2s ease;
-        }
-
-        .btn-mini:hover {
-            border-color: var(--primary);
-            color: var(--primary);
-        }
-
-        /* Navigacijski tabovi */
-        .tabs-nav {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 30px;
             flex-wrap: wrap;
-            justify-content: center;
         }
-
+        .machine-readable-box a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            border: 1px solid var(--border-color);
+            padding: 4px 12px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.03);
+            transition: all 0.3s ease;
+        }
+        .machine-readable-box a:hover {
+            border-color: var(--primary);
+            background: rgba(168, 85, 247, 0.1);
+        }
+        /* TAB INTERFEJS ZA BRZU NAVIGACIJU */
+        .cjenik-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 30px 0 10px 0;
+            flex-wrap: wrap;
+        }
         .tab-btn {
             background: var(--card-bg);
-            color: var(--text-main);
+            color: var(--text-muted);
             border: 1px solid var(--border-color);
-            padding: 12px 22px;
+            padding: 12px 24px;
             border-radius: 30px;
             cursor: pointer;
             font-weight: 600;
-            transition: all 0.2s ease;
             font-size: 0.95rem;
+            transition: all 0.3s ease;
         }
-
-        .tab-btn.active, .tab-btn:hover {
+        .tab-btn:hover, .tab-btn.active {
             background: var(--primary);
             color: #fff;
             border-color: var(--primary);
         }
-
-        .tab-content {
-            display: none;
-        }
-
-        .tab-content.active {
-            display: block;
-        }
-
-        .section-title {
-            font-size: 1.8rem;
-            margin-bottom: 25px;
-            border-left: 4px solid var(--primary);
-            padding-left: 12px;
-        }
-
-        /* Kartice za Mjesečne i Content pakete */
-        .packages-grid {
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        .section-title { font-size: 1.8rem; color: #fff; margin: 30px 0 20px 0; border-left: 4px solid var(--primary); padding-left: 15px; }
+        
+        .pricing-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
             margin-bottom: 30px;
         }
-
-        .package-card {
+        .pricing-card {
             background: var(--card-bg);
             border: 1px solid var(--border-color);
             border-radius: 16px;
-            padding: 25px;
+            padding: 30px 20px;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            position: relative;
+            transition: transform 0.3s, border-color 0.3s;
         }
-
-        .package-title {
-            font-size: 1.3rem;
-            font-weight: 700;
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+        }
+        .pricing-card.featured {
+            border: 2px solid var(--primary);
+            box-shadow: 0 0 25px rgba(168, 85, 247, 0.15);
+        }
+        .badge {
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            background: var(--primary);
             color: #fff;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        .pricing-card h3 { font-size: 1.3rem; margin-bottom: 5px; color: #fff; }
+        .pricing-card .subtitle { color: var(--primary); font-size: 0.85rem; font-weight: 600; margin-bottom: 15px; }
+        
+        .price-boxes-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
             margin-bottom: 15px;
         }
-
-        .prices-container {
-            display: flex;
-            gap: 10px;
-            margin-top: 15px;
-        }
-
         .price-box {
-            flex: 1;
             background: rgba(11, 12, 16, 0.6);
             border: 1px solid var(--border-color);
             border-radius: 12px;
-            padding: 12px;
+            padding: 12px 10px;
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
-
         .price-box.anchored {
             background: rgba(168, 85, 247, 0.08);
             border: 1px solid rgba(168, 85, 247, 0.4);
         }
-
-        .price-box .label {
-            display: block;
-            font-size: 0.68rem;
+        .price-box .price-label {
+            font-size: 0.7rem;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            margin-bottom: 4px;
-            font-weight: 600;
             color: var(--text-muted);
+            font-weight: 600;
+            margin-bottom: 4px;
+            line-height: 1.2;
         }
-
-        .price-box.anchored .label {
+        .price-box.anchored .price-label {
             color: var(--primary);
         }
-
-        .price-box .val {
+        .price-box .price-val {
             font-size: 1.1rem;
-            font-weight: 700;
+            font-weight: 800;
             color: #fff;
+            line-height: 1.2;
         }
-
-        .price-box.anchored .val {
+        .price-box.anchored .price-val {
             color: var(--primary);
         }
-
-        /* Tablice za Jednokratne i Dodatne usluge (Desktop) */
+        .price-note {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-align: center;
+            margin-bottom: 15px;
+            margin-top: -5px;
+            font-style: italic;
+        }
+        .pricing-card .for-whom { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 15px; font-style: italic; }
+        .pricing-card ul { list-style: none; margin-bottom: 25px; flex-grow: 1; }
+        .pricing-card ul li { color: var(--text-muted); margin-bottom: 10px; padding-left: 20px; position: relative; font-size: 0.9rem; }
+        .pricing-card ul li::before { content: "✓"; position: absolute; left: 0; color: var(--primary); font-weight: bold; }
+        .pricing-card .btn-primary { text-align: center; width: 100%; font-size: 0.9rem; padding: 10px; }
+        
+        /* Tables for Section C & D (Desktop) */
         .table-container { 
             background: var(--card-bg); 
             border: 1px solid var(--border-color); 
@@ -180,49 +252,41 @@
             overflow: hidden; 
             margin-bottom: 30px; 
         }
-
         table { 
             width: 100%; 
             border-collapse: collapse; 
             text-align: left; 
         }
-
         th, td { 
             padding: 18px 20px; 
             border-bottom: 1px solid var(--border-color); 
             font-size: 0.95rem; 
         }
-
         th { 
             background: rgba(0,0,0,0.3); 
             color: var(--primary); 
             font-weight: 600; 
         }
-
         tr:last-child td { border-bottom: none; }
-
         td.service-title {
             font-weight: 500;
             color: #fff;
         }
-
         td.price-col { 
             font-weight: 700; 
             color: #fff; 
             text-align: right; 
             width: 220px;
         }
-
         td.anchored-col { 
             font-weight: 700; 
             color: var(--primary); 
             text-align: right; 
             width: 240px;
         }
-
         .mobile-label { display: none; }
 
-        /* Opće napomene (Boldane i Istaknute) */
+        /* Opće napomene istaknute */
         .notes-card { 
             background: var(--card-bg); 
             border: 1px solid var(--primary); 
@@ -231,44 +295,71 @@
             margin-top: 40px; 
             margin-bottom: 50px; 
         }
-
         .notes-card h3 { 
             color: var(--primary); 
             margin-bottom: 15px; 
         }
-
         .notes-card ul { 
             list-style-type: disc; 
             padding-left: 20px; 
             color: #ffffff; 
             font-size: 0.98rem; 
         }
-
         .notes-card ul li { 
             margin-bottom: 12px; 
             line-height: 1.5;
         }
-
         .notes-card ul li strong {
             color: #ffffff;
             font-weight: 700;
         }
 
-        /* Mobilna prilagodba tablica */
+        footer { 
+            text-align: center; 
+            padding: 40px 20px; 
+            border-top: 1px solid var(--border-color); 
+            color: var(--text-muted); 
+            font-size: 0.9rem; 
+            margin-top: auto; 
+        }
+        .footer-links { display: flex; justify-content: center; gap: 15px; margin-bottom: 15px; flex-wrap: wrap; }
+        .footer-links a { color: var(--text-muted); text-decoration: none; }
+        .footer-links a:hover { color: var(--primary); }
+        .footer-legal { max-width: 800px; margin: 0 auto 15px auto; font-size: 0.85rem; opacity: 0.8; line-height: 1.4; }
+        
         @media (max-width: 768px) {
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+            .menu-toggle { display: block; }
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--bg-color);
+                padding: 20px;
+                border-bottom: 1px solid var(--border-color);
+                gap: 15px;
+                text-align: center;
+            }
+            .nav-links.active { display: flex; }
+            .dropdown-menu { position: static; box-shadow: none; background: transparent; border: none; width: 100%; }
+            .header-btn { display: none; }
+            
+            /* Mobilna prilagodba tablica */
             .table-container {
                 background: transparent;
                 border: none;
                 border-radius: 0;
             }
-
             table, tbody, tr, td {
                 display: block;
                 width: 100%;
             }
-
             thead { display: none; }
-
             tr {
                 background: var(--card-bg);
                 border: 1px solid var(--border-color);
@@ -279,7 +370,6 @@
                 flex-wrap: wrap;
                 gap: 10px;
             }
-
             td.service-title {
                 font-weight: 700;
                 font-size: 1.1rem;
@@ -288,7 +378,6 @@
                 margin-bottom: 5px;
                 padding: 0;
             }
-
             td.price-col, td.anchored-col {
                 flex: 1;
                 text-align: center;
@@ -298,12 +387,10 @@
                 padding: 10px;
                 width: auto;
             }
-
             td.anchored-col {
                 background: rgba(168, 85, 247, 0.08);
                 border: 1px solid rgba(168, 85, 247, 0.4);
             }
-
             .mobile-label {
                 display: block;
                 font-size: 0.68rem;
@@ -313,309 +400,503 @@
                 font-weight: 600;
                 color: var(--text-muted);
             }
-
             td.anchored-col .mobile-label {
                 color: var(--primary);
             }
+            
+            .cjenik-tabs { flex-direction: column; }
+            .tab-btn { width: 100%; text-align: center; }
+            .price-boxes-container { grid-template-columns: 1fr 1fr; }
         }
     </style>
 </head>
 <body>
-
-<div class="container">
-
-    <!-- Strojno čitljivi formati -->
-    <div class="machine-readable">
-        <span>Strojno čitljivi cjenik:</span>
-        <a href="#" class="btn-mini">XML format</a>
-        <a href="#" class="btn-mini">CSV format</a>
-    </div>
-
-    <!-- Navigacijski tabovi -->
-    <div class="tabs-nav">
-        <button class="tab-btn active" onclick="openTab('mjesecni')">Mjesečni paketi</button>
-        <button class="tab-btn" onclick="openTab('content')">Content paketi</button>
-        <button class="tab-btn" onclick="openTab('jednokratni')">Jednokratne usluge</button>
-        <button class="tab-btn" onclick="openTab('dodatni')">Dodatne usluge (Pojedinačne)</button>
-    </div>
-
-    <!-- 1. MJESEČNI PAKETI -->
-    <div id="mjesecni" class="tab-content active">
-        <h2 class="section-title">Mjesečni paketi</h2>
-        <div class="packages-grid">
-            <div class="package-card">
-                <div class="package-title">START</div>
-                <div class="prices-container">
-                    <div class="price-box">
-                        <span class="label">Aktualna cijena</span>
-                        <span class="val">180 – 320 €</span>
+    <header>
+        <a href="index.html" class="logo">VD <span>FLOW</span></a>
+        
+        <button class="menu-toggle" id="menu-toggle" aria-label="Otvorite izbornik">☰</button>
+        <nav>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Početna</a></li>
+                <li><a href="o-nama.html">O nama</a></li>
+                <li class="dropdown">
+                    <a href="#">Usluge ▾</a>
+                    <div class="dropdown-menu">
+                        <a href="usluge/vodjenje-mreza.html">Vođenje Društvenih Mreža</a>
+                        <a href="usluge/google-meta-oglasi.html">Google & Meta Oglasi</a>
+                        <a href="usluge/izrada-sadrzaja.html">Izrada Sadržaja (Content)</a>
+                        <a href="usluge/strategija-audit.html">Strategija & Audit</a>
                     </div>
-                    <div class="price-box anchored">
-                        <span class="label">Sidrena (10.09.2026.)</span>
-                        <span class="val">180 – 320 €</span>
+                </li>
+                <li class="dropdown">
+                    <a href="cjenik.html" class="active">Cjenik ▾</a>
+                    <div class="dropdown-menu">
+                        <a href="cjenik.html#mjesecni" onclick="switchTab('mjesecni')">Mjesečni paketi</a>
+                        <a href="cjenik.html#content" onclick="switchTab('content')">Content paketi</a>
+                        <a href="cjenik.html#jednokratni" onclick="switchTab('jednokratni')">Jednokratne usluge</a>
+                        <a href="cjenik.html#dodatni" onclick="switchTab('dodatni')">Dodatne usluge</a>
                     </div>
-                </div>
+                </li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+        
+        <a href="kontakt.html" class="btn-primary header-btn">Zatražite ponudu</a>
+    </header>
+    <main class="container">
+        <section class="page-header">
+            <h1>Cjenik Usluga</h1>
+            <p>Digitalni marketing za male biznise. Jednostavni paketi za sadržaj, oglase i vođenje profila – prilagođeni malim lokalnim biznisima koji žele uredniji nastup, više upita i jasniju online prisutnost.</p>
+            
+            <div class="note-box">
+                <strong>NAPOMENA:</strong> VD Flow pruža usluge isključivo poslovnim korisnicima (B2B). Navedeni cjenovni rasponi informativnog su karaktera i odnose se na standardni opseg usluge. Konačna cijena određuje se prema opsegu i složenosti projekta, količini sadržaja/materijala, potrebnom vremenu rada te specifičnim zahtjevima klijenta. Za svaki projekt, prije početka suradnje, dostavlja se konačna personalizirana ponuda.
             </div>
-
-            <div class="package-card">
-                <div class="package-title">GROWTH</div>
-                <div class="prices-container">
-                    <div class="price-box">
-                        <span class="label">Aktualna cijena</span>
-                        <span class="val">320 – 550 €</span>
-                    </div>
-                    <div class="price-box anchored">
-                        <span class="label">Sidrena (10.09.2026.)</span>
-                        <span class="val">320 – 550 €</span>
-                    </div>
-                </div>
+            <div class="machine-readable-box">
+                <span>Strojno čitljivi cjenik:</span>
+                <a href="cjenik.xml" download target="_blank">XML format</a>
+                <a href="cjenik.csv" download target="_blank">CSV format</a>
             </div>
+        </section>
 
-            <div class="package-card">
-                <div class="package-title">PRO</div>
-                <div class="prices-container">
-                    <div class="price-box">
-                        <span class="label">Aktualna cijena</span>
-                        <span class="val">550 – 900 €</span>
+        <!-- BRZI IZBORNIK KROZ KARTICE (TABS) -->
+        <div class="cjenik-tabs">
+            <button class="tab-btn active" id="tab-btn-mjesecni" onclick="switchTab('mjesecni')">Mjesečni paketi</button>
+            <button class="tab-btn" id="tab-btn-content" onclick="switchTab('content')">Content paketi</button>
+            <button class="tab-btn" id="tab-btn-jednokratni" onclick="switchTab('jednokratni')">Jednokratne usluge</button>
+            <button class="tab-btn" id="tab-btn-dodatni" onclick="switchTab('dodatni')">Dodatne usluge (Pojedinačne)</button>
+        </div>
+
+        <!-- MJESEČNI PAKETI (GLAVNI PAKETI) -->
+        <div id="mjesecni" class="tab-content active">
+            <h2 class="section-title">Glavni paketi</h2>
+            <div class="pricing-grid">
+                
+                <div class="pricing-card">
+                    <h3>1. Profil Start</h3>
+                    <div class="subtitle">“Da profil izgleda živo, uredno i profesionalno”</div>
+                    
+                    <div class="price-boxes-container">
+                        <div class="price-box">
+                            <span class="price-label">Aktualna cijena</span>
+                            <span class="price-val">180 – 250 €</span>
+                        </div>
+                        <div class="price-box anchored">
+                            <span class="price-label">Sidrena cijena (10.09.2026).</span>
+                            <span class="price-val">180 – 250 €</span>
+                        </div>
                     </div>
-                    <div class="price-box anchored">
-                        <span class="label">Sidrena (10.09.2026.)</span>
-                        <span class="val">550 – 900 €</span>
-                    </div>
+                    <div class="price-note">/ mjesečno (preporučeni raspon)</div>
+                    <div class="for-whom"><strong>Za koga je:</strong> Mali lokalni biznis koji zna da mora biti prisutan na Instagramu, ali nema vremena ni ideje što objavljivati.</div>
+                    <ul>
+                        <li>vođenje 1 profila (Instagram)</li>
+                        <li>8 objava mjesečno</li>
+                        <li>osnovni copy / caption za svaku objavu</li>
+                        <li>osnovni vizuali ili prilagodba dostavljenih materijala</li>
+                        <li>plan objava za mjesec</li>
+                        <li>objava sadržaja</li>
+                        <li>kratki mjesečni pregled što je radilo, a što ne</li>
+                    </ul>
+                    <a href="kontakt.html" class="btn-primary">Zatražite ponudu</a>
                 </div>
+
+                <div class="pricing-card">
+                    <h3>2. Profil Aktivno</h3>
+                    <div class="subtitle">“Redovita komunikacija i ozbiljan izgled”</div>
+                    
+                    <div class="price-boxes-container">
+                        <div class="price-box">
+                            <span class="price-label">Aktualna cijena</span>
+                            <span class="price-val">300 – 450 €</span>
+                        </div>
+                        <div class="price-box anchored">
+                            <span class="price-label">Sidrena cijena (10.09.2026).</span>
+                            <span class="price-val">300 – 450 €</span>
+                        </div>
+                    </div>
+                    <div class="price-note">/ mjesečno (preporučeni raspon)</div>
+                    <div class="for-whom"><strong>Za koga je:</strong> salon, restoran, lokalna trgovina, fitness studio, ordinacija ili uslužni obrt.</div>
+                    <ul>
+                        <li>vođenje 1 profila</li>
+                        <li>12 objava mjesečno</li>
+                        <li>8 – 12 story objava mjesečno</li>
+                        <li>osnovni community management</li>
+                        <li>1 jednostavniji reel / edit od dostavljenih materijala</li>
+                        <li>prijedlozi tema za objave</li>
+                        <li>mjesečni mini izvještaj + 1 kratki call</li>
+                    </ul>
+                    <a href="kontakt.html" class="btn-primary">Zatražite ponudu</a>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>3. Ads Fokus</h3>
+                    <div class="subtitle">Google ili Meta oglasi</div>
+                    
+                    <div class="price-boxes-container">
+                        <div class="price-box">
+                            <span class="price-label">Aktualna cijena</span>
+                            <span class="price-val">220 – 350 €</span>
+                        </div>
+                        <div class="price-box anchored">
+                            <span class="price-label">Sidrena cijena (10.09.2026).</span>
+                            <span class="price-val">220 – 350 €</span>
+                        </div>
+                    </div>
+                    <div class="price-note">/ mj (budžet oglasa nije uključen)</div>
+                    <div class="for-whom"><strong>Za koga je:</strong> Biznis koji već ima web ili jasan cilj (pozivi, poruke, rezervacije) i želi direktno generirati potražnju.</div>
+                    <ul>
+                        <li>vođenje 1 platforme: Google Ads ili Meta Ads</li>
+                        <li>postavljanje / slaganje kampanje</li>
+                        <li>1 – 3 kampanje ili ad seta</li>
+                        <li>osnovni copy za oglase</li>
+                        <li>osnovna optimizacija publika / ključnih riječi</li>
+                        <li>mjesečni pregled rezultata i prijedlozi</li>
+                    </ul>
+                    <a href="kontakt.html" class="btn-primary">Zatražite ponudu</a>
+                </div>
+
+                <div class="pricing-card featured">
+                    <div class="badge">Najpraktičnije</div>
+                    <h3>4. Lokalni Rast</h3>
+                    <div class="subtitle">Profil + Oglasi</div>
+                    
+                    <div class="price-boxes-container">
+                        <div class="price-box">
+                            <span class="price-label">Aktualna cijena</span>
+                            <span class="price-val">450 – 650 €</span>
+                        </div>
+                        <div class="price-box anchored">
+                            <span class="price-label">Sidrena cijena (10.09.2026).</span>
+                            <span class="price-val">450 – 650 €</span>
+                        </div>
+                    </div>
+                    <div class="price-note">/ mj (budžet oglasa nije uključen)</div>
+                    <div class="for-whom"><strong>Za koga je:</strong> Mali biznis koji želi da mu profil izgleda uredno i da oglasi dovode upite.</div>
+                    <ul>
+                        <li>vođenje 1 profila</li>
+                        <li>8 objava mjesečno</li>
+                        <li>4 – 8 story objava</li>
+                        <li>vođenje 1 oglasne platforme (Google ili Meta)</li>
+                        <li>osnovni content plan</li>
+                        <li>osnovni mjesečni izvještaj + 1 kratki call</li>
+                    </ul>
+                    <a href="kontakt.html" class="btn-primary">Zatražite ponudu</a>
+                </div>
+
             </div>
         </div>
-    </div>
 
-    <!-- 2. CONTENT PAKETI -->
-    <div id="content" class="tab-content">
-        <h2 class="section-title">Content paketi</h2>
-        <div class="packages-grid">
-            <div class="package-card">
-                <div class="package-title">CONTENT BASIC</div>
-                <div class="prices-container">
-                    <div class="price-box">
-                        <span class="label">Aktualna cijena</span>
-                        <span class="val">150 – 280 €</span>
+        <!-- CONTENT PAKETI -->
+        <div id="content" class="tab-content">
+            <h2 class="section-title">Content paketi</h2>
+            <div class="pricing-grid">
+                
+                <div class="pricing-card">
+                    <h3>1. Post paket Mini</h3>
+                    
+                    <div class="price-boxes-container">
+                        <div class="price-box">
+                            <span class="price-label">Aktualna cijena</span>
+                            <span class="price-val">140 – 180 €</span>
+                        </div>
+                        <div class="price-box anchored">
+                            <span class="price-label">Sidrena cijena (10.09.2026).</span>
+                            <span class="price-val">140 – 180 €</span>
+                        </div>
                     </div>
-                    <div class="price-box anchored">
-                        <span class="label">Sidrena (10.09.2026.)</span>
-                        <span class="val">150 – 280 €</span>
-                    </div>
+                    <div class="for-whom"><strong>Za koga je:</strong> Klijenti koji sami objavljuju, ali ne žele se zamarati sa osmišljavanjem i dizajnom sadržaja.</div>
+                    <ul>
+                        <li>4 gotove objave mjesečno (vizual + caption)</li>
+                    </ul>
+                    <a href="kontakt.html" class="btn-primary">Zatražite ponudu</a>
                 </div>
-            </div>
 
-            <div class="package-card">
-                <div class="package-title">CONTENT ADVANCED</div>
-                <div class="prices-container">
-                    <div class="price-box">
-                        <span class="label">Aktualna cijena</span>
-                        <span class="val">280 – 480 €</span>
+                <div class="pricing-card">
+                    <h3>2. Post paket Standard</h3>
+                    
+                    <div class="price-boxes-container">
+                        <div class="price-box">
+                            <span class="price-label">Aktualna cijena</span>
+                            <span class="price-val">260 – 360 €</span>
+                        </div>
+                        <div class="price-box anchored">
+                            <span class="price-label">Sidrena cijena (10.09.2026).</span>
+                            <span class="price-val">260 – 360 €</span>
+                        </div>
                     </div>
-                    <div class="price-box anchored">
-                        <span class="label">Sidrena (10.09.2026.)</span>
-                        <span class="val">280 – 480 €</span>
-                    </div>
+                    <div class="for-whom"><strong>Za koga je:</strong> Mali biznisi koji žele “mjesec unaprijed” riješen sadržaj.</div>
+                    <ul>
+                        <li>8 gotovih objava mjesečno (vizual + caption)</li>
+                    </ul>
+                    <a href="kontakt.html" class="btn-primary">Zatražite ponudu</a>
                 </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- 3. JEDNOKRATNE USLUGE -->
-    <div id="jednokratni" class="tab-content">
-        <h2 class="section-title">Jednokratne usluge</h2>
-        <div class="table-container">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Jednokratna usluga</th>
-                        <th style="text-align: right;">Aktualna cijena</th>
-                        <th style="text-align: right;">Sidrena cijena (10.09.2026.)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="service-title">Audit Instagram profila</td>
-                        <td class="price-col">
-                            <span class="mobile-label">Aktualna cijena</span>
-                            <span class="price-val">60 – 120 €</span>
-                        </td>
-                        <td class="anchored-col">
-                            <span class="mobile-label">Sidrena (10.09.2026.)</span>
-                            <span class="price-val">60 – 120 €</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="service-title">Audit oglasa (Google / Meta)</td>
-                        <td class="price-col">
-                            <span class="mobile-label">Aktualna cijena</span>
-                            <span class="price-val">80 – 150 €</span>
-                        </td>
-                        <td class="anchored-col">
-                            <span class="mobile-label">Sidrena (10.09.2026.)</span>
-                            <span class="price-val">80 – 150 €</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="service-title">Setup Google Ads kampanje</td>
-                        <td class="price-col">
-                            <span class="mobile-label">Aktualna cijena</span>
-                            <span class="price-val">150 – 250 €</span>
-                        </td>
-                        <td class="anchored-col">
-                            <span class="mobile-label">Sidrena (10.09.2026.)</span>
-                            <span class="price-val">150 – 250 €</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="service-title">Setup Meta Ads kampanje</td>
-                        <td class="price-col">
-                            <span class="mobile-label">Aktualna cijena</span>
+                <div class="pricing-card">
+                    <h3>3. Reels paket – edit only</h3>
+                    
+                    <div class="price-boxes-container">
+                        <div class="price-box">
+                            <span class="price-label">Aktualna cijena</span>
                             <span class="price-val">120 – 220 €</span>
-                        </td>
-                        <td class="anchored-col">
-                            <span class="mobile-label">Sidrena (10.09.2026.)</span>
+                        </div>
+                        <div class="price-box anchored">
+                            <span class="price-label">Sidrena cijena (10.09.2026).</span>
                             <span class="price-val">120 – 220 €</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="service-title">Pixel / osnovno praćenje konverzija / povezivanje računa</td>
-                        <td class="price-col">
-                            <span class="mobile-label">Aktualna cijena</span>
-                            <span class="price-val">80 – 180 €</span>
-                        </td>
-                        <td class="anchored-col">
-                            <span class="mobile-label">Sidrena (10.09.2026.)</span>
-                            <span class="price-val">80 – 180 €</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="service-title">Mjesečni content plan bez izrade objava</td>
-                        <td class="price-col">
-                            <span class="mobile-label">Aktualna cijena</span>
-                            <span class="price-val">50 – 90 €</span>
-                        </td>
-                        <td class="anchored-col">
-                            <span class="mobile-label">Sidrena (10.09.2026.)</span>
-                            <span class="price-val">50 – 90 €</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="service-title">Kratki savjetodavni poziv (45 – 60 min)</td>
-                        <td class="price-col">
-                            <span class="mobile-label">Aktualna cijena</span>
-                            <span class="price-val">40 – 80 €</span>
-                        </td>
-                        <td class="anchored-col">
-                            <span class="mobile-label">Sidrena (10.09.2026.)</span>
-                            <span class="price-val">40 – 80 €</span>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+                        </div>
+                    </div>
+                    <div class="for-whom"><strong>Za koga je:</strong> Klijenti koji mogu sami snimiti mobitelom, ali im treba montaža i finalni oblik.</div>
+                    <ul>
+                        <li>4 montirana Reels videa od materijala koji klijent pošalje</li>
+                    </ul>
+                    <a href="kontakt.html" class="btn-primary">Zatražite ponudu</a>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>4. Reels paket – Lite</h3>
+                    <div class="subtitle">Snimanje + Montaža</div>
+                    
+                    <div class="price-boxes-container">
+                        <div class="price-box">
+                            <span class="price-label">Aktualna cijena</span>
+                            <span class="price-val">280 – 480 €</span>
+                        </div>
+                        <div class="price-box anchored">
+                            <span class="price-label">Sidrena cijena (10.09.2026).</span>
+                            <span class="price-val">280 – 480 €</span>
+                        </div>
+                    </div>
+                    <div class="for-whom"><strong>Za koga je:</strong> Lokali, saloni, ugostitelji, mali showroom ili studio biznisi.</div>
+                    <ul>
+                        <li>4 kratka videa</li>
+                        <li>1 dolazak na lokaciju</li>
+                        <li>montaža sadržaja</li>
+                    </ul>
+                    <a href="kontakt.html" class="btn-primary">Zatražite ponudu</a>
+                </div>
+
+            </div>
         </div>
-    </div>
 
-    <!-- 4. DODATNE USLUGE -->
-    <div id="dodatni" class="tab-content">
-        <h2 class="section-title">Dodatne usluge (Pojedinačne)</h2>
-        <div class="table-container">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Usluga</th>
-                        <th style="text-align: right;">Aktualna cijena</th>
-                        <th style="text-align: right;">Sidrena cijena (10.09.2026.)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="service-title">1 statična objava (vizual + caption)</td>
-                        <td class="price-col">
-                            <span class="mobile-label">Aktualna cijena</span>
-                            <span class="price-val">20 – 35 €</span>
-                        </td>
-                        <td class="anchored-col">
-                            <span class="mobile-label">Sidrena (10.09.2026.)</span>
-                            <span class="price-val">20 – 35 €</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="service-title">1 Reel edit (od dostavljenog materijala)</td>
-                        <td class="price-col">
-                            <span class="mobile-label">Aktualna cijena</span>
-                            <span class="price-val">30 – 55 €</span>
-                        </td>
-                        <td class="anchored-col">
-                            <span class="mobile-label">Sidrena (10.09.2026.)</span>
-                            <span class="price-val">30 – 55 €</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="service-title">1 Story objava</td>
-                        <td class="price-col">
-                            <span class="mobile-label">Aktualna cijena</span>
-                            <span class="price-val">8 – 15 €</span>
-                        </td>
-                        <td class="anchored-col">
-                            <span class="mobile-label">Sidrena (10.09.2026.)</span>
-                            <span class="price-val">8 – 15 €</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="service-title">Dodatna oglasna platforma uz paket</td>
-                        <td class="price-col">
-                            <span class="mobile-label">Aktualna cijena</span>
-                            <span class="price-val">120 – 180 € / mj</span>
-                        </td>
-                        <td class="anchored-col">
-                            <span class="mobile-label">Sidrena (10.09.2026.)</span>
-                            <span class="price-val">120 – 180 € / mj</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="service-title">Izlazak na teren za snimanje (izvan paketa)</td>
-                        <td class="price-col">
-                            <span class="mobile-label">Aktualna cijena</span>
-                            <span class="price-val">80 – 150 € / dolazak</span>
-                        </td>
-                        <td class="anchored-col">
-                            <span class="mobile-label">Sidrena (10.09.2026.)</span>
-                            <span class="price-val">80 – 150 € / dolazak</span>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+        <!-- JEDNOKRATNE USLUGE -->
+        <div id="jednokratni" class="tab-content">
+            <h2 class="section-title">Jednokratne usluge</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Jednokratna usluga</th>
+                            <th style="text-align: right;">Aktualna cijena</th>
+                            <th style="text-align: right;">Sidrena cijena (10.09.2026).</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="service-title">Audit Instagram profila</td>
+                            <td class="price-col">
+                                <span class="mobile-label">Aktualna cijena</span>
+                                <span class="price-val">60 – 120 €</span>
+                            </td>
+                            <td class="anchored-col">
+                                <span class="mobile-label">Sidrena (10.09.2026.)</span>
+                                <span class="price-val">60 – 120 €</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="service-title">Audit oglasa (Google / Meta)</td>
+                            <td class="price-col">
+                                <span class="mobile-label">Aktualna cijena</span>
+                                <span class="price-val">80 – 150 €</span>
+                            </td>
+                            <td class="anchored-col">
+                                <span class="mobile-label">Sidrena (10.09.2026.)</span>
+                                <span class="price-val">80 – 150 €</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="service-title">Setup Google Ads kampanje</td>
+                            <td class="price-col">
+                                <span class="mobile-label">Aktualna cijena</span>
+                                <span class="price-val">150 – 250 €</span>
+                            </td>
+                            <td class="anchored-col">
+                                <span class="mobile-label">Sidrena (10.09.2026.)</span>
+                                <span class="price-val">150 – 250 €</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="service-title">Setup Meta Ads kampanje</td>
+                            <td class="price-col">
+                                <span class="mobile-label">Aktualna cijena</span>
+                                <span class="price-val">120 – 220 €</span>
+                            </td>
+                            <td class="anchored-col">
+                                <span class="mobile-label">Sidrena (10.09.2026.)</span>
+                                <span class="price-val">120 – 220 €</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="service-title">Pixel / osnovno praćenje konverzija / povezivanje računa</td>
+                            <td class="price-col">
+                                <span class="mobile-label">Aktualna cijena</span>
+                                <span class="price-val">80 – 180 €</span>
+                            </td>
+                            <td class="anchored-col">
+                                <span class="mobile-label">Sidrena (10.09.2026.)</span>
+                                <span class="price-val">80 – 180 €</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="service-title">Mjesečni content plan bez izrade objava</td>
+                            <td class="price-col">
+                                <span class="mobile-label">Aktualna cijena</span>
+                                <span class="price-val">50 – 90 €</span>
+                            </td>
+                            <td class="anchored-col">
+                                <span class="mobile-label">Sidrena (10.09.2026.)</span>
+                                <span class="price-val">50 – 90 €</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="service-title">Kratki savjetodavni poziv (45 – 60 min)</td>
+                            <td class="price-col">
+                                <span class="mobile-label">Aktualna cijena</span>
+                                <span class="price-val">40 – 80 €</span>
+                            </td>
+                            <td class="anchored-col">
+                                <span class="mobile-label">Sidrena (10.09.2026.)</span>
+                                <span class="price-val">40 – 80 €</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
-    </div>
 
-    <!-- OPĆE NAPOMENE -->
-    <section class="notes-card">
-        <h3>Opće napomene</h3>
-        <ul>
-            <li><strong>Budžet za Google i Meta oglase uplaćuje se izravno oglasnim platformama i nije uračunat u naknadu za vođenje kampanja.</strong></li>
-            <li><strong>Za dolaske na lokacije izvan opsega paketa obračunavaju se putni troškovi, ovisno o udaljenosti.</strong></li>
-            <li><strong>Sve cijene su podložne prilagodbi, ovisno o specifičnim zahtjevima i složenosti projekta.</strong></li>
-        </ul>
-    </section>
+        <!-- DODATNE USLUGE (POJEDINAČNE) -->
+        <div id="dodatni" class="tab-content">
+            <h2 class="section-title">Pojedinačne cijene (Add-ons)</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Usluga</th>
+                            <th style="text-align: right;">Aktualna cijena</th>
+                            <th style="text-align: right;">Sidrena cijena (10.09.2026).</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="service-title">1 statična objava (vizual + caption)</td>
+                            <td class="price-col">
+                                <span class="mobile-label">Aktualna cijena</span>
+                                <span class="price-val">20 – 35 €</span>
+                            </td>
+                            <td class="anchored-col">
+                                <span class="mobile-label">Sidrena (10.09.2026.)</span>
+                                <span class="price-val">20 – 35 €</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="service-title">1 Reel edit (od dostavljenog materijala)</td>
+                            <td class="price-col">
+                                <span class="mobile-label">Aktualna cijena</span>
+                                <span class="price-val">30 – 55 €</span>
+                            </td>
+                            <td class="anchored-col">
+                                <span class="mobile-label">Sidrena (10.09.2026.)</span>
+                                <span class="price-val">30 – 55 €</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="service-title">1 Story objava</td>
+                            <td class="price-col">
+                                <span class="mobile-label">Aktualna cijena</span>
+                                <span class="price-val">8 – 15 €</span>
+                            </td>
+                            <td class="anchored-col">
+                                <span class="mobile-label">Sidrena (10.09.2026.)</span>
+                                <span class="price-val">8 – 15 €</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="service-title">Dodatna oglasna platforma uz paket</td>
+                            <td class="price-col">
+                                <span class="mobile-label">Aktualna cijena</span>
+                                <span class="price-val">120 – 180 € / mj</span>
+                            </td>
+                            <td class="anchored-col">
+                                <span class="mobile-label">Sidrena (10.09.2026.)</span>
+                                <span class="price-val">120 – 180 € / mj</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="service-title">Izlazak na teren za snimanje (izvan paketa)</td>
+                            <td class="price-col">
+                                <span class="mobile-label">Aktualna cijena</span>
+                                <span class="price-val">80 – 150 € / dolazak</span>
+                            </td>
+                            <td class="anchored-col">
+                                <span class="mobile-label">Sidrena (10.09.2026.)</span>
+                                <span class="price-val">80 – 150 € / dolazak</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
 
-</div>
+        <!-- OPĆE NAPOMENE -->
+        <section class="notes-card">
+            <h3>Opće napomene</h3>
+            <ul>
+                <li><strong>Budžet za Google i Meta oglase uplaćuje se izravno oglasnim platformama i nije uračunat u naknadu za vođenje kampanja.</strong></li>
+                <li><strong>Za dolaske na lokacije izvan opsega paketa obračunavaju se putni troškovi, ovisno o udaljenosti.</strong></li>
+                <li><strong>Sve cijene su podložne prilagodbi, ovisno o specifičnim zahtjevima i složenosti projekta.</strong></li>
+            </ul>
+        </section>
+    </main>
 
-<script>
-    function openTab(tabId) {
-        // Sakrij sve tabove
-        const contents = document.querySelectorAll('.tab-content');
-        contents.forEach(content => content.classList.remove('active'));
+    <footer>
+        <div class="footer-links">
+            <a href="index.html">Početna</a>
+            <a href="o-nama.html">O nama</a>
+            <a href="cjenik.html">Cjenik</a>
+            <a href="faq.html">FAQ</a>
+            <a href="kontakt.html">Kontakt</a>
+        </div>
+        <div class="footer-legal">
+            <strong>VD FLOW</strong> • Obrt za digitalni marketing | Vlasnik: Vlatka Dizdarević | Sjedište: Gradek 26, 10255 Gornji Stupnik | OIB: 77462129969 | Upisano u Obrtni registar nadležnog ureda | IBAN:HR1924840081135531768
+        </div>
+        <p>&copy; 2026 VD FLOW. Sva prava pridržana.</p>
+    </footer>
 
-        // Deaktiviraj sve gumbe
-        const buttons = document.querySelectorAll('.tab-btn');
-        buttons.forEach(btn => btn.classList.remove('active'));
-
-        // Prikaži odabrani tab i aktiviraj gumb
-        document.getElementById(tabId).classList.add('active');
-        event.currentTarget.classList.add('active');
-    }
-</script>
-
+    <script>
+        // Prebacivanje tabova
+        function switchTab(tabId) {
+            const tabs = document.querySelectorAll('.tab-content');
+            const btns = document.querySelectorAll('.tab-btn');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            btns.forEach(btn => btn.classList.remove('active'));
+            const selectedTab = document.getElementById(tabId);
+            const selectedBtn = document.getElementById('tab-btn-' + tabId);
+            if (selectedTab) selectedTab.classList.add('active');
+            if (selectedBtn) selectedBtn.classList.add('active');
+        }
+        // Mobilni izbornik toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.getElementById('nav-links');
+        if (menuToggle) {
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        }
+        // Automatsko otvaranje taba prema hash-u u URL-u (npr. cjenik.html#content)
+        window.addEventListener('DOMContentLoaded', () => {
+            const hash = window.location.hash.replace('#', '');
+            if (hash && ['mjesecni', 'content', 'jednokratni', 'dodatni'].includes(hash)) {
+                switchTab(hash);
+            }
+        });
+    </script>
 </body>
 </html>
