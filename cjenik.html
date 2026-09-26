@@ -410,7 +410,7 @@
             .price-boxes-container { grid-template-columns: 1fr 1fr; }
         }
 
-        /* 100% ČISTA BIJELA PRINT SKREMA ZA PDF */
+        /* 100% PROFESIONALNI PRINT CSS ZA SAVRŠEN PDF */
         @media print {
             header, footer, .cjenik-tabs, .machine-readable-box, .btn-primary, .menu-toggle {
                 display: none !important;
@@ -418,6 +418,7 @@
             html, body {
                 background: #ffffff !important;
                 color: #111111 !important;
+                font-size: 13px !important;
             }
             .container {
                 max-width: 100% !important;
@@ -429,24 +430,29 @@
                 opacity: 1 !important;
                 visibility: visible !important;
                 page-break-inside: avoid;
-                margin-bottom: 20px;
+                margin-bottom: 25px;
+            }
+            .pricing-grid {
+                display: grid !important;
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 15px !important;
             }
             .pricing-card, .table-container, .notes-card, .price-box, .note-box {
-                background: #f9f9f9 !important;
-                border: 1px solid #d0d0d0 !important;
+                background: #fbfbfb !important;
+                border: 1px solid #cccccc !important;
                 color: #111111 !important;
                 box-shadow: none !important;
                 page-break-inside: avoid;
             }
             .note-box, .notes-card {
-                background: #f3e8ff !important;
+                background: #f7f2ff !important;
                 border: 1px solid #a855f7 !important;
             }
             .pricing-card h3, .section-title, .price-val, td.service-title, .notes-card h3, .page-header h1, .page-header p, .pricing-card .subtitle, .pricing-card .for-whom, .pricing-card ul li, .notes-card ul li {
                 color: #111111 !important;
             }
             .pricing-card .subtitle, .badge {
-                color: #9333ea !important;
+                color: #7e22ce !important;
             }
             .price-box.anchored {
                 background: #f3e8ff !important;
@@ -458,6 +464,16 @@
             .section-title {
                 border-left: 4px solid #a855f7 !important;
                 color: #111111 !important;
+                font-size: 1.4rem !important;
+                margin: 20px 0 15px 0 !important;
+            }
+            
+            /* PRAVILNO FORMATIRANJE TABLICA U PRINTU */
+            .table-container {
+                background: #ffffff !important;
+                border: 1px solid #cccccc !important;
+                border-radius: 8px !important;
+                overflow: hidden !important;
             }
             table, thead, tbody, tr, th, td {
                 display: table !important;
@@ -470,23 +486,31 @@
             }
             th, td {
                 display: table-cell !important;
-                border-bottom: 1px solid #d0d0d0 !important;
+                border-bottom: 1px solid #e0e0e0 !important;
                 color: #111111 !important;
-                padding: 12px !important;
+                padding: 10px 14px !important;
+                white-space: nowrap !important; /* Sprječava ružno prelamanje cijena u 2 reda */
+            }
+            /* Prvi stupac s nazivom usluge može hvatati višak teksta i lomiti se normalno */
+            td.service-title {
+                white-space: normal !important;
+                width: 50% !important;
             }
             th {
                 background: #f3f3f3 !important;
                 color: #7e22ce !important;
+                font-weight: 700 !important;
             }
             td.price-col, td.anchored-col {
                 text-align: right !important;
-                width: auto !important;
+                width: 25% !important;
                 background: transparent !important;
                 border: none !important;
-                border-bottom: 1px solid #d0d0d0 !important;
+                border-bottom: 1px solid #e0e0e0 !important;
             }
             td.anchored-col {
                 color: #7e22ce !important;
+                font-weight: 700 !important;
             }
             .mobile-label {
                 display: none !important;
