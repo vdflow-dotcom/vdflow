@@ -410,14 +410,14 @@
             .price-boxes-container { grid-template-columns: 1fr 1fr; }
         }
 
-        /* POSEBNA PRAVILA ZA SPREMANJE U PDF (CTRL + P) */
+        /* 100% ČISTA BIJELA PRINT SKREMA ZA PDF */
         @media print {
             header, footer, .cjenik-tabs, .machine-readable-box, .btn-primary, .menu-toggle {
                 display: none !important;
             }
-            body {
-                background-color: #ffffff !important;
-                color: #000000 !important;
+            html, body {
+                background: #ffffff !important;
+                color: #111111 !important;
             }
             .container {
                 max-width: 100% !important;
@@ -429,34 +429,67 @@
                 opacity: 1 !important;
                 visibility: visible !important;
                 page-break-inside: avoid;
-                margin-bottom: 30px;
+                margin-bottom: 20px;
             }
             .pricing-card, .table-container, .notes-card, .price-box, .note-box {
-                background-color: #ffffff !important;
-                border: 1px solid #cccccc !important;
-                color: #000000 !important;
+                background: #f9f9f9 !important;
+                border: 1px solid #d0d0d0 !important;
+                color: #111111 !important;
                 box-shadow: none !important;
                 page-break-inside: avoid;
             }
-            .pricing-card h3, .section-title, .price-val, td.service-title, .notes-card h3, .page-header h1 {
-                color: #000000 !important;
+            .note-box, .notes-card {
+                background: #f3e8ff !important;
+                border: 1px solid #a855f7 !important;
+            }
+            .pricing-card h3, .section-title, .price-val, td.service-title, .notes-card h3, .page-header h1, .page-header p, .pricing-card .subtitle, .pricing-card .for-whom, .pricing-card ul li, .notes-card ul li {
+                color: #111111 !important;
+            }
+            .pricing-card .subtitle, .badge {
+                color: #9333ea !important;
             }
             .price-box.anchored {
-                background-color: #f3e8ff !important;
+                background: #f3e8ff !important;
                 border: 1px solid #a855f7 !important;
+            }
+            .price-box.anchored .price-val, .price-box.anchored .price-label, td.anchored-col {
+                color: #7e22ce !important;
             }
             .section-title {
                 border-left: 4px solid #a855f7 !important;
+                color: #111111 !important;
+            }
+            table, thead, tbody, tr, th, td {
+                display: table !important;
+                width: 100% !important;
+            }
+            tr {
+                display: table-row !important;
+                background: transparent !important;
+                border: none !important;
             }
             th, td {
-                border-bottom: 1px solid #cccccc !important;
-                color: #000000 !important;
+                display: table-cell !important;
+                border-bottom: 1px solid #d0d0d0 !important;
+                color: #111111 !important;
+                padding: 12px !important;
+            }
+            th {
+                background: #f3f3f3 !important;
+                color: #7e22ce !important;
             }
             td.price-col, td.anchored-col {
-                color: #000000 !important;
+                text-align: right !important;
+                width: auto !important;
+                background: transparent !important;
+                border: none !important;
+                border-bottom: 1px solid #d0d0d0 !important;
             }
             td.anchored-col {
-                color: #a855f7 !important;
+                color: #7e22ce !important;
+            }
+            .mobile-label {
+                display: none !important;
             }
         }
     </style>
@@ -921,6 +954,13 @@
             if (selectedTab) selectedTab.classList.add('active');
             if (selectedBtn) selectedBtn.classList.add('active');
         }
+
+        // AUTOMATSKO OTVARANJE SVIH TADOVA PRIJE PRINTANJA U PDF
+        window.addEventListener('beforeprint', () => {
+            const tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(tab => tab.classList.add('active'));
+        });
+
         // Mobilni izbornik toggle
         const menuToggle = document.getElementById('menu-toggle');
         const navLinks = document.getElementById('nav-links');
@@ -929,7 +969,8 @@
                 navLinks.classList.toggle('active');
             });
         }
-        // Automatsko otvaranje taba prema hash-u u URL-u (npr. cjenik.html#content)
+
+        // Automatsko otvaranje taba prema hash-u u URL-u
         window.addEventListener('DOMContentLoaded', () => {
             const hash = window.location.hash.replace('#', '');
             if (hash && ['mjesecni', 'content', 'jednokratni', 'dodatni'].includes(hash)) {
