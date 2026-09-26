@@ -92,9 +92,9 @@
             font-size: 0.9rem; 
             margin-top: auto; 
         }
-        .footer-links { display: flex; justify-content: center; gap: 15px; margin-bottom: 15px; flex-wrap: wrap; }
+        .footer-links { display: flex; justify-content: center; gap: 12px; margin-bottom: 15px; flex-wrap: wrap; align-items: center; }
         .footer-links a { color: var(--text-muted); text-decoration: none; }
-        .footer-links a:hover { color: var(--primary); }
+        .footer-links span { color: #64748b; }
         .footer-legal { max-width: 800px; margin: 0 auto 15px auto; font-size: 0.85rem; opacity: 0.8; line-height: 1.4; }
 
         @media (max-width: 768px) {
@@ -127,16 +127,16 @@
         <button class="menu-toggle" id="menu-toggle" aria-label="Otvorite izbornik">☰</button>
 
         <nav>
-    <ul class="nav-links" id="nav-links">
-        <li><a href="index.html">Početna</a></li>
-        <li><a href="o-nama.html">O nama</a></li>
-        <li><a href="usluge.html">Usluge</a></li>
-        <li><a href="cjenik.html">Cjenik</a></li>
-        <li><a href="arhiva-cjenika.html">Arhiva cjenika</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="kontakt.html">Kontakt</a></li>
-    </ul>
-</nav>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Početna</a></li>
+                <li><a href="o-nama.html" class="active">O nama</a></li>
+                <li><a href="usluge.html">Usluge</a></li>
+                <li><a href="cjenik.html">Cjenik</a></li>
+                <li><a href="arhiva-cjenika.html">Arhiva cjenika</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
         
         <a href="kontakt.html" class="btn-primary header-btn">Zatraži ponudu</a>
     </header>
@@ -156,16 +156,18 @@
     <footer>
         <div class="footer-links">
             <a href="index.html" class="hover:text-slate-300 transition">Početna</a>
-    <span>•</span>
-    <a href="usluge.html" class="hover:text-slate-300 transition">Usluge</a>
-    <span>•</span>
-    <a href="cjenik.html" class="hover:text-slate-300 transition">Cjenik</a>
-    <span>•</span>
-    <a href="kontakt.html" class="hover:text-slate-300 transition">Kontakt</a>
-    <span>•</span>
-    <a href="uvjeti-koristenja.html" class="hover:text-slate-300 transition">Uvjeti korištenja</a>
-    <span>•</span>
-    <a href="politika-privatnosti.html" class="hover:text-slate-300 transition">Politika privatnosti</a>
+            <span>•</span>
+            <a href="o-nama.html" class="hover:text-slate-300 transition">O nama</a>
+            <span>•</span>
+            <a href="usluge.html" class="hover:text-slate-300 transition">Usluge</a>
+            <span>•</span>
+            <a href="cjenik.html" class="hover:text-slate-300 transition">Cjenik</a>
+            <span>•</span>
+            <a href="kontakt.html" class="hover:text-slate-300 transition">Kontakt</a>
+            <span>•</span>
+            <a href="uvjeti-koristenja.html" class="hover:text-slate-300 transition">Uvjeti korištenja</a>
+            <span>•</span>
+            <a href="politika-privatnosti.html" class="hover:text-slate-300 transition">Politika privatnosti</a>
         </div>
 
         <div class="footer-legal">
