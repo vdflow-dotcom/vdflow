@@ -6,7 +6,7 @@
     
     <!-- SEO Meta Tagovi -->
     <title>VD FLOW | Digitalni Marketing & Vođenje Društvenih Mreža</title>
-    <meta name="description" content="VD FLOW - Stručne usluge digitalnog marketinga, oglašavanja i vođenja društvenih mreža za Vaš obrt ili tvrtku. Povećajte vidljivost i dođite do novih klijenata.">
+    <meta name="description" content="VD FLOW - Stručne usluge digitalnog marketinga, oglasa i vođenja društvenih mreža za Vaš obrt ili tvrtku. Povećajte vidljivost i dođite do novih klijenata.">
     <meta name="keywords" content="digitalni marketing, vođenje društvenih mreža, Google oglasi, Meta oglasi, izrada sadržaja, Gornji Stupnik, Zagreb">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://vdflow.hr/">
@@ -147,21 +147,12 @@
             transition: color 0.3s, transform 0.3s;
         }
 
-        .scroll-down-arrow:hover {
-            color: var(--primary-hover);
-        }
+        .scroll-down-arrow:hover { color: var(--primary-hover); }
 
-        /* Animacija poskakivanja */
         @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {
-                transform: translateY(0);
-            }
-            40% {
-                transform: translateY(-10px);
-            }
-            60% {
-                transform: translateY(-5px);
-            }
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
         }
 
         /* Sekcije */
@@ -182,6 +173,44 @@
         .service-card p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px; }
         .card-link { color: var(--primary); text-decoration: none; font-weight: 600; font-size: 0.95rem; }
         .card-link:hover { text-decoration: underline; }
+
+        /* Sekcija za rezervaciju termina (TidyCal) */
+        .booking-box {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 850px;
+            margin: 0 auto;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        .booking-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        .tab-btn {
+            background: transparent;
+            border: 2px solid var(--border-color);
+            color: var(--text-muted);
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .tab-btn.active, .tab-btn:hover {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: #fff;
+        }
+        .booking-content {
+            display: none;
+        }
+        .booking-content.active {
+            display: block;
+        }
 
         /* O nama box */
         .about-box {
@@ -212,6 +241,8 @@
             .header-btn { display: none; }
             .hero-content h1 { font-size: 2.1rem; }
             .hero-video-container { min-height: auto; padding: 40px 0 30px 0; }
+            .booking-box { padding: 20px 15px; }
+            .booking-tabs { flex-direction: column; gap: 10px; }
         }
     </style>
 </head>
@@ -254,7 +285,6 @@
                     <a href="kontakt.html" class="btn-secondary">Kontaktirajte nas</a>
                 </div>
                 
-                <!-- Ljubičasta strelica unutar hero sadržaja -->
                 <a href="#usluge" class="scroll-down-arrow" aria-label="Skrolajte prema dolje">&#x25BC;</a>
             </div>
         </section>
@@ -303,6 +333,30 @@
             </div>
         </section>
 
+        <!-- Sekcija za Rezervaciju Termina (TidyCal) -->
+        <section class="container section-padding" style="padding-top: 0;">
+            <h2 class="section-title">Rezervirajte Termin</h2>
+            <p class="section-subtitle">Odaberite željeno trajanje sastanka. Radno vrijeme za rezervacije je od 16:00 do 21:00.</p>
+            
+            <div class="booking-box">
+                <!-- Prekidači za vrstu sastanka -->
+                <div class="booking-tabs">
+                    <button class="tab-btn active" onclick="openBooking(event, 'booking-30')">Sastanak 30 minuta</button>
+                    <button class="tab-btn" onclick="openBooking(event, 'booking-60')">Sastanak 60 minuta</button>
+                </div>
+
+                <!-- TidyCal Widget 30 min -->
+                <div id="booking-30" class="booking-content active">
+                    <div class="tidycal-embed" data-path="vdflowkontakt/30-minute-meeting"></div>
+                </div>
+
+                <!-- TidyCal Widget 60 min -->
+                <div id="booking-60" class="booking-content">
+                    <div class="tidycal-embed" data-path="vdflowkontakt/60-minute-meeting"></div>
+                </div>
+            </div>
+        </section>
+
         <!-- O nama sekcija -->
         <section class="container section-padding" style="padding-top: 0;">
             <h2 class="section-title">O VD FLOW</h2>
@@ -310,7 +364,7 @@
             
             <div class="about-box">
                 <p>VD FLOW je obrt za digitalni marketing fokusiran na pružanje konkretnih rezultata za male i srednje poduzetnike. Specijalizirani smo za vođenje društvenih mreža, kreiranje vizualno privlačnog i angažirajućeg sadržaja te vođenje visoko učinkovitih oglasnih kampanja na Meta (Facebook, Instagram) i Google platformama.</p>
-                <p>Naš cilj je jednostavan: osloboditi Vas stresa oko vođenja digitalnih kanala kako biste se Vi mogli posvetiti vođenju svog poslovanja, dok mi gradimo Vašu prepoznatljivost i privlačimo nove klijente.</p>
+                <p>Naš cilj je jednostavan: osloboditi Vaš stres oko vođenja digitalnih kanala kako biste se Vi mogli posvetiti vođenju svog poslovanja, dok mi gradimo Vašu prepoznatljivost i privlačimo nove klijente.</p>
                 <div style="text-align: center; margin-top: 20px;">
                     <a href="o-nama.html" class="btn-primary">Pročitaj više o nama</a>
                 </div>
@@ -340,6 +394,9 @@
         <p>&copy; 2026 VD FLOW. Sva prava pridržana.</p>
     </footer>
 
+    <!-- TidyCal Skripta (ubacuje se jednom na dno stranice) -->
+    <script src="https://asset-tidycal.b-cdn.net/js/embed.js" async></script>
+
     <!-- Cookie Banner -->
     <div id="cookie-banner" style="position: fixed; bottom: 20px; left: 20px; right: 20px; background: rgba(15, 23, 42, 0.95); border: 1px solid rgba(255,255,255,0.1); padding: 15px 20px; border-radius: 12px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 10px 25px rgba(0,0,0,0.5); backdrop-filter: blur(8px); z-index: 9999; flex-wrap: wrap; gap: 15px;">
         <p style="margin: 0; color: #cbd5e0; font-size: 0.9rem; max-width: 800px;">
@@ -353,6 +410,20 @@
         const menuToggle = document.getElementById('menu-toggle');
         const navLinks = document.getElementById('nav-links');
         menuToggle.addEventListener('click', () => { navLinks.classList.toggle('active'); });
+
+        // Funkcija za prebacivanje tabova kalendara (30 min / 60 min)
+        function openBooking(evt, bookingId) {
+            const contents = document.getElementsByClassName("booking-content");
+            for (let i = 0; i < contents.length; i++) {
+                contents[i].classList.remove("active");
+            }
+            const buttons = document.getElementsByClassName("tab-btn");
+            for (let i = 0; i < buttons.length; i++) {
+                buttons[i].classList.remove("active");
+            }
+            document.getElementById(bookingId).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
 
         // Cookie banner
         function acceptCookies() {
