@@ -278,9 +278,9 @@
             </ul>
         </nav>
         
-        <!-- Desktop gumbi gore desno (otvaraju u novom tabu s target="_blank") -->
+        <!-- Desktop gumbi gore desno -->
         <div class="header-actions">
-            <a href="https://tidycal.com/vdflowkontakt/30-minute-meeting" target="_blank" rel="noopener noreferrer" class="btn-outline-primary">Rezerviraj termin</a>
+            <a href="https://tidycal.com/vdflowkontakt/30-minute-meeting" class="btn-outline-primary booking-btn">Rezerviraj termin</a>
             <a href="kontakt.html" class="btn-primary">Zatražite ponudu</a>
         </div>
 
@@ -296,7 +296,7 @@
                 <li><a href="kontakt.html">Kontakt</a></li>
             </ul>
             <div class="mobile-buttons-box">
-                <a href="https://tidycal.com/vdflowkontakt/30-minute-meeting" target="_blank" rel="noopener noreferrer" class="btn-outline-primary">Rezerviraj termin</a>
+                <a href="https://tidycal.com/vdflowkontakt/30-minute-meeting" class="btn-outline-primary booking-btn">Rezerviraj termin</a>
                 <a href="kontakt.html" class="btn-primary">Zatražite ponudu</a>
             </div>
         </div>
@@ -417,6 +417,31 @@
         const menuToggle = document.getElementById('menu-toggle');
         const mobileMenu = document.getElementById('mobile-menu');
         menuToggle.addEventListener('click', () => { mobileMenu.classList.toggle('active'); });
+
+        // Pametna skripta za otvaranje bookinga koja sprječava Instagram loop
+        document.querySelectorAll('.booking-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const bookingUrl = this.href;
+                
+                // Provjera je li korisnik unutar Instagram ili Facebook aplikacije
+                const ua = navigator.userAgent || navigator.vendor || window.opera;
+                const isInstagram = (ua.indexOf('Instagram') > -1);
+                const isFacebook = (ua.indexOf('FBAN') > -1) || (ua.indexOf('FBAV') > -1);
+
+                if (isInstagram || isFacebook) {
+                    // Ako je u aplikaciji, pokušavamo otvoriti vanjski prozor ili korisniku nudimo direktan skok
+                    window.open(bookingUrl, '_system');
+                    // Rezervna opcija ako system browser blokira: direktna preusmjerenja
+                    setTimeout(() => {
+                        window.location.href = bookingUrl;
+                    }, 300);
+                } else {
+                    // Za obične pretraživače otvara se u novom tabu uredno
+                    window.open(bookingUrl, '_blank');
+                }
+            });
+        });
 
         // Cookie banner
         function acceptCookies() {
