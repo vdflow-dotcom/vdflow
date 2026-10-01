@@ -95,10 +95,16 @@
         .nav-links a { color: var(--text-muted); text-decoration: none; font-weight: 500; transition: 0.3s; }
         .nav-links a:hover, .nav-links a.active { color: var(--primary); }
 
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
         .btn-primary { 
             background: var(--primary); 
             color: #fff; 
-            padding: 10px 22px; 
+            padding: 10px 20px; 
             border-radius: 50px; 
             text-decoration: none; 
             font-weight: 600; 
@@ -106,11 +112,72 @@
             transition: background 0.3s;
             border: none;
             cursor: pointer;
+            font-size: 0.9rem;
+            text-align: center;
         }
         .btn-primary:hover { background: var(--primary-hover); }
 
+        .btn-outline-primary {
+            background: transparent;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: 0.3s;
+            border: 2px solid var(--primary);
+            cursor: pointer;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+        .btn-outline-primary:hover { background: var(--primary); }
+
         /* HAMBURGER MENU ZA MOBITELE */
         .menu-toggle { display: none; background: none; border: none; color: #fff; font-size: 1.8rem; cursor: pointer; }
+
+        /* MOBILNI IZBORNIK KONTEJNER */
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: var(--bg-color);
+            padding: 20px;
+            border-bottom: 1px solid var(--border-color);
+            gap: 15px;
+            text-align: center;
+            z-index: 999;
+        }
+        .mobile-menu.active {
+            display: flex;
+        }
+        .mobile-menu ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .mobile-menu ul a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: 0.3s;
+        }
+        .mobile-menu ul a:hover {
+            color: var(--primary);
+        }
+        .mobile-buttons-box {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 10px;
+            padding-top: 15px;
+            border-top: 1px solid var(--border-color);
+        }
 
         /* GLAVNI SADRŽAJ KONTAKTA */
         .main-content {
@@ -246,23 +313,12 @@
         /* MOBILNA PRILAGODBA */
         @media (max-width: 768px) {
             .menu-toggle { display: block; }
-            .nav-links {
-                display: none;
-                flex-direction: column;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background: var(--bg-color);
-                padding: 20px;
-                border-bottom: 1px solid var(--border-color);
-                gap: 15px;
-                text-align: center;
-            }
-            .nav-links.active { display: flex; }
-            .header-btn { display: none; }
-            .contact-container { padding: 25px 20px; }
-            .contact-container h1 { font-size: 1.6rem; }
+            .nav-links { display: none; }
+            .header-actions { display: none; }
+        }
+
+        @media (min-width: 769px) {
+            .mobile-menu { display: none !important; }
         }
     </style>
 </head>
@@ -273,19 +329,41 @@
         
         <button class="menu-toggle" id="menu-toggle" aria-label="Otvorite izbornik">☰</button>
 
-       <nav>
-    <ul class="nav-links" id="nav-links">
-        <li><a href="index.html">Početna</a></li>
-        <li><a href="o-nama.html">O nama</a></li>
-        <li><a href="usluge.html">Usluge</a></li>
-        <li><a href="cjenik.html">Cjenik</a></li>
-        <li><a href="arhiva-cjenika.html">Arhiva cjenika</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="kontakt.html">Kontakt</a></li>
-    </ul>
-</nav>
+        <!-- Desktop navigacija -->
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Početna</a></li>
+                <li><a href="o-nama.html">O nama</a></li>
+                <li><a href="usluge.html">Usluge</a></li>
+                <li><a href="cjenik.html">Cjenik</a></li>
+                <li><a href="arhiva-cjenika.html">Arhiva cjenika</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="kontakt.html" class="active">Kontakt</a></li>
+            </ul>
+        </nav>
         
-        <a href="kontakt.html" class="btn-primary header-btn">Zatražite ponudu</a>
+        <!-- Desktop gumbi gore desno -->
+        <div class="header-actions">
+            <a href="https://tidycal.com/vdflowkontakt/30-minute-meeting" class="btn-outline-primary booking-btn">Rezerviraj termin</a>
+            <a href="kontakt.html" class="btn-primary">Zatražite ponudu</a>
+        </div>
+
+        <!-- Mobilni izbornik -->
+        <div class="mobile-menu" id="mobile-menu">
+            <ul>
+                <li><a href="index.html">Početna</a></li>
+                <li><a href="o-nama.html">O nama</a></li>
+                <li><a href="usluge.html">Usluge</a></li>
+                <li><a href="cjenik.html">Cjenik</a></li>
+                <li><a href="arhiva-cjenika.html">Arhiva cjenika</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+            <div class="mobile-buttons-box">
+                <a href="https://tidycal.com/vdflowkontakt/30-minute-meeting" class="btn-outline-primary booking-btn">Rezerviraj termin</a>
+                <a href="kontakt.html" class="btn-primary">Zatražite ponudu</a>
+            </div>
+        </div>
     </header>
 
     <main class="main-content">
@@ -329,16 +407,16 @@
     <footer>
         <div class="footer-links">
             <a href="index.html" class="hover:text-slate-300 transition">Početna</a>
-    <span>•</span>
-    <a href="usluge.html" class="hover:text-slate-300 transition">Usluge</a>
-    <span>•</span>
-    <a href="cjenik.html" class="hover:text-slate-300 transition">Cjenik</a>
-    <span>•</span>
-    <a href="kontakt.html" class="hover:text-slate-300 transition">Kontakt</a>
-    <span>•</span>
-    <a href="uvjeti-koristenja.html" class="hover:text-slate-300 transition">Uvjeti korištenja</a>
-    <span>•</span>
-    <a href="politika-privatnosti.html" class="hover:text-slate-300 transition">Politika privatnosti</a>
+            <span>•</span>
+            <a href="usluge.html" class="hover:text-slate-300 transition">Usluge</a>
+            <span>•</span>
+            <a href="cjenik.html" class="hover:text-slate-300 transition">Cjenik</a>
+            <span>•</span>
+            <a href="kontakt.html" class="hover:text-slate-300 transition">Kontakt</a>
+            <span>•</span>
+            <a href="uvjeti-koristenja.html" class="hover:text-slate-300 transition">Uvjeti korištenja</a>
+            <span>•</span>
+            <a href="politika-privatnosti.html" class="hover:text-slate-300 transition">Politika privatnosti</a>
         </div>
 
         <div class="footer-legal">
@@ -359,13 +437,34 @@
     <script>
         // Mobilni izbornik toggle
         const menuToggle = document.getElementById('menu-toggle');
-        const navLinks = document.getElementById('nav-links');
-
-        if (menuToggle && navLinks) {
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (menuToggle && mobileMenu) {
             menuToggle.addEventListener('click', () => {
-                navLinks.classList.toggle('active');
+                mobileMenu.classList.toggle('active');
             });
         }
+
+        // Pametna skripta za otvaranje bookinga koja sprječava Instagram loop
+        document.querySelectorAll('.booking-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const bookingUrl = this.href;
+                
+                const ua = navigator.userAgent || navigator.vendor || window.opera;
+                const isInstagram = (ua.indexOf('Instagram') > -1);
+                const isFacebook = (ua.indexOf('FBAN') > -1) || (ua.indexOf('FBAV') > -1);
+
+                if (isInstagram || isFacebook) {
+                    window.open(bookingUrl, '_system');
+                    setTimeout(() => {
+                        window.location.href = bookingUrl;
+                    }, 300);
+                } else {
+                    window.open(bookingUrl, '_blank');
+                }
+            });
+        });
 
         // Cookie banner logika
         document.addEventListener('DOMContentLoaded', function() {
