@@ -86,12 +86,28 @@
         .nav-links a { color: var(--text-muted); text-decoration: none; font-weight: 500; transition: 0.3s; }
         .nav-links a:hover, .nav-links a.active { color: var(--primary); }
 
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
         .btn-primary {
-            background: var(--primary); color: #fff; padding: 10px 22px;
+            background: var(--primary); color: #fff; padding: 10px 20px;
             border-radius: 50px; text-decoration: none; font-weight: 600;
             display: inline-block; transition: background 0.3s; border: none; cursor: pointer;
+            font-size: 0.9rem;
         }
         .btn-primary:hover { background: var(--primary-hover); }
+
+        /* Stil za sekundarni gumb (Rezerviraj termin u headeru) */
+        .btn-outline-primary {
+            background: transparent; color: #fff; padding: 10px 20px;
+            border-radius: 50px; text-decoration: none; font-weight: 600;
+            display: inline-block; transition: 0.3s; border: 2px solid var(--primary); cursor: pointer;
+            font-size: 0.9rem;
+        }
+        .btn-outline-primary:hover { background: var(--primary); }
 
         .menu-toggle { display: none; background: none; border: none; color: #fff; font-size: 1.8rem; cursor: pointer; }
 
@@ -174,44 +190,6 @@
         .card-link { color: var(--primary); text-decoration: none; font-weight: 600; font-size: 0.95rem; }
         .card-link:hover { text-decoration: underline; }
 
-        /* Sekcija za rezervaciju termina (TidyCal) */
-        .booking-box {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 20px;
-            padding: 40px;
-            max-width: 850px;
-            margin: 0 auto;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-        }
-        .booking-tabs {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-bottom: 30px;
-        }
-        .tab-btn {
-            background: transparent;
-            border: 2px solid var(--border-color);
-            color: var(--text-muted);
-            padding: 10px 24px;
-            border-radius: 50px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-        .tab-btn.active, .tab-btn:hover {
-            background: var(--primary);
-            border-color: var(--primary);
-            color: #fff;
-        }
-        .booking-content {
-            display: none;
-        }
-        .booking-content.active {
-            display: block;
-        }
-
         /* O nama box */
         .about-box {
             background: var(--card-bg); border: 1px solid var(--border-color);
@@ -238,11 +216,9 @@
                 border-bottom: 1px solid var(--border-color); gap: 15px; text-align: center;
             }
             .nav-links.active { display: flex; }
-            .header-btn { display: none; }
+            .header-actions { display: none; } /* Sakrivamo gumbe iz headera na mobitelu i stavljamo u mobilni izbornik po želji ili ostavljamo čisto */
             .hero-content h1 { font-size: 2.1rem; }
             .hero-video-container { min-height: auto; padding: 40px 0 30px 0; }
-            .booking-box { padding: 20px 15px; }
-            .booking-tabs { flex-direction: column; gap: 10px; }
         }
     </style>
 </head>
@@ -265,7 +241,12 @@
             </ul>
         </nav>
         
-        <a href="kontakt.html" class="btn-primary header-btn">Zatražite ponudu</a>
+        <!-- Akcije gore desno: gumbi jedan do drugog -->
+        <div class="header-actions">
+            <!-- TidyCal Popup link (koristi data-path i klasu tidycal-modal) -->
+            <a href="https://tidycal.com/vdflowkontakt/30-minute-meeting" class="btn-outline-primary tidycal-modal">Rezerviraj termin</a>
+            <a href="kontakt.html" class="btn-primary">Zatražite ponudu</a>
+        </div>
     </header>
 
     <main>
@@ -333,30 +314,6 @@
             </div>
         </section>
 
-        <!-- Sekcija za Rezervaciju Termina (TidyCal) -->
-        <section class="container section-padding" style="padding-top: 0;">
-            <h2 class="section-title">Rezervirajte Termin</h2>
-            <p class="section-subtitle">Odaberite željeno trajanje sastanka. Radno vrijeme za rezervacije je od 16:00 do 21:00.</p>
-            
-            <div class="booking-box">
-                <!-- Prekidači za vrstu sastanka -->
-                <div class="booking-tabs">
-                    <button class="tab-btn active" onclick="openBooking(event, 'booking-30')">Sastanak 30 minuta</button>
-                    <button class="tab-btn" onclick="openBooking(event, 'booking-60')">Sastanak 60 minuta</button>
-                </div>
-
-                <!-- TidyCal Widget 30 min -->
-                <div id="booking-30" class="booking-content active">
-                    <div class="tidycal-embed" data-path="vdflowkontakt/30-minute-meeting"></div>
-                </div>
-
-                <!-- TidyCal Widget 60 min -->
-                <div id="booking-60" class="booking-content">
-                    <div class="tidycal-embed" data-path="vdflowkontakt/60-minute-meeting"></div>
-                </div>
-            </div>
-        </section>
-
         <!-- O nama sekcija -->
         <section class="container section-padding" style="padding-top: 0;">
             <h2 class="section-title">O VD FLOW</h2>
@@ -394,7 +351,7 @@
         <p>&copy; 2026 VD FLOW. Sva prava pridržana.</p>
     </footer>
 
-    <!-- TidyCal Skripta (ubacuje se jednom na dno stranice) -->
+    <!-- TidyCal Skripta za Popup modale -->
     <script src="https://asset-tidycal.b-cdn.net/js/embed.js" async></script>
 
     <!-- Cookie Banner -->
@@ -410,20 +367,6 @@
         const menuToggle = document.getElementById('menu-toggle');
         const navLinks = document.getElementById('nav-links');
         menuToggle.addEventListener('click', () => { navLinks.classList.toggle('active'); });
-
-        // Funkcija za prebacivanje tabova kalendara (30 min / 60 min)
-        function openBooking(evt, bookingId) {
-            const contents = document.getElementsByClassName("booking-content");
-            for (let i = 0; i < contents.length; i++) {
-                contents[i].classList.remove("active");
-            }
-            const buttons = document.getElementsByClassName("tab-btn");
-            for (let i = 0; i < buttons.length; i++) {
-                buttons[i].classList.remove("active");
-            }
-            document.getElementById(bookingId).classList.add("active");
-            evt.currentTarget.classList.add("active");
-        }
 
         // Cookie banner
         function acceptCookies() {
