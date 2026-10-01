@@ -97,15 +97,16 @@
             border-radius: 50px; text-decoration: none; font-weight: 600;
             display: inline-block; transition: background 0.3s; border: none; cursor: pointer;
             font-size: 0.9rem;
+            text-align: center;
         }
         .btn-primary:hover { background: var(--primary-hover); }
 
-        /* Stil za sekundarni gumb (Rezerviraj termin u headeru) */
         .btn-outline-primary {
             background: transparent; color: #fff; padding: 10px 20px;
             border-radius: 50px; text-decoration: none; font-weight: 600;
             display: inline-block; transition: 0.3s; border: 2px solid var(--primary); cursor: pointer;
             font-size: 0.9rem;
+            text-align: center;
         }
         .btn-outline-primary:hover { background: var(--primary); }
 
@@ -151,7 +152,6 @@
         }
         .btn-secondary:hover { background: var(--primary); }
 
-        /* Animirana ljubičasta strelica za skrolanje */
         .scroll-down-arrow {
             display: inline-block;
             color: var(--primary);
@@ -171,12 +171,10 @@
             60% { transform: translateY(-5px); }
         }
 
-        /* Sekcije */
         .section-padding { padding: 80px 20px; }
         .section-title { text-align: center; font-size: 2.2rem; color: #fff; margin-bottom: 15px; }
         .section-subtitle { text-align: center; color: var(--text-muted); max-width: 650px; margin: 0 auto 50px; }
 
-        /* Usluge Grid */
         .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 25px; }
         .service-card {
             background: var(--card-bg); border: 1px solid var(--border-color);
@@ -190,14 +188,12 @@
         .card-link { color: var(--primary); text-decoration: none; font-weight: 600; font-size: 0.95rem; }
         .card-link:hover { text-decoration: underline; }
 
-        /* O nama box */
         .about-box {
             background: var(--card-bg); border: 1px solid var(--border-color);
             border-radius: 20px; padding: 40px; max-width: 850px; margin: 0 auto;
         }
         .about-box p { color: var(--text-muted); font-size: 1.05rem; line-height: 1.8; margin-bottom: 20px; text-align: center; }
 
-        /* Footer */
         footer {
             text-align: center; padding: 40px 20px; border-top: 1px solid var(--border-color);
             color: var(--text-muted); font-size: 0.9rem; margin-top: auto;
@@ -210,15 +206,38 @@
         /* Mobilna prilagodba */
         @media (max-width: 768px) {
             .menu-toggle { display: block; }
+            
+            /* Desktop gumbi su sakriveni na mobitelu jer sele u mobilni meni */
+            .header-actions { display: none; } 
+
             .nav-links {
                 display: none; flex-direction: column; position: absolute; top: 100%; left: 0;
                 width: 100%; background: var(--bg-color); padding: 20px;
                 border-bottom: 1px solid var(--border-color); gap: 15px; text-align: center;
             }
             .nav-links.active { display: flex; }
-            .header-actions { display: none; } /* Sakrivamo gumbe iz headera na mobitelu i stavljamo u mobilni izbornik po želji ili ostavljamo čisto */
+
+            /* Stil za gumbe unutar mobilnog menija */
+            .nav-mobile-buttons {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                width: 100%;
+                margin-top: 10px;
+                padding-top: 15px;
+                border-top: 1px solid var(--border-color);
+            }
+            .nav-mobile-buttons a {
+                width: 100%;
+            }
+
             .hero-content h1 { font-size: 2.1rem; }
             .hero-video-container { min-height: auto; padding: 40px 0 30px 0; }
+        }
+
+        /* Na velikim ekranima skrivamo mobilne gumbe unutar menija */
+        @media (min-width: 769px) {
+            .nav-mobile-buttons { display: none; }
         }
     </style>
 </head>
@@ -238,12 +257,17 @@
                 <li><a href="arhiva-cjenika.html">Arhiva cjenika</a></li>
                 <li><a href="faq.html">FAQ</a></li>
                 <li><a href="kontakt.html">Kontakt</a></li>
+                
+                <!-- Gumbi unutar mobilnog izbornika -->
+                <div class="nav-mobile-buttons">
+                    <a href="https://tidycal.com/vdflowkontakt/30-minute-meeting" class="btn-outline-primary tidycal-modal">Rezerviraj termin</a>
+                    <a href="kontakt.html" class="btn-primary">Zatražite ponudu</a>
+                </div>
             </ul>
         </nav>
         
-        <!-- Akcije gore desno: gumbi jedan do drugog -->
+        <!-- Gumbi za desktop (gore desno) -->
         <div class="header-actions">
-            <!-- TidyCal Popup link (koristi data-path i klasu tidycal-modal) -->
             <a href="https://tidycal.com/vdflowkontakt/30-minute-meeting" class="btn-outline-primary tidycal-modal">Rezerviraj termin</a>
             <a href="kontakt.html" class="btn-primary">Zatražite ponudu</a>
         </div>
